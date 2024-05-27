@@ -573,7 +573,7 @@ setup.backTen = () => {
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio1.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -737,7 +737,7 @@ setup.backTen = () => {
  <<audio ":all" stop>>
 
 <main class="story" id="storyContainer">
-<audio id="audio" >
+<audio id="audio" autoplay >
   <source src="assets/audio/audio.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
@@ -848,7 +848,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1074,7 +1074,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1135,7 +1135,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1242,7 +1242,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1421,7 +1421,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1527,7 +1527,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1587,7 +1587,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1702,7 +1702,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -1951,7 +1951,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   
@@ -2011,7 +2011,7 @@ transcript
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   

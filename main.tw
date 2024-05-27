@@ -1,0 +1,2396 @@
+:: StoryTitle
+Watching the House
+
+
+:: StoryData
+{
+	"ifid": "0C31A3C2-BFA7-4333-91F9-C259DAB24B98",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "beginning",
+	"zoom": 0.6
+}
+
+
+:: Story Stylesheet [stylesheet]
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+
+@import url("styles/generics.css");
+@import url("styles/styles.css");
+
+
+
+:: Story JavaScript [script]
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();
+
+
+// CAPTIONS
+setup.addCaptions = (cuekey) =>  {
+  console.log("cuekey", cuekey)
+    const audio = document.getElementById("audio");
+     const track = audio.addTextTrack('subtitles', 'English', 'en');
+    track.mode = 'showing';
+    const cues = {
+       test:[[0.96,2.76,"Hello and congratulations."],[3.27,6.72,"Today is your first day on the job as a watcher at Marble Hill."],[7.59,11.58,"My name is Lydia and it's my job to make sure you get settled into your new role."],[12.3,17.31,"Think of me as your guide. I'll be here with you as you get used to your new workplace."],[19.77,22.23,"A few quick things to know about Marble Hill."],[23.13,26.4,"The house was built in the 1720s by Henrietta Howard."],[27.33,32.369,"The villa is an important example of a house built for and by a woman in Georgian England."],[33.54,39.09,"After a difficult earlier life, Henrietta enjoyed more freedom and independence here than she'd ever known,"],[39.69,42.78,"and hosted many of London's cultural and political elite."],[44.1,52.02,"Henrietta was a prominent member of the royal court, and a gift from King George second - when he was Prince of Wales -made the building of her new home possible."],[53.25,54.66,"That's all you need to know for now."],[55.47,56.7,"But what about this job?"],[59.79,62.64,"Well, you don't need to do too much actually."],[63.33,68.37,"Marble Hill already has room explainers whose job is to talk to guests and share the history."],[69.12,70.68,"So your job is simple."],[71.37,79.14,"Protect and preserve the house and its treasures of the past. Observe and listen. You are the watcher after all."],[80.22,89.34,"Make sure everything in each room remains as it should be. Keep an eye out for anything untoward. And the more discreet you are the better, so you can keep watch."],[90.6,95.52000000000001,"Imagine you are invisible. Other guests should hardly realise you are there."],[98.34,101.43,"Now that's sorted, you are ready to start your first shift."]]
+  }
+    for (let i=0; i<cues[cuekey].length; i++){
+    const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
+    track.addCue(cue); 
+}
+    track.addEventListener('cuechange', () => {
+    const activeCue = track.activeCues[0];
+    if (activeCue) {
+      document.getElementById('caption').textContent = activeCue.text;
+    }
+  });
+  console.log(audio.track)
+
+}
+
+setup.play = () => {
+ const audio = document.getElementById("audio")
+ audio.play();
+  }
+
+setup.pause = () => {
+ const audio = document.getElementById("audio")
+ audio.pause();
+  }
+
+setup.showCap = () => {
+    const track = document.getElementById("captrack")
+    console.log(track)
+track.mode = 'showing';
+    document.getElementById("caption").style.visibility = "visible";
+        document.getElementById("caption").classList.remove("hide")
+  }
+
+setup.hideCap = () => {
+    const track = document.getElementById("captrack")
+   track.mode = 'hidden';
+    document.getElementById("caption").style.visibility = "hidden";
+     document.getElementById("caption").classList.add("hide")
+  }
+
+setup.addTen = () => {
+  const audio = document.getElementById("audio")
+  const timeHolder = audio.currentTime;
+  audio.currentTime = timeHolder +10;  
+  }
+
+
+setup.backTen = () => {
+  const audio = document.getElementById("audio");
+  const timeHolder = audio.currentTime;
+  audio.currentTime = timeHolder -10;
+  }
+
+
+
+:: StoryInit {"position":"100,100","size":"100,100"}
+<<cacheaudio "1" "assets/audio/1.mp3">>
+
+<<waitforaudio>>
+
+
+:: header [nobr]{"position":"100,225","size":"100,100"}
+<header class="standard">
+<div class="header-item"></div>
+<div class="header-item">
+  <h1>$title</h1>
+  <h3 class="subtitle">$location</h3>
+
+<div class="multiple-icon-wrapper">
+<<if $bathroom is true>>
+ <div class="multiple-icon-item">
+      <img src="assets/img/bathroom.png" >
+
+    </div>
+    <</if>>
+    <<if $wifi is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/wifi.png" >
+
+    </div>
+     <</if>>
+    <<if $food is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/food.png" >
+
+    </div>
+     <</if>>
+    <<if $charge is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/charge.png" >
+
+    </div>
+     <</if>>
+    <<if $stepfree is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/stepfree.png" >
+
+    </div>
+     <</if>>
+    <<if $caution is true>>
+     
+      <div class="multiple-icon-item">
+      <img src="assets/img/caution.png" >
+
+    </div>
+     <</if>>
+</div>
+</div >
+</header>
+
+
+
+
+:: headeraudio [nobr]
+
+<header class="story">
+<<if $showBackwards is true>>
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back-black.png][$prevpass]]
+    </div>
+  </div>
+  <</if>>
+
+<div id="headerinstmount"></div>
+
+
+    <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item " >
+         [img[Forward|assets/img/for-black.png][$nextpass]]
+    </div>
+  </div>
+
+</header>
+
+
+:: footer [nobr]{"position":"100,375","size":"100,100"}
+<footer>
+<<if $showBackwards is true>>
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+  <</if>>
+  /* <<if $showRewind is true>>
+  <div class="nav-wrapper">
+    <div class="nav-item">
+   <<link [img[assets/img/backward.png]]>><<audio $audio time -5s>><</link>>
+    </div>
+  </div>
+  <</if>> */
+
+  <<if $showAudio is true>>
+   <div class="nav-wrapper">
+    <div class="nav-item">
+ <<link [img[assets/img/play.png]]>><<replace "#audio">><p>[audio playing...]</p><</replace>><</link>>
+   </div>
+  </div>
+  <</if>>
+    <<if $showReplay is true>>
+     <div class="nav-wrapper">
+    <div class="nav-item">
+    [img[Replay|assets/img/replay.png][$passage]]
+    </div>
+    </div>
+    <</if>>
+    /* <<if $showCredits is true>>
+     <div class="nav-wrapper">
+    <div class="nav-item">
+    [[Credits|credits]]
+    </div>
+    </div>
+    <</if>> */
+     /* <<if $showCaptionsIcon is true>>
+     <div class="nav-wrapper">
+    <div class="nav-item">
+  <<link [img[assets/img/captions.png]]>><<set $captions to !$captions>><<goto $passage>><</link>>
+    </div>
+    </div>
+    <</if>> */
+    /* <<if $showFF is true>>
+    <div class="nav-wrapper">
+    <div class="nav-item">
+        <<link [img[assets/img/forward.png]]>><<audio $audio time +10s>><</link>>
+    </div>
+  </div>
+     <</if>> */
+<<if $showForwards is true>>
+    <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item">
+         [img[Forward|assets/img/for.png][$nextpass]]
+    </div>
+  </div>
+     <</if>>
+</footer>
+
+
+:: footerback [nobr]{"position":"100,375","size":"100,100"}
+<footer>
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+  <div class="nav-wrapper">
+ 
+  </div>
+  
+</footer>
+
+:: footerfor [nobr]{"position":"100,375","size":"100,100"}
+<footer>
+<div></div>
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/for.png][$nextpass]]
+    </div>
+  </div>
+
+  
+</footer>
+
+
+
+:: footeraudio [nobr]
+
+<footer>
+
+<<if $showCaptionsIcon is true>>
+<div class="nav-wrapper">
+    <div class="nav-item">
+      <<link [img[assets/img/captions.png]]>>
+     
+      <<if $captionToggle is true>>
+         <<toggleclass "#poster" "hide">>
+         <<toggleclass "#storyContainer" "captions">>
+          <<set $captionToggle to false>>
+      <<set $fn to setup.hideCap()>>
+          <<else>>
+          <<toggleclass "#poster" "hide">>
+          <<toggleclass "#storyContainer" "captions">>
+          <<set $captionToggle to true>>
+      <<set $fn to setup.showCap()>>
+        <</if>>
+      <</link>>
+</div>
+  </div>
+<</if>>
+
+
+<div class="nav-wrapper">
+  <div class="nav-item">
+    <<link "-10s">>
+<<set $fn to setup.backTen()>>
+  <</link>>
+  </div>
+</div>
+
+<div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+       <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+       <<replace "#headerinstmount">><</replace>>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+<<if $showTranscriptIcon is true>>
+<div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>
+<</if>>
+
+<div class="nav-wrapper">
+  <div class="nav-item">
+    <<link "+10s">>
+      <<set $fn to setup.addTen()>>
+  <</link>>
+  </div>
+</div>
+
+
+<div class="nav-wrapper">
+    <div class="nav-item">
+      <<link [img[assets/img/replay.png]]>>
+     <<goto $passage>>
+      <</link>>
+</div>
+  </div>
+
+
+
+</footer>
+
+:: footerstorywalk [nobr]
+
+<footer>
+
+/* <<if $showCaptionsIcon is true>>
+<div class="nav-wrapper">
+    <div class="nav-item">
+      <<link [img[assets/img/captions.png]]>>
+      <<if $captionToggle is true>>
+         <<toggleclass "#storyContainer" "captions">>
+          <<set $captionToggle to false>>
+      <<set $fn to setup.hideCap()>>
+          <<else>>
+          <<toggleclass "#storyContainer" "captions">>
+          <<set $captionToggle to true>>
+      <<set $fn to setup.showCap()>>
+        <</if>>
+      <</link>>
+</div>
+  </div>
+<</if>> */
+
+
+<div class="nav-wrapper">
+  <div class="nav-item">
+    <<link "-30s">>
+<<set $fn to setup.backThirty()>>
+  <</link>>
+  </div>
+</div>
+
+<div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+
+
+
+<div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>
+<div class="nav-wrapper">
+  <div class="nav-item">
+    <<link "+30s">>
+      <<set $fn to setup.addThirty()>>
+  <</link>>
+  </div>
+</div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+:: beginning [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "beginning">>
+<<set $passage to "beginning">>
+<<set $nextpass to "framing">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showForwards to true>>
+<<set $showBackwards to false>>
+<<set $showCaptionsIcon to true>>
+
+<div class="comp-warning">Best experienced on a phone</div>
+<main class="beginning" id="">
+<h1>Watching the House</h1>
+<span>An interactive experience by Coney at Marble Hill </span>
+<br/>
+ <div class="menu-wrapper">
+    <<button "Start now">><<goto $nextpass>><</button>>
+</div>
+</main>
+
+
+:: framing [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "beginning">>
+<<set $passage to "framing">>
+<<set $nextpass to "instructions1">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+<main class="instructions" id="">
+<div id="mount"></div>
+<<timed 0.1s>><<replace "#mount">>
+<p>Welcome to Marble Hill House.</p>
+<</replace>><</timed>>
+
+<<timed 2s>><<append "#mount">>
+<p>Today is your first day on the job as English Heritage Room Supervisor. </p>
+<</append>><</timed>>
+
+<<timed 4s>><<append "#mount">>
+<p>Your induction will be starting shortly, but first, a few housekeeping questions. </p>
+<</append>><</timed>>
+
+<<timed 6s>><<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+<</append>><</timed>>
+
+
+
+</main>
+<<include "footer">>
+
+
+
+:: instructions1 [nobr]
+<<set $prevpass to "beginning">>
+<<set $passage to "instructions1">>
+<<set $nextpass to "instructions1b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>This is an interactive audio induction. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>You can use your own headphones, or borrow a pair from the English Heritage team.</p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+<p>Should we test if sound works?</p>
+  <</append>>
+    
+<</timed>>
+
+
+ <<timed 6s>>
+  <<append "#mount">>
+    <<button "Test TBC">><<goto "testaudio">><</button>>
+<<button "Next">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: testaudio [nobr]
+<<set $prevpass to "instructions1">>
+<<set $passage to "testaudio">>
+<<set $nextpass to "instructions1b">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "premieretranscript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio1.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+<h2>Testing Audio</h2>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+  <<set $addC to setup.addCaptions("test")>>
+<</done>>
+
+
+:: instructions1b [nobr]
+<<set $prevpass to "instructions1">>
+<<set $passage to "instructions1b">>
+<<set $nextpass to "instructions1c">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+<main class="instructions">
+
+<div id="mount" class="onboarding"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>Audio sections can be played back, paused or skipped forward by pressing the buttons below. </p>
+  <</replace>>
+
+<</timed>>
+
+
+ <<timed 2s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+
+:: instructions1c [nobr]
+<<set $prevpass to "instructions1b">>
+<<set $passage to "instructions1c">>
+<<set $nextpass to "instructions1d">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<<audio ":all" stop>>
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp4.mp3">
+</audio>
+<main class="instructions">
+
+<div id="mount" class="onboarding"></div>
+<<timed 0.1s>>
+  <<append "#mount">>
+    <p>Would you like to see captions? </p>
+  <</append>>
+<</timed>>
+<<timed 2s>>
+  <<append "#mount">>
+
+     <p>You can enable or disable them at any time by clicking on the <<link [img[assets/img/captions.png]]>><</link>> icon below
+  .</p>
+  <</append>>
+<</timed>>
+
+
+
+ <<timed 4s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions1d [nobr]
+<<set $prevpass to "instructions1c">>
+<<set $passage to "instructions1d">>
+<<set $nextpass to "audio1">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<<audio ":all" stop>>
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+<main class="instructions">
+
+<div id="mount" class="onboarding"></div>
+<<timed 0.1s>>
+  <<append "#mount">>
+    <p>Now that you are all set, please make your way outside the building. </p>
+  <</append>>
+<</timed>>
+<<timed 2s>>
+  <<append "#mount">>
+    <p>Find a quiet spot where you can have a good view of the house.</p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+    <p>If it rains, feel free to stay where you are and look at the model of the house instead.</p>
+  <</append>>
+<</timed>>
+<<timed 6s>>
+  <<append "#mount">>
+    <p>When you are in position, press start. </p>
+  <</append>>
+<</timed>>
+
+ <<timed 7s>>
+  <<append "#mount">>
+<<button "Start">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+
+
+:: audio1 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions1d">>
+<<set $passage to "audio1">>
+<<set $nextpass to "instructions2">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio1transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio1 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 30s>>
+  <<replace "#buttons">>
+    <<button "Next">><<goto $nextpass>><</button>>
+     
+    <</replace>>
+  <</timed>>
+
+
+:: audio1transcript
+transcript
+
+
+:: instructions2 [nobr]
+<<set $prevpass to "audio1">>
+<<set $passage to "instructions2">>
+<<set $nextpass to "audio2">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>Your first shift will take place in the Great Room. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Walk back to the house, take the mahogany staircase and go to the first floor. </p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+<p>Ask one of the English Heritage Room Explainers if you get lost. They know the house like the back of their hand. </p>
+  <</append>>
+<</timed>>
+<<timed 6s>>
+  <<append "#mount">>
+<p>When you are there, press the button below. </p>
+  <</append>>
+<</timed>>
+
+
+ <<timed 8s>>
+  <<append "#mount">>
+    <<button "I’m in the Great Room">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: audio2 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions2">>
+<<set $passage to "audio2">>
+<<set $nextpass to "instructions3notebook">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio2transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio2 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 3s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "I found the notebook">><<goto "instructions3notebook">><</button>>
+        <<button "The notebook is not there">><<goto "instructions3nonotebook">><</button>>
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio2transcript
+transcript
+
+
+:: instructions3notebook [nobr]
+<<set $prevpass to "audio2">>
+<<set $passage to "instructions3notebook">>
+<<set $nextpass to "instructions3b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>I see you are one of those people who like to explore. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Look beyond appearances. </p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+<p>Ask questions.</p>
+  <</append>>
+<</timed>>
+<<timed 6s>>
+  <<append "#mount">>
+<p>That’s what we need.  </p>
+  <</append>>
+<</timed>>
+
+<<timed 8s>>
+  <<replace "#mount">>
+<p>In this notebook, you will find a series of questions your predecessors have asked on their first day on the job. </p>
+  <</replace>>
+<</timed>>
+
+<<timed 10s>>
+  <<append "#mount">>
+<p>Have a read, and add yours.  </p>
+  <</append>>
+<</timed>>
+
+<<timed 12s>>
+  <<append "#mount">>
+<p>When you are done, press next.</p>
+  <</append>>
+<</timed>>
+
+
+
+ <<timed 14s>>
+  <<append "#mount">>
+    <<button "Next">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions3nonotebook [nobr]
+<<set $prevpass to "audio2">>
+<<set $passage to "instructions3nonotebook">>
+<<set $nextpass to "instructions3b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>I’m not surprised. Objects tend to vanish. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Why, you may wonder?</p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+<p>Because conveniently, uncomfortable secrets and questions are often hidden away. </p>
+  <</append>>
+<</timed>>
+<<timed 6s>>
+  <<append "#mount">>
+<p>So today, your role will be to find them. </p>
+  <</append>>
+<</timed>>
+
+<<timed 8s>>
+  <<append "#mount">>
+<p>Use your invisibility to search. To open. To unlock. To ask uncomfortable questions. </p>
+  <</append>>
+<</timed>>
+
+
+ <<timed 14s>>
+  <<append "#mount">>
+    <<button "Next">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+:: instructions3b [nobr]
+<<set $prevpass to "audio2">>
+<<set $passage to "instructions3b">>
+<<set $nextpass to "audio3">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>The next part of your shift will be in Miss Hotham’s Bedchamber, on your left when looking at the window. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Let me know when you are there. </p>
+  <</append>>
+<</timed>>
+
+
+ <<timed 4s>>
+  <<append "#mount">>
+    <<button "I am in the Bedchamber">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+:: audio3 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions2">>
+<<set $passage to "audio3">>
+<<set $nextpass to "audio3b">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio3transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio3 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "I found the shells">><<goto $nextpass>><</button>>
+  
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio3transcript
+transcript
+
+
+:: audio3b [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "audio3">>
+<<set $passage to "audio3b">>
+<<set $nextpass to "instructions4">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio3btranscript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio3b playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "Continue">><<goto $nextpass>><</button>>
+  
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio3btranscript
+transcript
+
+
+:: instructions4 [nobr]
+<<set $prevpass to "audio3b">>
+<<set $passage to "instructions4">>
+<<set $nextpass to "audio4">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>The next part of your shift will be in the Dressing Room. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>It’s the room on the other side of the Great Room. </p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>Let me know when you are there. </p>
+  <</append>>
+<</timed>>
+
+
+ <<timed 6s>>
+  <<append "#mount">>
+    <<button "I am in the Dressing Room">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+:: audio4 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions4">>
+<<set $passage to "audio4">>
+<<set $nextpass to "instructions5noletter">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio4transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio4 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "I found the letter">><<goto "instructions5letter">><</button>>
+        <<button "The didn't find the letter">><<goto "instructions5noletter">><</button>>
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio4transcript
+transcript
+
+
+:: instructions5letter [nobr]
+<<set $prevpass to "audio4">>
+<<set $passage to "instructions5letter">>
+<<set $nextpass to "instructions5b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>Rhianna to add copy / context</p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Put the letter back where you found it. </p>
+  <</append>>
+<</timed>>
+
+
+ <<timed 4s>>
+  <<append "#mount">>
+    <<button "Next">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions5noletter [nobr]
+<<set $prevpass to "audio4">>
+<<set $passage to "instructions5noletter">>
+<<set $nextpass to "instructions5b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <img src="assets/img/letter.png">
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Rhianna to add copy / context</p>
+  <</append>>
+<</timed>>
+
+
+
+ <<timed 4s>>
+  <<append "#mount">>
+    <<button "Next">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions5b [nobr]
+<<set $prevpass to "audio4">>
+<<set $passage to "instructions5b">>
+<<set $nextpass to "audio5">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>The next part of your shift will be on top of the mahogany staircase. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Let me know when you are there. </p>
+  <</append>>
+<</timed>>
+
+ <<timed 4s>>
+  <<append "#mount">>
+    <<button "I’m on top of the staircase">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+:: audio5 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions5b">>
+<<set $passage to "audio5">>
+<<set $nextpass to "instructions6">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio5transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio5 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "Continue">><<goto $nextpass>><</button>>
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio5transcript
+transcript
+
+
+:: instructions6 [nobr]
+<<set $prevpass to "audio5">>
+<<set $passage to "instructions6">>
+<<set $nextpass to "audio6">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>You are almost at the end of your shift. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Walk to the Hall next door, then enter the Breakfast Parlour on your left.</p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>Let me know when you are there.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 4s>>
+  <<append "#mount">>
+    <<button "I’m in the Breakfast Parlour">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+:: audio6 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions6">>
+<<set $passage to "audio6">>
+<<set $nextpass to "audio6b">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio6transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio6 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "Next">><<goto $nextpass>><</button>>
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio6transcript
+transcript
+
+
+:: audio6b [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "audio6">>
+<<set $passage to "audio6b">>
+<<set $nextpass to "instructions7">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio6btranscript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio6b playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "Next">><<goto $nextpass>><</button>>
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio6btranscript
+transcript
+
+:: instructions7 [nobr]
+<<set $prevpass to "audio6b">>
+<<set $passage to "instructions7">>
+<<set $nextpass to "audio7">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>This place is full of stories.</p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Invisible and visible. </p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>Go back to the Hall.</p>
+  <</append>>
+<</timed>>
+
+<<timed 6s>>
+   <<append "#mount">>
+<p>By the fireplace, you’ll see a game table with a map. </p>
+  <</append>>
+<</timed>>
+
+<<timed 8s>>
+   <<append "#mount">>
+<p>Come closer, and if you can, sit at that table.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 10s>>
+  <<append "#mount">>
+    <<button "I see the map">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: audio7 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "instructions7">>
+<<set $passage to "audio7">>
+<<set $nextpass to "instructions7change">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio7transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio7 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "Some people are missing">><<goto "instructions7change">><</button>>
+        <<button "Keep things as they are">><<goto "instructions7nochange">><</button>>
+</div>
+    <</replace>>
+  <</timed>>
+
+:: audio7transcript
+transcript
+
+
+:: instructions7change [nobr]
+<<set $prevpass to "audio7">>
+<<set $passage to "instructions7change">>
+<<set $nextpass to "instructions7cards">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>Have a look at the fireplace. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Above it you have a portrait of King George II. One of the many people celebrated in this house.  </p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>But look closer. </p>
+  <</append>>
+<</timed>>
+
+<<timed 6s>>
+   <<append "#mount">>
+<p>Can you find a deck of cards under his portrait? </p>
+  <</append>>
+<</timed>>
+
+ <<timed 8s>>
+  <<append "#mount">>
+  <div class="menu-wrapper">
+    <<button "I have found the cards">><<goto "instructions7cards">><</button>>
+    <<button "I haven't found the cards">><<goto "instructions7nocards">><</button>>
+</div>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions7cards [nobr]
+<<set $prevpass to "instructions7change">>
+<<set $passage to "instructions7cards">>
+<<set $nextpass to "audio7b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>Who are the people who are not celebrated in this house, and should be?</p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>With the pen provided, draw their portrait, write who they are and what makes them great. </p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>You can write about real people, or imagine people whose name and face have been forgotten. </p>
+  <</append>>
+<</timed>>
+
+<<timed 6s>>
+   <<append "#mount">>
+<p>Feel free to flick through the other cards before drawing yours. </p>
+  <</append>>
+<</timed>>
+
+<<timed 8s>>
+   <<append "#mount">>
+<p>When you are done, place your drawing back in the deck of cards on the fireplace.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 8s>>
+  <<append "#mount">>
+    <<button "I am done">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions7nocards [nobr]
+<<set $prevpass to "instructions7change">>
+<<set $passage to "instructions7nocards">>
+<<set $nextpass to "audio7b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>TBC</p>
+  <</replace>>
+
+<</timed>>
+
+
+ <<timed 2s>>
+  <<append "#mount">>
+    <<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions7nochange [nobr]
+<<set $prevpass to "audio7">>
+<<set $passage to "instructions7nochange">>
+<<set $nextpass to "audio7b">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+ <p>That’s fine. Sometimes it’s easier not to shake things off. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>You can terminate your training here. </p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>Otherwise, just in case you are a little bit curious, you can look for some hidden stories among the ashes.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 4s>>
+  <<append "#mount">>
+   <div class="menu-wrapper">
+    <<button "Look for hidden stories">><<goto "instructions7change">><</button>>
+        <<button "Terminate your training">><<goto "infopledge">><</button>>
+</div>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+:: audio7b [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "audio7">>
+<<set $passage to "audio7b">>
+<<set $nextpass to "audio8">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio7btranscript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio7b playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+    <p>Go back to the front of the house, and let me know when you are there. </p>
+     <div class="menu-wrapper">
+    <<button "I am at the front of the house">><<goto $nextpass>><</button>>
+  
+</div>
+    <</replace>>
+  <</timed>>
+
+:: audio7btranscript
+transcript
+
+:: audio8 [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "audio7b">>
+<<set $passage to "audio8">>
+<<set $nextpass to "infopledge">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to true>>
+<<set $showTranscriptIcon to false>>
+<<set $sendOn to false>>
+<<set $transcriptname to  "audio8transcript">>
+<<include "headeraudio">>
+ <<audio ":all" stop>>
+
+<main class="story" id="storyContainer">
+<audio id="audio" autoplay>
+  <source src="assets/audio/audio.mp3">
+  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+</audio>
+
+  
+<div class="poster-wrapper" id="poster">
+   <img class="poster" src="./../assets/img/house.png"/>
+ </div>
+ <div id="caption" class="hide"></div>
+<div id="transcript"></div>
+<div id="mount"></div>
+<div id="buttons"></div>
+
+ /* <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>> */
+
+</main>
+
+<<include "footeraudio">>
+
+<<done>>
+   <<replace "#headerinstmount">><p class="note">[audio 8 playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
+<</done>>
+
+<<timed 5s>>
+  <<replace "#buttons">>
+     <div class="menu-wrapper">
+    <<button "Next">><<goto $nextpass>><</button>>
+
+</div>
+    <</replace>>
+  <</timed>>
+
+
+:: audio8transcript
+transcript
+
+
+:: infopledge [nobr]
+<<set $prevpass to "audio8">>
+<<set $passage to "infopledge">>
+<<set $nextpass to "record">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>Rhianna to add copy about recording pledge  - endeavour to do things differently, now that’s you’ve been induced, make the invisible visible. </p>
+  <</replace>>
+
+<</timed>>
+
+ <<timed 2s>>
+  <<append "#mount">>
+ <div class="menu-wrapper">
+    <<button "Record your pledge">><<goto "record">><</button>>
+     <<button "Skip and listen to others">><<goto "listen">><</button>>
+    <<button "End the experience">><<goto "end">><</button>>
+</div>
+  <</append>>
+<</timed>>
+
+
+</main>
+<<include "footer">>
+
+
+:: end [nobr]
+<<set $prevpass to "infopledge">>
+<<set $passage to "end">>
+<<set $nextpass to "end">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+ <p>Thank you for attending Watching the House, a project by Coney in partnership with English Heritage. </p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>To find out more about the project click here. </p>
+  <</append>>
+<</timed>>
+
+<<timed 4s>>
+   <<append "#mount">>
+<p>For more historical background about Marble Hill’s colonial history, click here.</p>
+  <</append>>
+<</timed>>
+
+<<timed 6s>>
+   <<append "#mount">>
+<p>If you want to find out more about the next Coney projects, please sign up for our newsletter or follow us on social media.</p>
+  <</append>>
+<</timed>>
+
+<<timed 8s>>
+   <<append "#mount">>
+<div class="icon-container socials">
+        <a href="https://www.instagram.com/agencyofconey/" target="_blank">
+          <img src="assets/img/socials/insta-black.png" alt="instagram icon"></a>
+        <a href="https://www.facebook.com/coneyhq/" target="_blank">
+          <img src="assets/img/socials/fb-black.png" alt="facebook logo" /></a>
+        <a href="https://twitter.com/agencyofconey" alt="twitter logo" target="_blank">
+          <img src="assets/img/socials/twitter-black.png" /></a>
+      </div>
+  <</append>>
+<</timed>>
+
+</main>
+<<include "footer">>
+
+:: record[nobr]
+<<set $prevpass to "infopledge">>
+<<set $passage to "record">>
+<<set $nextpass to "listen">>
+<<set $showAudio to false>>
+<<set $showReplay to false>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<main class="instructions">
+<p>By clicking Record, you consent for your recording to be published online as part of the project. You can withdraw that consent at any time. More info can be found in our terms of use.</p>
+  <p> Please try to keep your recording to 60 sec or less.</p>
+      <p>By submitting a recording here, you agree to the <a
+          href="" target="_blank" rel="no-referrer"
+          class="highlighted">terms and
+          conditions</a>.</p>
+      <br>
+      <iframe src="https://www.speakpipe.com/widget/inline/kzucd1vw97rd1ikj33nexcg8mnycvn9k"  allow="microphone"
+        width="100%" height="200" frameborder="0"></iframe>
+<br/>
+
+<<button "Listen to others">><<goto "listenenter">><</button>>
+</main>
+<<include "footer">>
+
+:: listenenter [nobr t8n-dissolve]
+<<set $prevpass to "infopledge">>
+<<set $passage to "listenenter">>
+<<set $nextpass to "listen">>
+<<set $captions to false>>
+<<set $sound to true>>
+<<set $showForwards to false>>
+
+   <<set $audiooptions to ["listen1"]>>
+ <<set $audiooptionscopy to $audiooptions>>
+
+<header/>
+<main class="main-section listen entrance " id="main">
+/* <<button "Start">>
+     <<set $source to $audiooptions[random(0, $audiooptions.length - 1)]>>
+   <<goto "listen">><</button>>  */
+
+
+<<button "Listen">>
+   <<if $audiooptionscopy.length > 0>>
+    <<set $source to $audiooptionscopy.splice(random(0, $audiooptionscopy.length - 1), 1)[0]>>
+     <<goto "listen">>
+<</if>>
+<</button>> 
+</main>
+<<include "footer">>
+
+
+:: listen [nobr t8n.typewriter.4 t8n-dissolve]
+<<set $showCaptionsIcon to true>>
+<<set $showAudioIcon to true>>
+<<set $showBackwards to true>>
+/* <<set $sound to true>> */
+<<set $showMenu to false>>
+<<set $menuOpen to false>>
+<<set $prevpass to "record">>
+<<set $passage to "listen">>
+ /* <<set $source to "audio3">> */
+
+
+<<include "headerlisten">>
+
+<main class="main-section listen player " id="main">
+<audio id="audio" autoplay>
+<<if $sound is true>>
+  <<include $source>>
+  <</if>>
+</audio>
+
+
+
+<<if $captions is true>>
+<div id="caption">
+
+</div>
+  /* <<include `$source + "cap"`>> */
+  <<include "listen1cap">>
+<</if>>
+
+</main>
+<<include "footerlisten">>
+
+:: headerlisten [nobr]
+<header class="listen player" >
+
+      <div class="nav-item">
+          [img[Back|../assets/img/back-black.png][infopledge]]
+      </div>
+
+ <div class="nav-item">
+<<button "Next recording">>
+   <<if $audiooptionscopy.length > 0>>
+    <<set $source to $audiooptionscopy.splice(random(0, $audiooptionscopy.length - 1), 1)[0]>>
+            <<goto $passage>>
+<<else>>
+  <<replace "#main">>
+  <div id="endMsgMount"> <<button "Listen again?">>
+    <<replace "#endMsgMount">>
+     <<set $audiooptionscopy to $audiooptions>>
+    <<goto "listen">><</replace>>
+    <</button>></div>
+   
+    <</replace>>
+
+<</if>>
+<</button>>
+ </div>
+  
+</header>
+
+
+:: footerlisten [nobr]
+
+<footer class="listen">
+<div class="nav-container">
+  <<if $showCaptionsIcon is true>>
+  <div class="nav-wrapper">
+      <div class="nav-item" id="capIconContainer">
+        <<link [img[../assets/img/captions.png]]>>
+        <<if $captions is true>>
+          <<set $captions to false>>
+  
+           <<goto $passage>>
+       <<else>>
+           <<set $captions to true>>
+  
+             <<goto $passage>>
+          
+          <</if>>
+        <</link>>
+  </div>
+    </div>
+  <</if>> 
+
+</div>
+<div class="nav-wrapper">
+   <div class="nav-item" id="">
+        <<button "Record">>
+        <<goto "record">>
+        <</button>>
+  </div>
+ </div>
+<div class="nav-wrapper">
+   <div class="nav-item" id="">
+        <<button "End the experience">>
+        <<goto "end">>
+        <</button>>
+  </div>
+ </div>
+
+</footer>
+
+<<done>>
+  <<if $captions is true>>
+    <<addclass "#capIconContainer" "activeIcon">>
+  <</if>>
+  <<if $sound is true>>
+   /* <<addclass "#audioContainer" "activeIcon">> */
+  <</if>>
+<</done>>
+
+
+
+:: listen1
+<source  src="https://youhavefoundconey.net/1884FM/assets/memorial/audio1.mp3">
+
+:: listen1cap [nobr]
+
+<<timed 1s>>
+  <<replace "#caption">>
+    <<type 60ms>>
+<p>The live show made me think about the role and the power of historians</p> 
+<</type>>
+  <</replace>>
+<</timed>>
+
+<<timed 7s>>
+  <<replace "#caption">>
+ <<type 40ms>>
+<p>to tell the stories of people and communities that they never met</p> 
+<</type>>
+  <</replace>>
+<</timed>>
+
+<<timed 12s>>
+  <<append "#caption">>
+  <<type 30ms>>
+<p>and they don't really know </p>
+<</type>>
+  <</append>>
+<</timed>>
+
+<<timed 15s>>
+  <<replace "#caption">>
+  <<type 60ms>>
+<p>and the way that in particular Western white supremacist institutions</p> 
+<</type>>
+  <</replace>>
+<</timed>>
+
+<<timed 24s>>
+  <<append "#caption">>
+  <<type 40ms>>
+<p>apply a bias and a lens</p>
+<</type>>
+  <</append>>
+<</timed>>
+
+<<timed 27s>>
+  <<append "#caption">>
+  <<type 40ms>>
+<p> to the stories and the histories of people of color. </p>
+<</type>>
+  <</append>>
+<</timed>>
+
+<<timed 32s>>
+  <<replace "#caption">>
+  <<type 50ms>>
+<p>The way histories and objects are made to be exotic </p>
+<</type>>
+  <</replace>>
+<</timed>>
+
+<<timed 38s>>
+  <<append "#caption">>
+  <<type 40ms>>
+<p>and are made to be ritualistic and </p>
+<</type>>
+  <</append>>
+<</timed>>
+
+<<timed 41s>>
+  <<append "#caption">>
+  <<type 40ms>>
+<p>made to be... more nonsensical </p>
+<</type>>
+  <</append>>
+<</timed>>
+
+<<timed 46s>>
+  <<replace "#caption">> 
+  <<type 60ms>>
+<p>just because of...</p>
+<</type>>
+  <</replace>>
+<</timed>>
+
+<<timed 50s>>
+  <<append "#caption">> 
+  <<type 60ms>>
+<p>where that community are from.</p>
+<</type>>
+  <</append>>
+<</timed>>

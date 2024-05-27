@@ -35,6 +35,7 @@ setup.addCaptions = (cuekey) =>  {
   }
      const track = audio.addTextTrack('subtitles', 'English', 'en');
     track.mode = 'showing';
+
     console.log("track", track)
   
     const cues = {
@@ -74,16 +75,16 @@ setup.pause = () => {
   }
 
 setup.showCap = () => {
-    const track = document.getElementById("captrack")
-    console.log(track)
-track.mode = 'showing';
+//     const track = document.getElementById("captrack")
+//     console.log(track)
+// track.mode = 'showing';
     document.getElementById("caption").style.visibility = "visible";
         document.getElementById("caption").classList.remove("hide")
   }
 
 setup.hideCap = () => {
-    const track = document.getElementById("captrack")
-   track.mode = 'hidden';
+  //   const track = document.getElementById("captrack")
+  //  track.mode = 'hidden';
     document.getElementById("caption").style.visibility = "hidden";
      document.getElementById("caption").classList.add("hide")
   }
@@ -738,7 +739,7 @@ setup.backTen = () => {
 <main class="story" id="storyContainer">
 <audio id="audio" >
   <source src="assets/audio/audio.mp3">
-  <track kind="captions" srclang="en" label="English captions" id="captrack" default>
+  /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
   

@@ -130,8 +130,9 @@ setup.addCaptions = (cuekey) =>  {
     track.addCue(cue); 
     console.log("cue added", cue)
 }
+console.log("track after adding cues", track)
     track.addEventListener('cuechange', () => {
-  console.log("cue has changed")
+  console.log("cue has changed", )
     const activeCue = track.activeCues[0];
     if (activeCue) {
       document.getElementById('caption').textContent = activeCue.text;

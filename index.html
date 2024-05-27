@@ -114,8 +114,9 @@ setup.addCaptions = (cuekey) =>  {
     return;
   }
      const track = audio.addTextTrack('subtitles', 'English', 'en');
-       console.log("track", track)
     track.mode = 'showing';
+    console.log("track", track)
+  
     const cues = {
        test:[[0.96,2.76,"Hello and congratulations."],[3.27,6.72,"Today is your first day on the job as a watcher at Marble Hill."],[7.59,11.58,"My name is Lydia and it's my job to make sure you get settled into your new role."],[12.3,17.31,"Think of me as your guide. I'll be here with you as you get used to your new workplace."],[19.77,22.23,"A few quick things to know about Marble Hill."],[23.13,26.4,"The house was built in the 1720s by Henrietta Howard."],[27.33,32.369,"The villa is an important example of a house built for and by a woman in Georgian England."],[33.54,39.09,"After a difficult earlier life, Henrietta enjoyed more freedom and independence here than she'd ever known,"],[39.69,42.78,"and hosted many of London's cultural and political elite."],[44.1,52.02,"Henrietta was a prominent member of the royal court, and a gift from King George second - when he was Prince of Wales -made the building of her new home possible."],[53.25,54.66,"That's all you need to know for now."],[55.47,56.7,"But what about this job?"],[59.79,62.64,"Well, you don't need to do too much actually."],[63.33,68.37,"Marble Hill already has room explainers whose job is to talk to guests and share the history."],[69.12,70.68,"So your job is simple."],[71.37,79.14,"Protect and preserve the house and its treasures of the past. Observe and listen. You are the watcher after all."],[80.22,89.34,"Make sure everything in each room remains as it should be. Keep an eye out for anything untoward. And the more discreet you are the better, so you can keep watch."],[90.6,95.52000000000001,"Imagine you are invisible. Other guests should hardly realise you are there."],[98.34,101.43,"Now that's sorted, you are ready to start your first shift."]]
   }
@@ -127,6 +128,7 @@ setup.addCaptions = (cuekey) =>  {
     for (let i=0; i<cues[cuekey].length; i++){
     const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
     track.addCue(cue); 
+    console.log("cue added")
 }
     track.addEventListener('cuechange', () => {
   console.log("cue has changed")
@@ -137,7 +139,7 @@ setup.addCaptions = (cuekey) =>  {
     
   });
 
-  console.log("audio track added", track);
+
 }
 
 setup.play = () => {
@@ -734,7 +736,7 @@ setup.backTen = () => {
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
 &lt;main class=&quot;story&quot; id=&quot;storyContainer&quot;&gt;
-&lt;audio id=&quot;audio&quot; autoplay&gt;
+&lt;audio id=&quot;audio&quot; &gt;
   &lt;source src=&quot;assets/audio/audio.mp3&quot;&gt;
   &lt;track kind=&quot;captions&quot; srclang=&quot;en&quot; label=&quot;English captions&quot; id=&quot;captrack&quot; default&gt;
 &lt;/audio&gt;

@@ -128,7 +128,7 @@ setup.addCaptions = (cuekey) =>  {
     for (let i=0; i<cues[cuekey].length; i++){
     const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
     track.addCue(cue); 
-    console.log("cue added")
+    console.log("cue added", cue)
 }
     track.addEventListener('cuechange', () => {
   console.log("cue has changed")

@@ -39,7 +39,16 @@ setup.addCaptions = (cuekey) =>  {
     console.log("track", track)
   
     const cues = {
-       test:[[0.96,2.76,"Hello and congratulations."],[3.27,6.72,"Today is your first day on the job as a watcher at Marble Hill."],[7.59,11.58,"My name is Lydia and it's my job to make sure you get settled into your new role."],[12.3,17.31,"Think of me as your guide. I'll be here with you as you get used to your new workplace."],[19.77,22.23,"A few quick things to know about Marble Hill."],[23.13,26.4,"The house was built in the 1720s by Henrietta Howard."],[27.33,32.369,"The villa is an important example of a house built for and by a woman in Georgian England."],[33.54,39.09,"After a difficult earlier life, Henrietta enjoyed more freedom and independence here than she'd ever known,"],[39.69,42.78,"and hosted many of London's cultural and political elite."],[44.1,52.02,"Henrietta was a prominent member of the royal court, and a gift from King George second - when he was Prince of Wales -made the building of her new home possible."],[53.25,54.66,"That's all you need to know for now."],[55.47,56.7,"But what about this job?"],[59.79,62.64,"Well, you don't need to do too much actually."],[63.33,68.37,"Marble Hill already has room explainers whose job is to talk to guests and share the history."],[69.12,70.68,"So your job is simple."],[71.37,79.14,"Protect and preserve the house and its treasures of the past. Observe and listen. You are the watcher after all."],[80.22,89.34,"Make sure everything in each room remains as it should be. Keep an eye out for anything untoward. And the more discreet you are the better, so you can keep watch."],[90.6,95.52000000000001,"Imagine you are invisible. Other guests should hardly realise you are there."],[98.34,101.43,"Now that's sorted, you are ready to start your first shift."]]
+       audio1:[[3.629,5.939,"Hello and congratulations."],[5.939,10.259,"Today is your first day on the job as a watcher at Marble Hill."],[10.259,14.999,"My name is Lydia and it's my job to make sure you get settled into your new role."],[14.999,17.309,"Think of me as your guide."],[17.309,22.439,"I'll be here with you as you get used to your new workplace."],[22.439,25.769,"A few quick things to know about Marble Hill."],[25.769,29.969,"The house was built in the 1720s by Henrietta Howard."],[29.969,36.179,"The villa is an important example of a house built for and by a woman in Georgian England."],[36.179,46.769,"After a difficult earlier life, Henrietta enjoyed more freedom and independence here than she'd ever known, and hosted many of London's cultural and political elite."],[46.769,55.919,"Henrietta was a prominent member of the royal court and a gift from King George II - when he was Prince of Wales - made the building of her new home possible."],[55.919,58.139,"That's all you need to know for now."],[58.139,62.459,"But what about this job?"],[62.459,65.999,"Well, you don't need to do too much actually."],[65.999,71.789,"Marble Hill already has room explainers, whose job is to talk to guests and share the history."],[71.789,74.039,"So your job is simple."],[74.039,78.569,"Protect and preserve the house and its treasures of the past."],[78.569,82.889,"Observe and listen, you are the watcher after all."],[82.889,86.429,"Make sure everything in each room remains as it should be."],[86.429,88.979,"Keep an eye out for anything untoward."],[88.979,93.269,"And the more discreet you are, the better so you can keep watch."],[93.269,95.999,"Imagine you are invisible."],[95.999,101.009,"Other guests should hardly realise you are there."],[101.009,104.03999999999999,"Now that sorted, you are ready to start your first shift."]], 
+       audio2: [[4.65,7.02,"So here you are in The Great Room."],[7.68,11.58,"Remember, the only job you have to do is to sit."],[12.57,13.2,"Wait."],[14.37,15.03,"Watch."],[16.23,18.42,"Whilst you sit, your mind might wander."],[19.08,22.14,"That's fine. That's inevitable in these kinds of jobs."],[23.64,25.77,"What was this room for, do you think?"],[26.55,28.29,"What conversations took place here?"],[28.8,30.45,"And where did everything come from?"],[31.95,35.7,"This is called The Great Room. But what makes it great?"],[36.6,40.41,"Is it the size or the objects within it, collected from around the world?"],[41.73,43.68,"Is that what we mean by Great Britain?"],[45.24,54.72,"In the corner of the room is a lacquer screen, made in China nearly 300 years ago, reflecting Henrietta's interest in what was seen as \"exotic\" or \"other\"."],[56.58,58.5,"Take a moment to look at the paintings above you."],[59.31,62.73,"What do you see? Who is celebrated as great here?"],[63.87,66.63,"Or, you may wonder, who is missing?"],[69.36,71.58,"You notice a basket on the floor to your right."],[72.39,77.13,"It doesn't look like something you should touch but... what would happen if you did?"],[78.45,80.4,"Your job is to remain invisible."],[80.91,83.88,"But who and what else is hiding in this house?"],[84.87,86.85,"What will happen if you start looking for them?"],[88.28999999999999,92.25,"When nobody is looking, look inside the basket and find the notebook."],[93.47999999999999,95.67,"Remember, be discreet."],[96.3,97.8,"You are still on the job."]], 
+       audio3a: [[1.439,6.029,"We're in the bedroom of Miss Hoffman, Henrietta's great niece."],[6.029,8.579,"Watchers aren't technically meant to sit here."],[8.579,15.449,"But, well, if nobody's paying you much attention, it's probably fine."],[15.449,19.799,"If you can sit down at the mirror and take a look at yourself."],[19.799,23.939,"If not, simply stand near the table."],[23.939,27.749,"How well do you know the stories of the people who came before you?"],[27.749,34.019,"Your ancestors, whose facial features you will share, even if you don't know it."],[34.019,35.969,"Take a look at the table."],[35.969,37.949,"Open the drawers."],[37.949,41.01,"Once you've found the drawer with the shelving, let me know"]], 
+       audio3b: [[1.62,3.48,"Why shells?"],[3.48,7.2,"They were collected to decorate the grotto, in the garden outside."],[7.2,12.27,"And perhaps Miss Hoffman love the shapes, the colors, the swirls..."],[12.27,15.24,"But why shells, you wonder?"],[15.24,23.85,"Shells from the Caribbean, now in Richmond upon Thames, collected and transported as part of the TransAtlantic slave route."],[23.85,27.63,"Now hidden in these drawers."],[27.63,30.42,"As you look at the mirror, you reflect."],[30.42,34.29,"Why did Henrietta want and need these shells so much?"],[34.29,37.23,"What were the names of the people who gathered them?"],[37.23,39.27,"The island the shells came from?"],[39.27,46.74,"And the horrors being enacted upon the people there in exchange for shells, sugar, money."],[46.74,51.27,"But hurry, it's time to go before somebody sees you here."],[51.27,53.85,"These stories have been hidden for a long time."],[53.85,56.28,"And Not everybody wants to know they exist."]], 
+       audio4: [[3.419,9.089,"From where you're standing, you might notice all the faces peering down at you."],[9.089,17.699,"These were people from Henrietta's circle, many of whom passed through this house to socialise, gossip and discuss business."],[17.699,22.109,"During her time at court, Henrietta became mistress to the Prince of Wales."],[22.109,32.579,"And this house was built after she received a gift of 11,500 pounds in stocks from him, worth possibly over 1 million pounds today."],[32.579,36.809,"Henrietta also held other investments and was financially savvy."],[36.809,42.329,"All the people in these paintings were mostly born wealthy, and we're trying to make more money."],[42.329,44.549,"How? You might wonder..."],[44.549,50.159,"When you can, you might try to discreetly open up the drawers on the desk and see what's inside."]], 
+       audio5: [[1.62,3.48,"It's time to monitor the staircase."],[4.05,7.47,"You simply have to stand still on the landing, as others pass by."],[8.5,11.08,"You might look down. Take note of the wood."],[11.8,15.7,"Mahogany. A highly fashionable material in the eighteenth century."],[16.35,18.9,"Now you're standing on it, centuries later."],[20.04,24.57,"But at this point you've asked so many questions, and the wood elicits more."],[25.62,26.55,"Who built this?"],[27.27,28.8,"Where did this wood come from?"],[29.8,34.33,"How many hands have touched this word? And what toil did they have to suffer to build this?"],[35.77,39.34,"Who should have the right to feel proud of this staircase? This artwork."],[40.27,41.8,"Who is history-worthy?"],[43.87,50.47,"Henrietta was one of the first to use Mahogany in her home, and the word quickly became fashionable across elite society."],[51.45,60.06,"But tradition has it, the word was harvested in the Bay of Honduras - present-day Belize - and likely through the exploitation of enslaved people."],[60.96,65.82,"The mahogany trade was one dependent on the forced labor of enslaved Africans,"],[66.33,70.44,"who worked unpaid in hostile conditions to satisfy the tastes of England."],[71.1,72.45,"The tastes of Richmond."],[74.25,76.59,"You close your eyes. You listen."],[77.52,82.32,"You walk down the stairs with your hand on the railing and start to hear fragments of a poem."],[87.13,89.95,"And then I realised the whole house was filled with mahogany,"],[89,93.05,"the doorknobs, the banisters, the stairs themselves..."],[93.41,96.62,"it was worship and annihilation all in one."],[97.97,101.09,"I was compelled to assist in cutting a great deal of Mahogany"],[101.09,105.86,"wood, writes Olaudah Equiano. Think of the mornings he toiled"],[105.86,109.82,"and toiled to capture swelling grains of the tree crotch under"],[109.82,113.45,"the tyranny of mosquitoes. Think of his back breaking, while"],[113.45,117.5,"harvesting rows of trunks later than the big house, to harness"],[117.5,121.73,"then tumble into nearby river water. Logs lashed"],[121.73,125.93,"together, lumbering, riding currents towards their first"],[125.93,131.18,"destination, a main port, to be buried in the belly of ships. Think"],[131.18,135.02,"genocide visited here, and men labored and the art of such a thing."],[136.02,141,"Speak of Mahogany. O, speak of the people of the land!"],[140.99,143.84,"Speak of mahogany. Speak"],[143.84,145.82,"of the original people of the land!"],[146.32999999999998,150.56,"And think of\tbodies/\tbodies/ \tblood/"],[151.25,157.01,"black/\t\tblessed/\tbones/\t\tback/\t\tback broad/"],[157.34,159.2,"borders/\tbroken branches/"],[159.2,162.14,"broken bough/\tbrown/\tbleed/\t\tbalsam/"],[162.35,164.27,"balm/ \t\tbreathless/"]], 
+       audio6: [[1.11,4.56,"As you stand, once again your eyes wander."],[4.56,8.52,"You may notice a tea tray."],[8.52,13.23,"You are curious and perhaps, even after a long day, thirsty."],[14.94,19.53,"You remain discreet but edge towards the tray."],[19.53,22.14,"Feel free to open the lid, and see what's inside."],[24.42,29.28,"As you explore, smell the tea and close your eyes."],[29.28,36.57,"Like the Mahogany of the staircase, sugar, tea and coffee became highly fashionable during Henrietta's time."],[36.57,39.24,"But at what cost?"],[39.24,45.39,"You open the coffee pot and look inside."],[45.39,47.34,"Where did these goods come from?"],[47.34,51.54,"To sweeten the tea and coffee of the elites of Richmond."],[51.54,54.87,"Many people from around the world built this house,"],[54.87,57.78,"but only a few are remembered."],[57.78,61.17,"There are people whose stories are too dark and disturbing,"],[61.17,64.05,"that they are often hidden away, invisible."]], 
+       audio7a: [[1.17,4.02,"You look at the map of Richmond."],[4.02,8.31,"The people of the past imagine this town as an idyllic utopia,"],[8.31,13.17,"without acknowledging the truth of how it was funded or built."],[13.17,16.59,"You might look through the cards on the table."],[16.59,20.55,"The great and the good of Richmond upon Thames."],[20.55,25.32,"The people who have been remembered, archived in history."],[25.32,31.44,"Does it feel right? Would you want to add anyone? change anything?"]], 
+       audio7b: [[0.57,2.28,"You've left your mark here now,"],[2.28,5.52,"whilst keeping things seemingly the same on the surface."],[5.52,8.34,"Perhaps that's what this job is about after all -"],[8.34,12.33,"but quick, the day is ending, and your shift is almost up."]], 
+       audio8: [[0.989,3.629,"And we are back to where we began."],[3.629,8.219,"Congratulations! Your first day as a watcher is complete."],[8.219,10.559,"Thank you for keeping watch on Marble Hill"],[10.559,15.689,"and for noticing and asking questions that others may not have."],[15.689,21.119,"At the end of your day, you take one more look at Marble Hill."],[21.119,23.159,"Does the house look any different?"],[23.159,27.209,"After spending a day observing and listening from the sidelines?"],[27.209,31.169,"How should we remember a piece like this?"],[31.169,36.179,"How do we make the invisible visible?"],[36.179,39.75,"I've got one final thing for you. And then you can be on your way"]]
   }
   console.log("cues ", cues)
    if (!cues[cuekey]) {
@@ -49,7 +58,7 @@ setup.addCaptions = (cuekey) =>  {
     for (let i=0; i<cues[cuekey].length; i++){
     const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
     track.addCue(cue); 
-    console.log("cue added", cue)
+   // console.log("cue added", cue)
 }
 console.log("track after adding cues", track)
     track.addEventListener('cuechange', () => {
@@ -246,6 +255,47 @@ setup.backTen = () => {
      <</if>>
 </footer>
 
+:: footerrecord [nobr]{"position":"100,375","size":"100,100"}
+<footer>
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+
+
+    <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item">
+       <<button "Listen to others">><<goto "listenenter">><</button>>
+    </div>
+  </div>
+
+</footer>
+
+:: footerfinal [nobr]{"position":"100,375","size":"100,100"}
+<footer>
+
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+  
+     <div class="nav-wrapper">
+    <div class="nav-item">
+    [img[Replay|assets/img/replay.png][$passage]]
+    </div>
+    </div>
+
+
+    <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item">
+ 
+    </div>
+  </div>
+
+</footer>
+
 
 :: footerback [nobr]{"position":"100,375","size":"100,100"}
 <footer>
@@ -280,15 +330,17 @@ setup.backTen = () => {
 
 <<if $showCaptionsIcon is true>>
 <div class="nav-wrapper">
-    <div class="nav-item">
+    <div class="nav-item" id="capIcon">
       <<link [img[assets/img/captions.png]]>>
      
       <<if $captionToggle is true>>
          <<toggleclass "#poster" "hide">>
          <<toggleclass "#storyContainer" "captions">>
           <<set $captionToggle to false>>
-      <<set $fn to setup.hideCap()>>
-          <<else>>
+          <<removeclass "#capIcon" "caphighlight">>
+           <<set $fn to setup.hideCap()>>
+     <<else>>
+         <<addclass "#capIcon" "caphighlight">>
           <<toggleclass "#poster" "hide">>
           <<toggleclass "#storyContainer" "captions">>
           <<set $captionToggle to true>>
@@ -360,93 +412,17 @@ setup.backTen = () => {
       <</link>>
 </div>
   </div>
-
-
-
 </footer>
 
-:: footerstorywalk [nobr]
-
-<footer>
-
-/* <<if $showCaptionsIcon is true>>
-<div class="nav-wrapper">
-    <div class="nav-item">
-      <<link [img[assets/img/captions.png]]>>
-      <<if $captionToggle is true>>
-         <<toggleclass "#storyContainer" "captions">>
-          <<set $captionToggle to false>>
-      <<set $fn to setup.hideCap()>>
-          <<else>>
-          <<toggleclass "#storyContainer" "captions">>
-          <<set $captionToggle to true>>
-      <<set $fn to setup.showCap()>>
-        <</if>>
-      <</link>>
-</div>
-  </div>
-<</if>> */
-
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "-30s">>
-<<set $fn to setup.backThirty()>>
-  <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper playpause-wrapper">
-  <div class="nav-item" id="playpause">
-      <<link [img[assets/img/playpause.png]]>>
-        <<if $playToggle is false>>
-      <<set $fn to setup.play()>>
-      <<set $playToggle to true>>
-      <<addclass "#playpause" "playhighlight">>
-      <<else>>
-       <<set $fn to setup.pause()>>
-        <<set $playToggle to false>>
-      <<removeclass "#playpause" "playhighlight">>
-      <</if>>
-      <</link>>
-  </div>
-</div>
-
-
-
-<div class="nav-wrapper">
-  <div class="nav-item">
-  <<link [img[assets/img/transcript.png]]>>
-<<if $transcript is false>>
-  <<set $transcript to true>>
-  <<replace "#transcript">>
-    <<include $transcriptname>>
-  <</replace>>
-  <<else>>
-  <<set $transcript to false>>
-  <<replace "#transcript">>
-  <</replace>>
-  <</if>>
-  <</link>>
-  </div>
-</div>
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "+30s">>
-      <<set $fn to setup.addThirty()>>
-  <</link>>
-  </div>
-</div>
-
-</footer>
-
-
-
-
-
-
-
-
+/* captions */
+<<done>>
+ <<if $captionToggle is true>>
+  <<addclass "#capIcon" "caphighlight">>
+    <<toggleclass "#poster" "hide">>
+     <<toggleclass "#storyContainer" "captions">>
+    <<set $fn to setup.showCap()>>
+<</if>>
+<</done>>
 
 
 :: beginning [nobr]  {"position":"700,175","size":"100,100"}
@@ -495,11 +471,11 @@ setup.backTen = () => {
 <p>Today is your first day on the job as English Heritage Room Supervisor. </p>
 <</append>><</timed>>
 
-<<timed 4s>><<append "#mount">>
+<<timed 5s>><<append "#mount">>
 <p>Your induction will be starting shortly, but first, a few housekeeping questions. </p>
 <</append>><</timed>>
 
-<<timed 6s>><<append "#mount">>
+<<timed 8s>><<append "#mount">>
 <<button "Next">><<goto $nextpass>><</button>>
 <</append>><</timed>>
 
@@ -513,7 +489,7 @@ setup.backTen = () => {
 :: instructions1 [nobr]
 <<set $prevpass to "beginning">>
 <<set $passage to "instructions1">>
-<<set $nextpass to "instructions1b">>
+<<set $nextpass to "testaudio">>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showForwards to true>>
@@ -533,12 +509,12 @@ setup.backTen = () => {
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>You can use your own headphones, or borrow a pair from the English Heritage team.</p>
   <</append>>
 <</timed>>
-<<timed 4s>>
+<<timed 6s>>
   <<append "#mount">>
 <p>Should we test if sound works?</p>
   <</append>>
@@ -546,10 +522,9 @@ setup.backTen = () => {
 <</timed>>
 
 
- <<timed 6s>>
+ <<timed 8s>>
   <<append "#mount">>
-    <<button "Test TBC">><<goto "testaudio">><</button>>
-<<button "Next">><<goto $nextpass>><</button>>
+    <<button "Yes">><<goto "testaudio">><</button>>
 
   <</append>>
 <</timed>>
@@ -559,10 +534,9 @@ setup.backTen = () => {
 :: testaudio [nobr]
 <<set $prevpass to "instructions1">>
 <<set $passage to "testaudio">>
-<<set $nextpass to "instructions1b">>
+<<set $nextpass to "instructions1d">>
 <<set $transcript to false>>
 <<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -570,20 +544,36 @@ setup.backTen = () => {
 <<set $transcriptname to  "premieretranscript">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
-<main class="story" id="storyContainer">
+<main class="story testaudio" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio1.mp3">
+  <source src="assets/audio/00.Sound_Check_Sound_Audio_Final.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
-
-  
 <div class="poster-wrapper" id="poster">
-<h2>Testing Audio</h2>
  </div>
  <div id="caption" class="hide"></div>
-<div id="transcript"></div>
+/* <div id="transcript"></div> */
 <div id="mount"></div>
-<div id="buttons"></div>
+<div id="buttons">
+<<timed 2s>>
+   <div class="menu-wrapper col">
+      <<button "I can hear the audio">>
+       <<replace "#buttons">>
+        <</replace>>
+        <<replace "#mount">>
+          <<include "audioexplainer">>
+          <</replace>>
+        <</button>>
+
+        <<timed 2s>>
+          <br/><br/>
+    <<button "I can't hear anything">>
+     <<goto "testaudiodoesntwork">>
+      <</button>>
+        <</timed>>
+   </div>
+  <</timed>>
+  </div>
 
  /* <<timed 30s>>
  <<replace "#headerinstmount">>
@@ -597,14 +587,46 @@ setup.backTen = () => {
 <<include "footeraudio">>
 
 <<done>>
+   <<replace "#headerinstmount">><p class="note">[testing audio...]</p><</replace>>
   <<set $addC to setup.addCaptions("test")>>
+  <<addclass "#playpause" "playhighlight">>
 <</done>>
 
 
-:: instructions1b [nobr]
-<<set $prevpass to "instructions1">>
-<<set $passage to "instructions1b">>
-<<set $nextpass to "instructions1c">>
+:: audioexplainer[nobr]
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p class="explainer">Audio sections can be paused by clicking the <<link [img[assets/img/playpause.png]]>><</link>> icon. </p>
+    <</replace>>
+  <</timed>>
+  <<timed 3s>>
+  <<append "#mount">>
+       <p class="explainer"> You can move along within the audio by pressing the <span class="white">-10s</span> or <span class="white">+10s</span> icons. </p>
+ 
+    <</append>>
+  <</timed>>
+  <<timed 6s>>
+  <<append "#mount">>
+     <p class="explainer">You can listen to the section again by pressing the  <<link [img[assets/img/replay.png]]>><</link>> icon. 
+    <br/>
+    <<timed 3s>>
+      <br/>
+    <<button "Okay">>
+      <<replace "#mount">>
+          <<include "captionsexplainer">>
+          <</replace>>
+    <</button>>
+    <</timed>>
+    </p>
+    
+  <</append>>
+
+<</timed>>
+
+:: testaudiodoesntwork [nobr]
+<<set $prevpass to "testaudio">>
+<<set $passage to "testaudiodoesntwork">>
+<<set $nextpass to "testaudio">>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showForwards to true>>
@@ -618,63 +640,44 @@ setup.backTen = () => {
 <div id="mount" class="onboarding"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>Audio sections can be played back, paused or skipped forward by pressing the buttons below. </p>
+    <p>Best to ask a member of staff for help. </p>
   <</replace>>
 
-<</timed>>
 
-
- <<timed 2s>>
   <<append "#mount">>
-<<button "Next">><<goto $nextpass>><</button>>
+<<button "Back to Start">><<goto 'beginning'>><</button>>
   <</append>>
 <</timed>>
 </main>
 <<include "footer">>
 
-
-
-:: instructions1c [nobr]
-<<set $prevpass to "instructions1b">>
-<<set $passage to "instructions1c">>
-<<set $nextpass to "instructions1d">>
-<<set $showAudio to false>>
-<<set $showReplay to true>>
-<<set $showForwards to true>>
-<<set $showBackwards to true>>
-<<set $showCaptionsIcon to false>>
-<<audio ":all" stop>>
-<audio id="audio" autoplay >
-  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp4.mp3">
-</audio>
-<main class="instructions">
-
-<div id="mount" class="onboarding"></div>
+:: captionsexplainer[nobr]
 <<timed 0.1s>>
   <<append "#mount">>
-    <p>Would you like to see captions? </p>
+    <p class="explainer">Would you like to see captions? </p>
   <</append>>
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
   <<append "#mount">>
 
-     <p>You can enable or disable them at any time by clicking on the <<link [img[assets/img/captions.png]]>><</link>> icon below
-  .</p>
+     <p class="explainer">You can enable or disable them by clicking on the <<link [img[assets/img/captions.png]]>><</link>> icon below.
+        <<timed 2s>>
+      <br/>  <br/>
+ <<button "Next">><<goto $nextpass>><</button>>
+    <</timed>>
+    </p>
+   
   <</append>>
 <</timed>>
 
 
 
- <<timed 4s>>
-  <<append "#mount">>
-<<button "Next">><<goto $nextpass>><</button>>
-  <</append>>
-<</timed>>
-</main>
-<<include "footer">>
+
+
+
 
 :: instructions1d [nobr]
-<<set $prevpass to "instructions1c">>
+<<set $prevpass to "testaudio">>
 <<set $passage to "instructions1d">>
 <<set $nextpass to "audio1">>
 <<set $showAudio to false>>
@@ -694,23 +697,23 @@ setup.backTen = () => {
     <p>Now that you are all set, please make your way outside the building. </p>
   <</append>>
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
   <<append "#mount">>
     <p>Find a quiet spot where you can have a good view of the house.</p>
   <</append>>
 <</timed>>
-<<timed 4s>>
+<<timed 6s>>
   <<append "#mount">>
     <p>If it rains, feel free to stay where you are and look at the model of the house instead.</p>
   <</append>>
 <</timed>>
-<<timed 6s>>
+<<timed 9s>>
   <<append "#mount">>
     <p>When you are in position, press start. </p>
   <</append>>
 <</timed>>
 
- <<timed 7s>>
+ <<timed 10s>>
   <<append "#mount">>
 <<button "Start">><<goto $nextpass>><</button>>
   <</append>>
@@ -726,8 +729,6 @@ setup.backTen = () => {
 <<set $passage to "audio1">>
 <<set $nextpass to "instructions2">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -738,7 +739,7 @@ setup.backTen = () => {
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay >
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/01.OutsideTheHouseAudioFinal.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -764,12 +765,12 @@ setup.backTen = () => {
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio1 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio1")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 30s>>
+<<timed 100s>>
   <<replace "#buttons">>
     <<button "Next">><<goto $nextpass>><</button>>
      
@@ -804,24 +805,24 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Walk back to the house, take the mahogany staircase and go to the first floor. </p>
   <</append>>
 <</timed>>
-<<timed 4s>>
+<<timed 6s>>
   <<append "#mount">>
 <p>Ask one of the English Heritage Room Explainers if you get lost. They know the house like the back of their hand. </p>
   <</append>>
 <</timed>>
-<<timed 6s>>
+<<timed 9s>>
   <<append "#mount">>
 <p>When you are there, press the button below. </p>
   <</append>>
 <</timed>>
 
 
- <<timed 8s>>
+ <<timed 10.5s>>
   <<append "#mount">>
     <<button "I’m in the Great Room">><<goto $nextpass>><</button>>
 
@@ -835,8 +836,6 @@ transcript
 <<set $passage to "audio2">>
 <<set $nextpass to "instructions3notebook">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -847,7 +846,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/02.TheGreatRoomAudioFinal.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -859,7 +858,6 @@ transcript
 <div id="transcript"></div>
 <div id="mount"></div>
 <div id="buttons"></div>
-
 
  /* <<timed 30s>>
  <<replace "#headerinstmount">>
@@ -873,12 +871,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio2 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio2")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 3s>>
+<<timed 93s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "I found the notebook">><<goto "instructions3notebook">><</button>>
@@ -915,35 +913,35 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Look beyond appearances. </p>
   <</append>>
 <</timed>>
-<<timed 4s>>
+<<timed 5s>>
   <<append "#mount">>
 <p>Ask questions.</p>
   <</append>>
 <</timed>>
-<<timed 6s>>
+<<timed 7s>>
   <<append "#mount">>
 <p>That’s what we need.  </p>
   <</append>>
 <</timed>>
 
-<<timed 8s>>
+<<timed 9s>>
   <<replace "#mount">>
 <p>In this notebook, you will find a series of questions your predecessors have asked on their first day on the job. </p>
   <</replace>>
 <</timed>>
 
-<<timed 10s>>
+<<timed 12s>>
   <<append "#mount">>
 <p>Have a read, and add yours.  </p>
   <</append>>
 <</timed>>
 
-<<timed 12s>>
+<<timed 15s>>
   <<append "#mount">>
 <p>When you are done, press next.</p>
   <</append>>
@@ -951,7 +949,7 @@ transcript
 
 
 
- <<timed 14s>>
+ <<timed 16s>>
   <<append "#mount">>
     <<button "Next">><<goto $nextpass>><</button>>
 
@@ -983,30 +981,30 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Why, you may wonder?</p>
   <</append>>
 <</timed>>
-<<timed 4s>>
+<<timed 6s>>
   <<append "#mount">>
 <p>Because conveniently, uncomfortable secrets and questions are often hidden away. </p>
   <</append>>
 <</timed>>
-<<timed 6s>>
+<<timed 9s>>
   <<append "#mount">>
 <p>So today, your role will be to find them. </p>
   <</append>>
 <</timed>>
 
-<<timed 8s>>
+<<timed 12s>>
   <<append "#mount">>
 <p>Use your invisibility to search. To open. To unlock. To ask uncomfortable questions. </p>
   <</append>>
 <</timed>>
 
 
- <<timed 14s>>
+ <<timed 15s>>
   <<append "#mount">>
     <<button "Next">><<goto $nextpass>><</button>>
 
@@ -1039,14 +1037,14 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 4s>>
    <<append "#mount">>
 <p>Let me know when you are there. </p>
   <</append>>
 <</timed>>
 
 
- <<timed 4s>>
+ <<timed 5.5s>>
   <<append "#mount">>
     <<button "I am in the Bedchamber">><<goto $nextpass>><</button>>
 
@@ -1061,7 +1059,6 @@ transcript
 <<set $passage to "audio3">>
 <<set $nextpass to "audio3b">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
 <<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
@@ -1073,7 +1070,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/03.MissHothamsBedchamberAudioPart1.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1098,12 +1095,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio3 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio3a")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 43s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "I found the shells">><<goto $nextpass>><</button>>
@@ -1122,7 +1119,6 @@ transcript
 <<set $passage to "audio3b">>
 <<set $nextpass to "instructions4">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
 <<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
@@ -1134,7 +1130,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/03.MissHothamsBedchamberAudioPart2.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1159,12 +1155,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio3b playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio3b")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 60s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "Continue">><<goto $nextpass>><</button>>
@@ -1201,20 +1197,20 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>It’s the room on the other side of the Great Room. </p>
   <</append>>
 <</timed>>
 
-<<timed 4s>>
+<<timed 6s>>
    <<append "#mount">>
 <p>Let me know when you are there. </p>
   <</append>>
 <</timed>>
 
 
- <<timed 6s>>
+ <<timed 8s>>
   <<append "#mount">>
     <<button "I am in the Dressing Room">><<goto $nextpass>><</button>>
 
@@ -1229,8 +1225,6 @@ transcript
 <<set $passage to "audio4">>
 <<set $nextpass to "instructions5noletter">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1241,7 +1235,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/04.DressingRoomAudio.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1266,12 +1260,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio4 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio4")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 60s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "I found the letter">><<goto "instructions5letter">><</button>>
@@ -1308,14 +1302,14 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Put the letter back where you found it. </p>
   <</append>>
 <</timed>>
 
 
- <<timed 4s>>
+ <<timed 5s>>
   <<append "#mount">>
     <<button "Next">><<goto $nextpass>><</button>>
 
@@ -1387,13 +1381,13 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Let me know when you are there. </p>
   <</append>>
 <</timed>>
 
- <<timed 4s>>
+ <<timed 5s>>
   <<append "#mount">>
     <<button "I’m on top of the staircase">><<goto $nextpass>><</button>>
 
@@ -1408,8 +1402,6 @@ transcript
 <<set $passage to "audio5">>
 <<set $nextpass to "instructions6">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1420,7 +1412,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/05.StaircaseAudioFinal.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1446,12 +1438,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio5 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio5")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 168s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "Continue">><<goto $nextpass>><</button>>
@@ -1487,19 +1479,19 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Walk to the Hall next door, then enter the Breakfast Parlour on your left.</p>
   <</append>>
 <</timed>>
 
-<<timed 4s>>
+<<timed 6s>>
    <<append "#mount">>
 <p>Let me know when you are there.</p>
   <</append>>
 <</timed>>
 
- <<timed 4s>>
+ <<timed 9s>>
   <<append "#mount">>
     <<button "I’m in the Breakfast Parlour">><<goto $nextpass>><</button>>
 
@@ -1512,10 +1504,8 @@ transcript
 :: audio6 [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "instructions6">>
 <<set $passage to "audio6">>
-<<set $nextpass to "audio6b">>
+<<set $nextpass to "instructions7">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1526,7 +1516,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/06.BreakfastPalourAudioFinal.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1551,12 +1541,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio6 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio6")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 64s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "Next">><<goto $nextpass>><</button>>
@@ -1574,8 +1564,6 @@ transcript
 <<set $passage to "audio6b">>
 <<set $nextpass to "instructions7">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1611,7 +1599,7 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio6b playing...]</p><</replace>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
   <<set $addC to setup.addCaptions("test")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
@@ -1629,7 +1617,7 @@ transcript
 transcript
 
 :: instructions7 [nobr]
-<<set $prevpass to "audio6b">>
+<<set $prevpass to "audio6">>
 <<set $passage to "instructions7">>
 <<set $nextpass to "audio7">>
 <<set $showAudio to false>>
@@ -1669,13 +1657,13 @@ transcript
   <</append>>
 <</timed>>
 
-<<timed 8s>>
+<<timed 9s>>
    <<append "#mount">>
 <p>Come closer, and if you can, sit at that table.</p>
   <</append>>
 <</timed>>
 
- <<timed 10s>>
+ <<timed 11s>>
   <<append "#mount">>
     <<button "I see the map">><<goto $nextpass>><</button>>
 
@@ -1689,8 +1677,6 @@ transcript
 <<set $passage to "audio7">>
 <<set $nextpass to "instructions7change">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1701,7 +1687,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/07.TheHallAudioFinalPart1.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1726,12 +1712,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio7 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio7a")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 33s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "Some people are missing">><<goto "instructions7change">><</button>>
@@ -1767,29 +1753,29 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>Above it you have a portrait of King George II. One of the many people celebrated in this house.  </p>
   <</append>>
 <</timed>>
 
-<<timed 4s>>
+<<timed 6s>>
    <<append "#mount">>
 <p>But look closer. </p>
   <</append>>
 <</timed>>
 
-<<timed 6s>>
+<<timed 8s>>
    <<append "#mount">>
 <p>Can you find a deck of cards under his portrait? </p>
   <</append>>
 <</timed>>
 
- <<timed 8s>>
+ <<timed 10s>>
   <<append "#mount">>
   <div class="menu-wrapper">
     <<button "I have found the cards">><<goto "instructions7cards">><</button>>
-    <<button "I haven't found the cards">><<goto "instructions7nocards">><</button>>
+    <<button "I haven't found the cards">><<goto "instructions8">><</button>>
 </div>
 
   <</append>>
@@ -1820,31 +1806,31 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>With the pen provided, draw their portrait, write who they are and what makes them great. </p>
   <</append>>
 <</timed>>
 
-<<timed 4s>>
+<<timed 6s>>
    <<append "#mount">>
 <p>You can write about real people, or imagine people whose name and face have been forgotten. </p>
   <</append>>
 <</timed>>
 
-<<timed 6s>>
+<<timed 9s>>
    <<append "#mount">>
 <p>Feel free to flick through the other cards before drawing yours. </p>
   <</append>>
 <</timed>>
 
-<<timed 8s>>
+<<timed 12s>>
    <<append "#mount">>
 <p>When you are done, place your drawing back in the deck of cards on the fireplace.</p>
   <</append>>
 <</timed>>
 
- <<timed 8s>>
+ <<timed 14s>>
   <<append "#mount">>
     <<button "I am done">><<goto $nextpass>><</button>>
   <</append>>
@@ -1852,38 +1838,6 @@ transcript
 </main>
 <<include "footer">>
 
-:: instructions7nocards [nobr]
-<<set $prevpass to "instructions7change">>
-<<set $passage to "instructions7nocards">>
-<<set $nextpass to "audio7b">>
-<<set $showAudio to false>>
-<<set $showReplay to true>>
-<<set $showForwards to true>>
-<<set $showBackwards to true>>
-<<set $showCaptionsIcon to false>>
-
-<audio id="audio" autoplay >
-  <source src="">
-</audio>
-/* <<include "header">> */
-<main class="instructions">
-
-<div id="mount"></div>
-<<timed 0.1s>>
-  <<replace "#mount">>
-    <p>TBC</p>
-  <</replace>>
-
-<</timed>>
-
-
- <<timed 2s>>
-  <<append "#mount">>
-    <<button "Next">><<goto $nextpass>><</button>>
-  <</append>>
-<</timed>>
-</main>
-<<include "footer">>
 
 :: instructions7nochange [nobr]
 <<set $prevpass to "audio7">>
@@ -1908,19 +1862,19 @@ transcript
   <</replace>>
 
 <</timed>>
-<<timed 2s>>
+<<timed 3s>>
    <<append "#mount">>
 <p>You can terminate your training here. </p>
   <</append>>
 <</timed>>
 
-<<timed 4s>>
+<<timed 6s>>
    <<append "#mount">>
 <p>Otherwise, just in case you are a little bit curious, you can look for some hidden stories among the ashes.</p>
   <</append>>
 <</timed>>
 
- <<timed 4s>>
+ <<timed 9s>>
   <<append "#mount">>
    <div class="menu-wrapper">
     <<button "Look for hidden stories">><<goto "instructions7change">><</button>>
@@ -1936,10 +1890,8 @@ transcript
 :: audio7b [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "audio7">>
 <<set $passage to "audio7b">>
-<<set $nextpass to "audio8">>
+<<set $nextpass to "instructions8">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1950,7 +1902,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/07.TheHallAudioFinalPart2.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -1975,31 +1927,59 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio7b playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio7b")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
-  <<replace "#buttons">>
-    <p>Go back to the front of the house, and let me know when you are there. </p>
-     <div class="menu-wrapper">
-    <<button "I am at the front of the house">><<goto $nextpass>><</button>>
-  
-</div>
-    <</replace>>
+<<timed 17s>>
+<<goto $nextpass>>
   <</timed>>
 
 :: audio7btranscript
 transcript
+
+
+:: instructions8 [nobr]
+<<set $prevpass to "audio7">>
+<<set $passage to "instructions8">>
+<<set $nextpass to "audio8">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+  <p>Go back to the front of the house, and let me know when you are there. </p>
+
+  <</replace>>
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+   <div class="menu-wrapper">
+    <<button "I am at the front of the house">><<goto $nextpass>><</button>>
+  
+</div>
+  <</append>>
+<</timed>>
+
+</main>
+<<include "footer">>
 
 :: audio8 [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "audio7b">>
 <<set $passage to "audio8">>
 <<set $nextpass to "infopledge">>
 <<set $transcript to false>>
-<<set $playToggle to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -2010,7 +1990,7 @@ transcript
 
 <main class="story" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/audio.mp3">
+  <source src="assets/audio/08.TheEndFinal.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 
@@ -2035,12 +2015,12 @@ transcript
 <<include "footeraudio">>
 
 <<done>>
-   <<replace "#headerinstmount">><p class="note">[audio 8 playing...]</p><</replace>>
-  <<set $addC to setup.addCaptions("test")>>
+   <<replace "#headerinstmount">><p class="note">[audio playing...]</p><</replace>>
+  <<set $addC to setup.addCaptions("audio8")>>
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 5s>>
+<<timed 42s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
     <<button "Next">><<goto $nextpass>><</button>>
@@ -2118,25 +2098,25 @@ transcript
 <</timed>>
 <<timed 2s>>
    <<append "#mount">>
-<p>To find out more about the project click here. </p>
+<p>To find out more about the project click <a href="" target="_blank" rel="noreferrer" class="hlght">here</a>. </p>
   <</append>>
 <</timed>>
 
 <<timed 4s>>
    <<append "#mount">>
-<p>For more historical background about Marble Hill’s colonial history, click here.</p>
+<p>For more historical background about Marble Hill’s colonial history, click <a href="" target="_blank" rel="noreferrer" class="hlght">here</a>.</p>
   <</append>>
 <</timed>>
 
 <<timed 6s>>
    <<append "#mount">>
-<p>If you want to find out more about the next Coney projects, please sign up for our newsletter or follow us on social media.</p>
+<p>If you want to find out more about the next Coney projects, please sign up for our <a href="https://coneyhq.org/sign-up-to-our-mailing-list/" target="_blank" rel="noreferrer">newsletter</a> or follow us on social media.</p>
   <</append>>
 <</timed>>
 
 <<timed 8s>>
    <<append "#mount">>
-<div class="icon-container socials">
+<div class="icon-container socials fadeIn">
         <a href="https://www.instagram.com/agencyofconey/" target="_blank">
           <img src="assets/img/socials/insta-black.png" alt="instagram icon"></a>
         <a href="https://www.facebook.com/coneyhq/" target="_blank">
@@ -2148,7 +2128,7 @@ transcript
 <</timed>>
 
 </main>
-<<include "footer">>
+<<include "footerfinal">>
 
 :: record[nobr]
 <<set $prevpass to "infopledge">>
@@ -2160,9 +2140,10 @@ transcript
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 <main class="instructions">
-<p>By clicking Record, you consent for your recording to be published online as part of the project. You can withdraw that consent at any time. More info can be found in our terms of use.</p>
-  <p> Please try to keep your recording to 60 sec or less.</p>
-      <p>By submitting a recording here, you agree to the <a
+<h2>Record</h2>
+<p class="nofade">By clicking Record, you consent for your recording to be published online as part of the project. You can withdraw that consent at any time. More info can be found in our terms of use.</p>
+  <p class="nofade"> Please try to keep your recording to 60 sec or less.</p>
+      <p class="nofade">By submitting a recording here, you agree to the <a
           href="" target="_blank" rel="no-referrer"
           class="highlighted">terms and
           conditions</a>.</p>
@@ -2171,9 +2152,9 @@ transcript
         width="100%" height="200" frameborder="0"></iframe>
 <br/>
 
-<<button "Listen to others">><<goto "listenenter">><</button>>
+
 </main>
-<<include "footer">>
+<<include "footerrecord">>
 
 :: listenenter [nobr t8n-dissolve]
 <<set $prevpass to "infopledge">>
@@ -2186,7 +2167,7 @@ transcript
    <<set $audiooptions to ["listen1"]>>
  <<set $audiooptionscopy to $audiooptions>>
 
-<header/>
+/* <header/> */
 <main class="main-section listen entrance " id="main">
 /* <<button "Start">>
      <<set $source to $audiooptions[random(0, $audiooptions.length - 1)]>>

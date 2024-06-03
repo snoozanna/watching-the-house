@@ -30,7 +30,7 @@
   --color-buttons: var(--color-red);
   --font-headings: "Archetype", sans-serif;
   --font-body: "Caslon", sans-serif;
-  --padding: 1.5rem;
+  --padding: 2rem;
   --icon-size: 3rem;
 }
 
@@ -89,6 +89,11 @@ a:hover {
   color: #fff;
 }
 
+a.hlght{
+  color: var(--color-purple);
+  font-weight: 900;
+}
+
 #story a.link-external:after {
   content: "";
 }
@@ -96,6 +101,7 @@ a:hover {
 #story {
   margin: 0;
 }
+
 
 /* GENERAL STYLES */
 body {
@@ -241,6 +247,15 @@ nav {
   width: 100%;
 }
 
+.menu-wrapper.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+
 .menu-wrapper > button {
   margin-inline-end: 10px;
   margin-block-end: 10px;
@@ -302,6 +317,7 @@ header.standard > .header-item > h3.subtitle {
 
 main.instructions {
   justify-content: flex-start;
+  margin-block-start: 3rem;
 }
 main.instructions > h2 {
   margin-block-end: 3rem;
@@ -333,14 +349,22 @@ main.story > #mount > p > .link-image > img {
 
 main.instructions > #mount > p,
 main.instructions > p {
-  background-color: var(--color-green);
-  padding: 6px 8px;
-  border-radius: 10px;
+  /* background-color: var(--color-green); */
+  /* padding: 6px 8px; */
+  /* border-radius: 10px; */
   /* border: white 0.5px solid; */
-  color: white;
+  /* color: white; */
   width: fit-content;
+  animation: fadeIn 1s ease-in-out forwards;
+animation-delay: var(1000ms, 0s);
 
 }
+
+main.instructions > p.nofade{
+  animation: inherit;
+}
+
+
 
 main.instructions > p.amenities {
   background-color: transparent;
@@ -451,6 +475,16 @@ p.comment {
 p.comment.center,
 #headerinstmount > p.comment {
   text-align: center;
+
+}
+
+main.story > #mount > p.explainer {
+  text-align: center;
+  text-wrap: pretty;
+  }
+
+main.story > #mount > p.explainer> span.white{
+  color: white;
 }
 
 main.story.captions {
@@ -467,6 +501,11 @@ footer > .nav-wrapper.playpause-wrapper {
 #playpause.playhighlight {
   background-color: var(--color-purple);
 }
+
+#capIcon.caphighlight {
+  background-color: var(--color-purple);
+}
+
 
 main.story > .poster-wrapper {
   width: 95%;
@@ -490,6 +529,10 @@ main.story > #caption {
   padding: 0.5rem;
   text-align: center;
     font-size: 2rem;
+    text-wrap: pretty;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: var(1000ms, 0s);
 }
 
 main.story > .mount > p {
@@ -598,4 +641,20 @@ footer.listen > .nav-wrapper > .nav-item > button{
   color: black;
   box-shadow: black 4px 4px;
   border: solid black 2px;
+}
+
+
+/* Fade  */
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.fadeIn{
+  animation: fadeIn 1s ease-in-out forwards;
 }

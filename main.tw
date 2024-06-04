@@ -18,7 +18,9 @@ Watching the House
 @import url("styles/generics.css");
 @import url("styles/styles.css");
 
-
+:: UserScript [script]
+/* Import the emailjs library. */
+importScripts("https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js");
 
 :: Story JavaScript [script]
 $('#ui-bar').remove();
@@ -48,7 +50,7 @@ setup.addCaptions = (cuekey) =>  {
        audio6: [[1.11,4.56,"As you stand, once again your eyes wander."],[4.56,8.52,"You may notice a tea tray."],[8.52,13.23,"You are curious and perhaps, even after a long day, thirsty."],[14.94,19.53,"You remain discreet but edge towards the tray."],[19.53,22.14,"Feel free to open the lid, and see what's inside."],[24.42,29.28,"As you explore, smell the tea and close your eyes."],[29.28,36.57,"Like the Mahogany of the staircase, sugar, tea and coffee became highly fashionable during Henrietta's time."],[36.57,39.24,"But at what cost?"],[39.24,45.39,"You open the coffee pot and look inside."],[45.39,47.34,"Where did these goods come from?"],[47.34,51.54,"To sweeten the tea and coffee of the elites of Richmond."],[51.54,54.87,"Many people from around the world built this house,"],[54.87,57.78,"but only a few are remembered."],[57.78,61.17,"There are people whose stories are too dark and disturbing,"],[61.17,64.05,"that they are often hidden away, invisible."]], 
        audio7a: [[1.17,4.02,"You look at the map of Richmond."],[4.02,8.31,"The people of the past imagined this town as an idyllic utopia,"],[8.31,13.17,"without acknowledging the truth of how it was funded or built."],[13.17,16.59,"You might look through the cards on the table."],[16.59,20.55,"The great and the good of Richmond upon Thames."],[20.55,25.32,"The people who have been remembered, archived in history."],[25.32,31.44,"Does it feel right? Would you want to add anyone? Change anything?"]], 
        audio7b: [[0.57,2.28,"You've left your mark here now,"],[2.28,5.52,"whilst keeping things seemingly the same on the surface."],[5.52,8.34,"Perhaps that's what this job is about after all -"],[8.34,12.33,"but quick, the day is ending, and your shift is almost up."]], 
-       audio8: [[0.989,3.629,"And we are back to where we began."],[3.629,8.219,"Congratulations! Your first day as a watcher is complete."],[8.219,10.559,"Thank you for keeping watch on Marble Hill"],[10.559,15.689,"and for noticing and asking questions that others may not have."],[15.689,21.119,"At the end of your day, you take one more look at Marble Hill."],[21.119,23.159,"Does the house look any different?"],[23.159,27.209,"After spending a day observing and listening from the sidelines?"],[27.209,31.169,"How should we remember a place like this?"],[31.169,36.179,"How do we make the invisible visible?"],[36.179,39.75,"I've got one final thing for you. And then you can be on your way"]]
+       audio8: [[0.989,3.629,"And we are back to where we began."],[3.629,8.219,"Congratulations! Your first day as a watcher is complete."],[8.219,10.559,"Thank you for keeping watch on Marble Hill"],[10.559,15.689,"and for noticing and asking questions that others may not have."],[15.689,21.119,"At the end of your day, you take one more look at Marble Hill."],[21.119,23.159,"Does the house look any different?"],[23.159,27.209,"After spending a day observing and listening from the sidelines?"],[27.209,31.169,"How should we remember a place like this?"],[31.169,36.179,"How do we make the invisible visible?"],[36.179,39.75,"I've got one final thing for you. And then you can be on your way."]]
   }
   console.log("cues ", cues)
    if (!cues[cuekey]) {
@@ -111,6 +113,27 @@ setup.backTen = () => {
   audio.currentTime = timeHolder -10;
   }
 
+  // EMAIL
+
+setup.initEmail = () => {
+  console.log("initing emailjs")
+  emailjs.init("I5fGiJYF5iD8WzMJl")
+;}
+setup.test = () => {
+  const form = document.getElementById("contactForm");
+  console.log(form)
+     const data = Object.fromEntries(new FormData(form).entries());
+    console.log("formData", data);
+emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl")
+                     .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+  };
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
@@ -253,6 +276,24 @@ setup.backTen = () => {
     </div>
   </div>
      <</if>>
+</footer>
+
+:: footersimple [nobr]{"position":"100,375","size":"100,100"}
+<footer>
+
+  <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+
+ 
+    <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item">
+         [img[Forward|assets/img/for.png][$nextpass]]
+    </div>
+  </div>
+
 </footer>
 
 :: footerrecord [nobr]{"position":"100,375","size":"100,100"}
@@ -826,7 +867,7 @@ transcript
 <</timed>>
 <<timed 3s>>
    <<append "#mount">>
-<p>Walk back to the house, take the mahogany staircase and go to the first floor. </p>
+<p>Walk back to the house, take the mahogany staircase and go to the first floor, then enter the Breakfast Parlour on your left. If it is closed today, stay by the door.  </p>
   <</append>>
 <</timed>>
 <<timed 6s>>
@@ -836,15 +877,17 @@ transcript
 <</timed>>
 <<timed 9s>>
   <<append "#mount">>
-<p>When you are there, press the button below. </p>
+<p>When you are there, press one of the buttons below. </p>
   <</append>>
 <</timed>>
 
 
  <<timed 10.5s>>
   <<append "#mount">>
+     <div class="menu-wrapper">
     <<button "I’m in the Great Room">><<goto $nextpass>><</button>>
-
+     <<button "I'm at the door of the Breakfast Parlour">><<goto $nextpass>><</button>>
+</div>
   <</append>>
 <</timed>>
 </main>
@@ -898,7 +941,7 @@ transcript
 <<timed 93s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
-    <<button "I found the notebook">><<goto "instructions3notebook">><</button>>
+    <<button "I have found the notebook">><<goto "instructions3notebook">><</button>>
         <<button "The notebook is not there">><<goto "instructions3nonotebook">><</button>>
 </div>
     <</replace>>
@@ -948,19 +991,19 @@ transcript
   <</append>>
 <</timed>>
 
-<<timed 9s>>
+<<timed 12s>>
   <<replace "#mount">>
 <p>In this notebook, you will find a series of questions your predecessors have asked on their first day on the job. </p>
   <</replace>>
 <</timed>>
 
-<<timed 12s>>
+<<timed 15s>>
   <<append "#mount">>
 <p>Have a read, and add yours.  </p>
   <</append>>
 <</timed>>
 
-<<timed 15s>>
+<<timed 17s>>
   <<append "#mount">>
 <p>When you are done, press next.</p>
   <</append>>
@@ -968,7 +1011,7 @@ transcript
 
 
 
- <<timed 16s>>
+ <<timed 19s>>
   <<append "#mount">>
     <<button "Next">><<goto $nextpass>><</button>>
 
@@ -1122,7 +1165,7 @@ transcript
 <<timed 43s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
-    <<button "I found the shells">><<goto $nextpass>><</button>>
+    <<button "I have found the shells">><<goto $nextpass>><</button>>
   
 </div>
     <</replace>>
@@ -1284,10 +1327,10 @@ transcript
   <<addclass "#playpause" "playhighlight">>
 <</done>>
 
-<<timed 60s>>
+<<timed 55s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
-    <<button "I found the letter">><<goto "instructions5letter">><</button>>
+    <<button "I have found the letter">><<goto "instructions5letter">><</button>>
         <<button "I didn't find the letter">><<goto "instructions5noletter">><</button>>
 </div>
     <</replace>>
@@ -1317,18 +1360,30 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>Rhianna to add copy / context</p>
+ <p>In 1720, seeking greater financial independence from her husband and the royal court, Henrietta invested in the South Sea Company, a British joint-stock company that was granted a monopoly to supply African slaves to the islands in the "South Seas" and South America.</p>
   <</replace>>
-
 <</timed>>
-<<timed 3s>>
+
+<<timed 8s>>
+  <<append "#mount">>
+<p> The £11,500 gift she received from King George II after she left court in 1722 also contained shares in the South Sea Company. </p>
+  <</append>>
+<</timed>>
+
+<<timed 14s>>
+  <<append "#mount">>
+<p>The trans-Atlantic slave trade was therefore crucial in funding both the acquisition of the land and the building of Marble Hill House. </p>
+
+  <</append>>
+<</timed>>
+<<timed 16s>>
    <<append "#mount">>
-<p>Put the letter back where you found it. </p>
+<p>Now put this letter where you found it. </p>
   <</append>>
 <</timed>>
 
 
- <<timed 5s>>
+ <<timed 18s>>
   <<append "#mount">>
     <<button "Next">><<goto $nextpass>><</button>>
 
@@ -1340,6 +1395,54 @@ transcript
 :: instructions5noletter [nobr]
 <<set $prevpass to "audio4">>
 <<set $passage to "instructions5noletter">>
+<<set $nextpass to "instructions5noletterexplain">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+<p>Not to worry. I've saved a transcript for you.</p>
+
+/* <img src="assets/img/letter.jpeg"/> */
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+    <div id="letter" class="letter fadeIn">
+    <span class="date">Axminster, June 25 1720</span>
+    <p> I hope I need not tell you, my dear Mrs. Howard, that I heartily rejoice at your success in the South Sea, for you would have reason to think me void of friendship and gratitude if I did not. Certainly fortune never bestowed her gifts on one who deserved them more, or had a more just or elegant taste for enjoying them. But since she is not always so nice in the choice of her favourites, I cannot forbear repining that it is not in my power to put myself in her way, that I might share those bounties of which she is at present so profuse. To tell you the truth, I am almost South Sea mad, and I find that philosophical temper of mind which made me content under my circumstances, when there was no seeming probability of bettering them, forsakes me on this occasion; and I cannot, without great regret, reflect that, for want of a little money, I am forced to let slip an opportunity which is never like to happen again.</p>
+
+<p>Perhaps you will think me unreasonable when I tell you that good Lady Sunderland was so mindful of her absent friends as to secure us a five-hundred pound subscription, which money my father laid down for us, and it is now doubled; but this has but given me a taste of fortune, which makes me more eager to pursue it. As greedy as I seem, I should have been satisfied if I could by any means have raised the sum of five hundred or a thousand pounds more, but the vast price that money bears, and our being not able to make any security according to law, has made me reject a scheme I had laid of borrowing such a sum of some monied friend; but since I have given that over I shall endeavour to be content with the share I have in the good fortune of my friends, among whom I am proud to rank my dear Mrs Howard.</p>
+<span>And I am, &c.</span>
+<br/>
+<span>E. Molesworth</span>
+    </div>
+  <</append>>
+<</timed>>
+ <<timed 4s>>
+  <<append "#mount">>
+    <br/><br/>
+    <<button "What does it mean?">><<goto $nextpass>><</button>>
+
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions5noletterexplain [nobr]
+<<set $prevpass to "instructions5noletter">>
+<<set $passage to "instructions5noletterexplain">>
 <<set $nextpass to "instructions5b">>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
@@ -1356,19 +1459,23 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <img src="assets/img/letter.png">
+ <p>In 1720, seeking greater financial independence from her husband and the royal court, Henrietta invested in the South Sea Company, a British joint-stock company that was granted a monopoly to supply African slaves to the islands in the "South Seas" and South America.</p>
   <</replace>>
-
 <</timed>>
-<<timed 2s>>
-   <<append "#mount">>
-<p>Rhianna to add copy / context</p>
+
+<<timed 8s>>
+  <<append "#mount">>
+<p> The £11,500 gift she received from King George II after she left court in 1722 also contained shares in the South Sea Company. </p>
   <</append>>
 <</timed>>
 
+<<timed 14s>>
+  <<append "#mount">>
+<p>The trans-Atlantic slave trade was therefore crucial in funding both the acquisition of the land and the building of Marble Hill House. </p>
 
-
- <<timed 4s>>
+  <</append>>
+<</timed>>
+ <<timed 16s>>
   <<append "#mount">>
     <<button "Next">><<goto $nextpass>><</button>>
 
@@ -1738,7 +1845,7 @@ transcript
   <<append "#mount">>
   <div class="menu-wrapper">
     <<button "I have found the cards">><<goto "instructions7cards">><</button>>
-    <<button "I haven't found the cards">><<goto "instructions8">><</button>>
+    <<button "I haven't found the cards">><<goto "instructions7nocards">><</button>>
 </div>
 
   <</append>>
@@ -1793,6 +1900,7 @@ transcript
   <</append>>
 <</timed>>
 
+
  <<timed 14s>>
   <<append "#mount">>
     <<button "I am done">><<goto $nextpass>><</button>>
@@ -1805,7 +1913,7 @@ transcript
 :: instructions7nochange [nobr]
 <<set $prevpass to "audio7">>
 <<set $passage to "instructions7nochange">>
-<<set $nextpass to "audio7b">>
+<<set $nextpass to "infopledge">>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showForwards to true>>
@@ -1841,13 +1949,119 @@ transcript
   <<append "#mount">>
    <div class="menu-wrapper">
     <<button "Look for hidden stories">><<goto "instructions7change">><</button>>
-        <<button "Terminate your training">><<goto "infopledge">><</button>>
+        <<button "Terminate your training">><<goto "instructions8">><</button>>
 </div>
 
   <</append>>
 <</timed>>
 </main>
 <<include "footer">>
+
+:: instructions7nocards [nobr]
+<<set $prevpass to "audio7">>
+<<set $passage to "instructions7nocards">>
+<<set $nextpass to "instructions8">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions">
+
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+ <p>Classic. Objects related to silenced voices tend to disappear.
+ </p>
+  <</replace>>
+
+<</timed>>
+<<timed 3s>>
+   <<append "#mount">>
+<p>But let me ask you a question.</p>
+  <</append>>
+<</timed>>
+
+<<timed 6s>>
+   <<append "#mount">>
+<p>Who are the people who are not celebrated in this house, and should be?</p>
+  <</append>>
+<</timed>>
+
+<<timed 8s>>
+   <<append "#mount">>
+<p>In the text box below, tell us about a person from the past that should be remembered.</p>
+  <</append>>
+<</timed>>
+
+<<timed 10s>>
+   <<append "#mount">>
+<p>You can write about real people, or imagine people whose name and face have been forgotten. </p>
+  <</append>>
+<</timed>>
+
+<<timed 12s>>
+   <<append "#mount">>
+   <div class="form-container">
+      <<textarea "$writing""">>
+      <<button "Submit">><<goto "writingSubmitted">><</button>>
+   </div>
+
+  <</append>>
+<</timed>>
+
+ <<timed 14s>>
+  <<append "#mount">>
+    <<button "I am done">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+<<done>>
+  <<set $setup to setup.initEmail()>>
+  <</done>>
+
+:: writingSubmitted  [nobr]
+<<set $prevpass to "instructions7nocards">>
+<<set $pass to "writingSubmitted">>
+<<set $nextpass to "audio7b">>
+<main class="main-section">
+
+<div class="review-container">
+/* print star rating  */
+   <p><em>$writing</em></p>
+ <br/><br/>
+   <div class="confirmation" id="confirmation"><<type 60ms>><p>Sending...</p><</type>></div>
+</div>
+</main>
+
+<form id="contactForm" class="hide" >
+    
+    <label for="writing">Written Contribution:</label>
+    <textarea id="writing" name="writing" rows="4"  required>$writing</textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+<<timed 4s>>
+   <<replace "#confirmation">><p>Sent.</p><</replace>>
+
+ <</timed>>
+
+ <<timed 8s>>
+  <<goto $nextpass>>
+  <</timed>>
+
+ <<done>>
+
+<<set $s to setup.test()>>
+<</done>>
+<<include "footersimple">>
 
 
 :: audio7b [nobr]  {"position":"700,175","size":"100,100"}
@@ -2067,7 +2281,7 @@ transcript
 
 <<timed 4s>>
    <<append "#mount">>
-<p>For more historical background about Marble Hill’s colonial history, click <a href="" target="_blank" rel="noreferrer" class="hlght">here</a>.</p>
+<p>For more historical background about Marble Hill’s colonial history, click <<link "here">><<goto "history">><</link>>.</p>
   <</append>>
 <</timed>>
 
@@ -2090,8 +2304,51 @@ transcript
   <</append>>
 <</timed>>
 
+<<timed 10s>>
+   <<append "#mount">>
+    <br/>
+<p>We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking <a href="" target="_blank" rel="noreferrer">here</a>.</p>
+  <</append>>
+<</timed>>
 </main>
 <<include "footerfinal">>
+
+
+:: history [nobr]
+<<set $prevpass to "infopledge">>
+<<set $passage to "end">>
+<<set $nextpass to "end">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+/* <<include "header">> */
+<main class="instructions history">
+<<timed 0.1s>>
+<h2>Historical background</h2>
+<</timed>>
+<br/>
+<<timed 1s>>
+<div class="fadeIn historyLinks">
+  <p><span class="type">Website</span><br/> Traces of the Transatlantic Slave Economy in the National Heritage Collection. <a href="" target="_blank" rel="noreferrer">Visit.</a></p>
+  <p><span class="type">Report</span> <br/>The slavery connections of Marble Hill House. <a href="" target="_blank" rel="noreferrer">Read.</a></p>
+  <p><span class="type">Lecture</span> <br/>Teaching and learning about enslavement history. <a href="" target="_blank" rel="noreferrer">Watch.</a></p>
+  <p><span class="type">Website</span><br/> Black History & English Heritage. <a href="" target="_blank" rel="noreferrer">Visit.</a></p>
+  </div>
+  <</timed>>
+
+
+
+
+
+
+</main>
+<<include "footerback">>
 
 :: record[nobr]
 <<set $prevpass to "infopledge">>

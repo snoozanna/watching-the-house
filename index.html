@@ -98,10 +98,14 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://0C31A3C2-BFA7-4333-91F9-C259DAB24B98// --><tw-storydata name="Watching the House" startnode="10" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="0C31A3C2-BFA7-4333-91F9-C259DAB24B98" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://0C31A3C2-BFA7-4333-91F9-C259DAB24B98// --><tw-storydata name="Watching the House" startnode="11" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="0C31A3C2-BFA7-4333-91F9-C259DAB24B98" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url("styles/generics.css");
-@import url("styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
+@import url("styles/styles.css");</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "UserScript" */
+/* Import the emailjs library. */
+importScripts("https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js");
+/* twine-user-script #2: "Story JavaScript" */
+$('#ui-bar').remove();
 $(document.head).find('#style-ui-bar').remove();
 
 
@@ -128,7 +132,7 @@ setup.addCaptions = (cuekey) =>  {
        audio6: [[1.11,4.56,"As you stand, once again your eyes wander."],[4.56,8.52,"You may notice a tea tray."],[8.52,13.23,"You are curious and perhaps, even after a long day, thirsty."],[14.94,19.53,"You remain discreet but edge towards the tray."],[19.53,22.14,"Feel free to open the lid, and see what's inside."],[24.42,29.28,"As you explore, smell the tea and close your eyes."],[29.28,36.57,"Like the Mahogany of the staircase, sugar, tea and coffee became highly fashionable during Henrietta's time."],[36.57,39.24,"But at what cost?"],[39.24,45.39,"You open the coffee pot and look inside."],[45.39,47.34,"Where did these goods come from?"],[47.34,51.54,"To sweeten the tea and coffee of the elites of Richmond."],[51.54,54.87,"Many people from around the world built this house,"],[54.87,57.78,"but only a few are remembered."],[57.78,61.17,"There are people whose stories are too dark and disturbing,"],[61.17,64.05,"that they are often hidden away, invisible."]], 
        audio7a: [[1.17,4.02,"You look at the map of Richmond."],[4.02,8.31,"The people of the past imagined this town as an idyllic utopia,"],[8.31,13.17,"without acknowledging the truth of how it was funded or built."],[13.17,16.59,"You might look through the cards on the table."],[16.59,20.55,"The great and the good of Richmond upon Thames."],[20.55,25.32,"The people who have been remembered, archived in history."],[25.32,31.44,"Does it feel right? Would you want to add anyone? Change anything?"]], 
        audio7b: [[0.57,2.28,"You've left your mark here now,"],[2.28,5.52,"whilst keeping things seemingly the same on the surface."],[5.52,8.34,"Perhaps that's what this job is about after all -"],[8.34,12.33,"but quick, the day is ending, and your shift is almost up."]], 
-       audio8: [[0.989,3.629,"And we are back to where we began."],[3.629,8.219,"Congratulations! Your first day as a watcher is complete."],[8.219,10.559,"Thank you for keeping watch on Marble Hill"],[10.559,15.689,"and for noticing and asking questions that others may not have."],[15.689,21.119,"At the end of your day, you take one more look at Marble Hill."],[21.119,23.159,"Does the house look any different?"],[23.159,27.209,"After spending a day observing and listening from the sidelines?"],[27.209,31.169,"How should we remember a place like this?"],[31.169,36.179,"How do we make the invisible visible?"],[36.179,39.75,"I've got one final thing for you. And then you can be on your way"]]
+       audio8: [[0.989,3.629,"And we are back to where we began."],[3.629,8.219,"Congratulations! Your first day as a watcher is complete."],[8.219,10.559,"Thank you for keeping watch on Marble Hill"],[10.559,15.689,"and for noticing and asking questions that others may not have."],[15.689,21.119,"At the end of your day, you take one more look at Marble Hill."],[21.119,23.159,"Does the house look any different?"],[23.159,27.209,"After spending a day observing and listening from the sidelines?"],[27.209,31.169,"How should we remember a place like this?"],[31.169,36.179,"How do we make the invisible visible?"],[36.179,39.75,"I've got one final thing for you. And then you can be on your way."]]
   }
   console.log("cues ", cues)
    if (!cues[cuekey]) {
@@ -189,7 +193,29 @@ setup.backTen = () => {
   const audio = document.getElementById("audio");
   const timeHolder = audio.currentTime;
   audio.currentTime = timeHolder -10;
-  }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;1&quot; &quot;assets/audio/1.mp3&quot;&gt;&gt;
+  }
+
+  // EMAIL
+
+setup.initEmail = () => {
+  console.log("initing emailjs")
+  emailjs.init("I5fGiJYF5iD8WzMJl")
+;}
+setup.test = () => {
+  const form = document.getElementById("contactForm");
+  console.log(form)
+     const data = Object.fromEntries(new FormData(form).entries());
+    console.log("formData", data);
+emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl")
+                     .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+  };</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;1&quot; &quot;assets/audio/1.mp3&quot;&gt;&gt;
 
 &lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;standard&quot;&gt;
 &lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
@@ -313,7 +339,22 @@ setup.backTen = () => {
     &lt;/div&gt;
   &lt;/div&gt;
      &lt;&lt;/if&gt;&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerrecord" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;listen&quot;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footersimple" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+
+  &lt;div class=&quot;nav-wrapper&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+        [img[Back|assets/img/back.png][$prevpass]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+ 
+    &lt;div class=&quot;nav-wrapper&quot; id=&quot;forIcon&quot;&gt;
+    &lt;div class=&quot;nav-item&quot;&gt;
+         [img[Forward|assets/img/for.png][$nextpass]]
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerrecord" tags="nobr" position="100,375" size="100,100">&lt;footer class=&quot;listen&quot;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/back.png][$prevpass]]
@@ -327,7 +368,7 @@ setup.backTen = () => {
     &lt;/div&gt;
   &lt;/div&gt;
 
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerfinal" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerfinal" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
 
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -348,7 +389,7 @@ setup.backTen = () => {
     &lt;/div&gt;
   &lt;/div&gt;
 
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="footerback" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
         [img[Back|assets/img/back.png][$prevpass]]
@@ -358,7 +399,7 @@ setup.backTen = () => {
  
   &lt;/div&gt;
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="8" name="footerfor" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="9" name="footerfor" tags="nobr" position="100,375" size="100,100">&lt;footer&gt;
 &lt;div&gt;&lt;/div&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
@@ -367,7 +408,7 @@ setup.backTen = () => {
   &lt;/div&gt;
 
   
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="9" name="footeraudio" tags="nobr" position="1100,100" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="10" name="footeraudio" tags="nobr" position="1225,100" size="100,100">&lt;footer&gt;
 
 &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
 &lt;div class=&quot;nav-wrapper&quot;&gt;
@@ -463,7 +504,7 @@ setup.backTen = () => {
      &lt;&lt;toggleclass &quot;#storyContainer&quot; &quot;captions&quot;&gt;&gt;
     &lt;&lt;set $fn to setup.showCap()&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="beginning" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="beginning" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;framing&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -481,7 +522,7 @@ setup.backTen = () => {
  &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;&lt;button &quot;Start now&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="11" name="framing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="12" name="framing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;framing&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions1&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -515,7 +556,7 @@ setup.backTen = () => {
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="instructions1" tags="nobr" position="225,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="instructions1" tags="nobr" position="350,225" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions1&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;testaudio&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -557,7 +598,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="testaudio" tags="nobr" position="350,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions1&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="testaudio" tags="nobr" position="475,225" size="100,100">&lt;&lt;set $prevpass to &quot;instructions1&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;testaudio&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions1d&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -634,7 +675,7 @@ setup.backTen = () => {
    &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;&lt;p class=&quot;note&quot;&gt;[testing audio...]&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
   &lt;&lt;set $addC to setup.addCaptions(&quot;test&quot;)&gt;&gt;
   &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="audioexplainer" tags="nobr" position="475,225" size="100,100">&lt;&lt;timed 0.1s&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="audioexplainer" tags="nobr" position="600,225" size="100,100">&lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
     &lt;p class=&quot;explainer&quot;&gt;Audio sections can be paused by clicking the &lt;&lt;link [img[assets/img/playpause.png]]&gt;&gt;&lt;&lt;/link&gt;&gt; icon. &lt;/p&gt;
     &lt;&lt;/replace&gt;&gt;
@@ -661,7 +702,7 @@ setup.backTen = () => {
     
   &lt;&lt;/append&gt;&gt;
 
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="testaudiodoesntwork" tags="nobr" position="600,225" size="100,100">&lt;&lt;set $prevpass to &quot;testaudio&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="testaudiodoesntwork" tags="nobr" position="725,225" size="100,100">&lt;&lt;set $prevpass to &quot;testaudio&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;testaudiodoesntwork&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;testaudio&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -686,7 +727,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="captionsexplainer" tags="nobr" position="725,225" size="100,100">&lt;&lt;timed 0.1s&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="captionsexplainer" tags="nobr" position="850,225" size="100,100">&lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;p class=&quot;explainer&quot;&gt;Would you like to see captions? &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
@@ -702,7 +743,7 @@ setup.backTen = () => {
     &lt;/p&gt;
    
   &lt;&lt;/append&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="instructions1d" tags="nobr" position="850,225" size="100,100">&lt;&lt;set $prevpass to &quot;testaudio&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="instructions1d" tags="nobr" position="975,225" size="100,100">&lt;&lt;set $prevpass to &quot;testaudio&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions1d&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio1&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -744,7 +785,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="audio1" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions1d&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="audio1" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions1d&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio1&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -794,7 +835,7 @@ setup.backTen = () => {
     &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
      
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="audio1transcript" tags="" position="1100,225" size="100,100">transcript</tw-passagedata><tw-passagedata pid="20" name="instructions2" tags="nobr" position="1225,225" size="100,100">&lt;&lt;set $prevpass to &quot;audio1&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="audio1transcript" tags="" position="1225,225" size="100,100">transcript</tw-passagedata><tw-passagedata pid="21" name="instructions2" tags="nobr" position="100,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio1&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio2&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -818,7 +859,7 @@ setup.backTen = () => {
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 3s&gt;&gt;
    &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;Walk back to the house, take the mahogany staircase and go to the first floor. &lt;/p&gt;
+&lt;p&gt;Walk back to the house, take the mahogany staircase and go to the first floor, then enter the Breakfast Parlour on your left. If it is closed today, stay by the door.  &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 6s&gt;&gt;
@@ -828,19 +869,21 @@ setup.backTen = () => {
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 9s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;When you are there, press the button below. &lt;/p&gt;
+&lt;p&gt;When you are there, press one of the buttons below. &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
 
  &lt;&lt;timed 10.5s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+     &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;&lt;button &quot;I’m in the Great Room&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
-
+     &lt;&lt;button &quot;I&#39;m at the door of the Breakfast Parlour&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="audio2" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="audio2" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio2&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions3notebook&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -887,11 +930,11 @@ setup.backTen = () => {
 &lt;&lt;timed 93s&gt;&gt;
   &lt;&lt;replace &quot;#buttons&quot;&gt;&gt;
      &lt;div class=&quot;menu-wrapper&quot;&gt;
-    &lt;&lt;button &quot;I found the notebook&quot;&gt;&gt;&lt;&lt;goto &quot;instructions3notebook&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+    &lt;&lt;button &quot;I have found the notebook&quot;&gt;&gt;&lt;&lt;goto &quot;instructions3notebook&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
         &lt;&lt;button &quot;The notebook is not there&quot;&gt;&gt;&lt;&lt;goto &quot;instructions3nonotebook&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="audio2transcript" tags="" position="225,350" size="100,100">transcript</tw-passagedata><tw-passagedata pid="23" name="instructions3notebook" tags="nobr" position="350,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio2&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="audio2transcript" tags="" position="350,350" size="100,100">transcript</tw-passagedata><tw-passagedata pid="24" name="instructions3notebook" tags="nobr" position="475,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions3notebook&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions3b&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -929,19 +972,19 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 9s&gt;&gt;
+&lt;&lt;timed 12s&gt;&gt;
   &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
 &lt;p&gt;In this notebook, you will find a series of questions your predecessors have asked on their first day on the job. &lt;/p&gt;
   &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 12s&gt;&gt;
+&lt;&lt;timed 15s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
 &lt;p&gt;Have a read, and add yours.  &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 15s&gt;&gt;
+&lt;&lt;timed 17s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
 &lt;p&gt;When you are done, press next.&lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
@@ -949,14 +992,14 @@ setup.backTen = () => {
 
 
 
- &lt;&lt;timed 16s&gt;&gt;
+ &lt;&lt;timed 19s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="instructions3nonotebook" tags="nobr" position="475,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="instructions3nonotebook" tags="nobr" position="600,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions3nonotebook&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions3b&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1008,7 +1051,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="instructions3b" tags="nobr" position="600,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="instructions3b" tags="nobr" position="725,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions3b&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio3&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1044,7 +1087,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="audio3" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="audio3" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions2&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio3&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio3b&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1092,11 +1135,11 @@ setup.backTen = () => {
 &lt;&lt;timed 43s&gt;&gt;
   &lt;&lt;replace &quot;#buttons&quot;&gt;&gt;
      &lt;div class=&quot;menu-wrapper&quot;&gt;
-    &lt;&lt;button &quot;I found the shells&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+    &lt;&lt;button &quot;I have found the shells&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
   
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="audio3transcript" tags="" position="850,350" size="100,100">transcript</tw-passagedata><tw-passagedata pid="28" name="audio3b" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;audio3&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="audio3transcript" tags="" position="975,350" size="100,100">transcript</tw-passagedata><tw-passagedata pid="29" name="audio3b" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;audio3&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio3b&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions4&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1148,7 +1191,7 @@ setup.backTen = () => {
   
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="audio3btranscript" tags="" position="1100,350" size="100,100">transcript</tw-passagedata><tw-passagedata pid="30" name="instructions4" tags="nobr" position="1225,350" size="100,100">&lt;&lt;set $prevpass to &quot;audio3b&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="audio3btranscript" tags="" position="1225,350" size="100,100">transcript</tw-passagedata><tw-passagedata pid="31" name="instructions4" tags="nobr" position="100,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio3b&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions4&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio4&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1190,7 +1233,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="audio4" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions4&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="audio4" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions4&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio4&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions5noletter&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1234,14 +1277,14 @@ setup.backTen = () => {
   &lt;&lt;addclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
 &lt;&lt;/done&gt;&gt;
 
-&lt;&lt;timed 60s&gt;&gt;
+&lt;&lt;timed 55s&gt;&gt;
   &lt;&lt;replace &quot;#buttons&quot;&gt;&gt;
      &lt;div class=&quot;menu-wrapper&quot;&gt;
-    &lt;&lt;button &quot;I found the letter&quot;&gt;&gt;&lt;&lt;goto &quot;instructions5letter&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+    &lt;&lt;button &quot;I have found the letter&quot;&gt;&gt;&lt;&lt;goto &quot;instructions5letter&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
         &lt;&lt;button &quot;I didn&#39;t find the letter&quot;&gt;&gt;&lt;&lt;goto &quot;instructions5noletter&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="audio4transcript" tags="" position="225,475" size="100,100">transcript</tw-passagedata><tw-passagedata pid="33" name="instructions5letter" tags="nobr" position="350,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio4&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="audio4transcript" tags="" position="350,475" size="100,100">transcript</tw-passagedata><tw-passagedata pid="34" name="instructions5letter" tags="nobr" position="475,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio4&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions5letter&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions5b&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1259,26 +1302,83 @@ setup.backTen = () => {
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-    &lt;p&gt;Rhianna to add copy / context&lt;/p&gt;
+ &lt;p&gt;In 1720, seeking greater financial independence from her husband and the royal court, Henrietta invested in the South Sea Company, a British joint-stock company that was granted a monopoly to supply African slaves to the islands in the &quot;South Seas&quot; and South America.&lt;/p&gt;
   &lt;&lt;/replace&gt;&gt;
-
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 3s&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt; The £11,500 gift she received from King George II after she left court in 1722 also contained shares in the South Sea Company. &lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 14s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;The trans-Atlantic slave trade was therefore crucial in funding both the acquisition of the land and the building of Marble Hill House. &lt;/p&gt;
+
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 16s&gt;&gt;
    &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;Put the letter back where you found it. &lt;/p&gt;
+&lt;p&gt;Now put this letter where you found it. &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
 
- &lt;&lt;timed 5s&gt;&gt;
+ &lt;&lt;timed 18s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="instructions5noletter" tags="nobr" position="475,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio4&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="instructions5noletter" tags="nobr" position="600,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio4&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions5noletter&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;instructions5noletterexplain&quot;&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+&lt;audio id=&quot;audio&quot; autoplay &gt;
+  &lt;source src=&quot;&quot;&gt;
+&lt;/audio&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;instructions&quot;&gt;
+
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;
+  &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;Not to worry. I&#39;ve saved a transcript for you.&lt;/p&gt;
+
+/* &lt;img src=&quot;assets/img/letter.jpeg&quot;/&gt; */
+  &lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;div id=&quot;letter&quot; class=&quot;letter fadeIn&quot;&gt;
+    &lt;span class=&quot;date&quot;&gt;Axminster, June 25 1720&lt;/span&gt;
+    &lt;p&gt; I hope I need not tell you, my dear Mrs. Howard, that I heartily rejoice at your success in the South Sea, for you would have reason to think me void of friendship and gratitude if I did not. Certainly fortune never bestowed her gifts on one who deserved them more, or had a more just or elegant taste for enjoying them. But since she is not always so nice in the choice of her favourites, I cannot forbear repining that it is not in my power to put myself in her way, that I might share those bounties of which she is at present so profuse. To tell you the truth, I am almost South Sea mad, and I find that philosophical temper of mind which made me content under my circumstances, when there was no seeming probability of bettering them, forsakes me on this occasion; and I cannot, without great regret, reflect that, for want of a little money, I am forced to let slip an opportunity which is never like to happen again.&lt;/p&gt;
+
+&lt;p&gt;Perhaps you will think me unreasonable when I tell you that good Lady Sunderland was so mindful of her absent friends as to secure us a five-hundred pound subscription, which money my father laid down for us, and it is now doubled; but this has but given me a taste of fortune, which makes me more eager to pursue it. As greedy as I seem, I should have been satisfied if I could by any means have raised the sum of five hundred or a thousand pounds more, but the vast price that money bears, and our being not able to make any security according to law, has made me reject a scheme I had laid of borrowing such a sum of some monied friend; but since I have given that over I shall endeavour to be content with the share I have in the good fortune of my friends, among whom I am proud to rank my dear Mrs Howard.&lt;/p&gt;
+&lt;span&gt;And I am, &amp;c.&lt;/span&gt;
+&lt;br/&gt;
+&lt;span&gt;E. Molesworth&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+ &lt;&lt;timed 4s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;br/&gt;&lt;br/&gt;
+    &lt;&lt;button &quot;What does it mean?&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="instructions5noletterexplain" tags="nobr" position="725,475" size="100,100">&lt;&lt;set $prevpass to &quot;instructions5noletter&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;instructions5noletterexplain&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions5b&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
 &lt;&lt;set $showReplay to true&gt;&gt;
@@ -1295,26 +1395,30 @@ setup.backTen = () => {
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-    &lt;img src=&quot;assets/img/letter.png&quot;&gt;
+ &lt;p&gt;In 1720, seeking greater financial independence from her husband and the royal court, Henrietta invested in the South Sea Company, a British joint-stock company that was granted a monopoly to supply African slaves to the islands in the &quot;South Seas&quot; and South America.&lt;/p&gt;
   &lt;&lt;/replace&gt;&gt;
-
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;
-   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;Rhianna to add copy / context&lt;/p&gt;
+
+&lt;&lt;timed 8s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt; The £11,500 gift she received from King George II after she left court in 1722 also contained shares in the South Sea Company. &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
+&lt;&lt;timed 14s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;The trans-Atlantic slave trade was therefore crucial in funding both the acquisition of the land and the building of Marble Hill House. &lt;/p&gt;
 
-
- &lt;&lt;timed 4s&gt;&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+ &lt;&lt;timed 16s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="instructions5b" tags="nobr" position="600,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio4&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="instructions5b" tags="nobr" position="850,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio4&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions5b&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio5&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1349,7 +1453,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="audio5" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions5b&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="audio5" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions5b&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio5&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions6&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1400,7 +1504,7 @@ setup.backTen = () => {
     &lt;&lt;button &quot;Continue&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="audio5transcript" tags="" position="850,475" size="100,100">transcript</tw-passagedata><tw-passagedata pid="38" name="instructions6" tags="nobr" position="975,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio5&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="audio5transcript" tags="" position="1100,475" size="100,100">transcript</tw-passagedata><tw-passagedata pid="40" name="instructions6" tags="nobr" position="1225,475" size="100,100">&lt;&lt;set $prevpass to &quot;audio5&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions6&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio6&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1441,7 +1545,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="audio6" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions6&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="audio6" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions6&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio6&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions7&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1491,7 +1595,7 @@ setup.backTen = () => {
     &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="audio6transcript" tags="" position="1225,475" size="100,100">transcript</tw-passagedata><tw-passagedata pid="41" name="instructions7" tags="nobr" position="100,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio6&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="audio6transcript" tags="" position="225,600" size="100,100">transcript</tw-passagedata><tw-passagedata pid="43" name="instructions7" tags="nobr" position="350,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio6&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions7&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio7&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1544,7 +1648,7 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="audio7" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions7&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="audio7" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;instructions7&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio7&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions7change&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1595,7 +1699,7 @@ setup.backTen = () => {
         &lt;&lt;button &quot;Keep things as they are&quot;&gt;&gt;&lt;&lt;goto &quot;instructions7nochange&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="audio7transcript" tags="" position="350,600" size="100,100">transcript</tw-passagedata><tw-passagedata pid="44" name="instructions7change" tags="nobr" position="475,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="audio7transcript" tags="" position="600,600" size="100,100">transcript</tw-passagedata><tw-passagedata pid="46" name="instructions7change" tags="nobr" position="725,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions7change&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions7cards&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1639,13 +1743,13 @@ setup.backTen = () => {
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
   &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;&lt;button &quot;I have found the cards&quot;&gt;&gt;&lt;&lt;goto &quot;instructions7cards&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-    &lt;&lt;button &quot;I haven&#39;t found the cards&quot;&gt;&gt;&lt;&lt;goto &quot;instructions8&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+    &lt;&lt;button &quot;I haven&#39;t found the cards&quot;&gt;&gt;&lt;&lt;goto &quot;instructions7nocards&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="instructions7cards" tags="nobr" position="600,600" size="100,100">&lt;&lt;set $prevpass to &quot;instructions7change&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="instructions7cards" tags="nobr" position="850,600" size="100,100">&lt;&lt;set $prevpass to &quot;instructions7change&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions7cards&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio7b&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1691,15 +1795,16 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
+
  &lt;&lt;timed 14s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;&lt;button &quot;I am done&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="instructions7nochange" tags="nobr" position="725,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="instructions7nochange" tags="nobr" position="975,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions7nochange&quot;&gt;&gt;
-&lt;&lt;set $nextpass to &quot;audio7b&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;infopledge&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
 &lt;&lt;set $showReplay to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
@@ -1735,13 +1840,113 @@ setup.backTen = () => {
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
    &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;&lt;button &quot;Look for hidden stories&quot;&gt;&gt;&lt;&lt;goto &quot;instructions7change&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-        &lt;&lt;button &quot;Terminate your training&quot;&gt;&gt;&lt;&lt;goto &quot;infopledge&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+        &lt;&lt;button &quot;Terminate your training&quot;&gt;&gt;&lt;&lt;goto &quot;instructions8&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="audio7b" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="instructions7nocards" tags="nobr" position="1100,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;instructions7nocards&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;instructions8&quot;&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+&lt;audio id=&quot;audio&quot; autoplay &gt;
+  &lt;source src=&quot;&quot;&gt;
+&lt;/audio&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;instructions&quot;&gt;
+
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;timed 0.1s&gt;&gt;
+  &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+ &lt;p&gt;Classic. Objects related to silenced voices tend to disappear.
+ &lt;/p&gt;
+  &lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;But let me ask you a question.&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 6s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;Who are the people who are not celebrated in this house, and should be?&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;In the text box below, tell us about a person from the past that should be remembered.&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;You can write about real people, or imagine people whose name and face have been forgotten. &lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+   &lt;div class=&quot;form-container&quot;&gt;
+      &lt;&lt;textarea &quot;$writing&quot;&quot;&quot;&gt;&gt;
+      &lt;&lt;button &quot;Submit&quot;&gt;&gt;&lt;&lt;goto &quot;writingSubmitted&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+   &lt;/div&gt;
+
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;timed 14s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;&lt;button &quot;I am done&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;/main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;
+&lt;&lt;done&gt;&gt;
+  &lt;&lt;set $setup to setup.initEmail()&gt;&gt;
+  &lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="writingSubmitted" tags="nobr" position="1225,600" size="100,100">&lt;&lt;set $prevpass to &quot;instructions7nocards&quot;&gt;&gt;
+&lt;&lt;set $pass to &quot;writingSubmitted&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;audio7b&quot;&gt;&gt;
+&lt;main class=&quot;main-section&quot;&gt;
+
+&lt;div class=&quot;review-container&quot;&gt;
+/* print star rating  */
+   &lt;p&gt;&lt;em&gt;$writing&lt;/em&gt;&lt;/p&gt;
+ &lt;br/&gt;&lt;br/&gt;
+   &lt;div class=&quot;confirmation&quot; id=&quot;confirmation&quot;&gt;&lt;&lt;type 60ms&gt;&gt;&lt;p&gt;Sending...&lt;/p&gt;&lt;&lt;/type&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;form id=&quot;contactForm&quot; class=&quot;hide&quot; &gt;
+    
+    &lt;label for=&quot;writing&quot;&gt;Written Contribution:&lt;/label&gt;
+    &lt;textarea id=&quot;writing&quot; name=&quot;writing&quot; rows=&quot;4&quot;  required&gt;$writing&lt;/textarea&gt;
+
+    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+
+&lt;&lt;timed 4s&gt;&gt;
+   &lt;&lt;replace &quot;#confirmation&quot;&gt;&gt;&lt;p&gt;Sent.&lt;/p&gt;&lt;&lt;/replace&gt;&gt;
+
+ &lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;timed 8s&gt;&gt;
+  &lt;&lt;goto $nextpass&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;done&gt;&gt;
+
+&lt;&lt;set $s to setup.test()&gt;&gt;
+&lt;&lt;/done&gt;&gt;
+&lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="audio7b" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio7b&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;instructions8&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1787,7 +1992,7 @@ setup.backTen = () => {
 
 &lt;&lt;timed 17s&gt;&gt;
 &lt;&lt;goto $nextpass&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="audio7btranscript" tags="" position="975,600" size="100,100">transcript</tw-passagedata><tw-passagedata pid="49" name="instructions8" tags="nobr" position="1100,600" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="audio7btranscript" tags="" position="225,725" size="100,100">transcript</tw-passagedata><tw-passagedata pid="53" name="instructions8" tags="nobr" position="350,725" size="100,100">&lt;&lt;set $prevpass to &quot;audio7&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;instructions8&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;audio8&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1819,7 +2024,7 @@ setup.backTen = () => {
 &lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="audio8" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;audio7b&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="audio8" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;audio7b&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;audio8&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;infopledge&quot;&gt;&gt;
 &lt;&lt;set $transcript to false&gt;&gt;
@@ -1870,7 +2075,7 @@ setup.backTen = () => {
 
 &lt;/div&gt;
     &lt;&lt;/replace&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="audio8transcript" tags="" position="100,725" size="100,100">transcript</tw-passagedata><tw-passagedata pid="52" name="infopledge" tags="nobr" position="225,725" size="100,100">&lt;&lt;set $prevpass to &quot;audio8&quot;&gt;&gt;
+  &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="audio8transcript" tags="" position="600,725" size="100,100">transcript</tw-passagedata><tw-passagedata pid="56" name="infopledge" tags="nobr" position="725,725" size="100,100">&lt;&lt;set $prevpass to &quot;audio8&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;infopledge&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;record&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1905,7 +2110,7 @@ setup.backTen = () => {
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="end" tags="nobr" position="350,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="end" tags="nobr" position="850,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;end&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;end&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1935,7 +2140,7 @@ setup.backTen = () => {
 
 &lt;&lt;timed 4s&gt;&gt;
    &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;For more historical background about Marble Hill’s colonial history, click &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot; class=&quot;hlght&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more historical background about Marble Hill’s colonial history, click &lt;&lt;link &quot;here&quot;&gt;&gt;&lt;&lt;goto &quot;history&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;.&lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
@@ -1958,8 +2163,47 @@ setup.backTen = () => {
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
+&lt;&lt;timed 10s&gt;&gt;
+   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;br/&gt;
+&lt;p&gt;We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footerfinal&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="record" tags="nobr" position="475,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
+&lt;&lt;include &quot;footerfinal&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="history" tags="nobr" position="975,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
+&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;
+&lt;&lt;set $nextpass to &quot;end&quot;&gt;&gt;
+&lt;&lt;set $showAudio to false&gt;&gt;
+&lt;&lt;set $showReplay to true&gt;&gt;
+&lt;&lt;set $showForwards to true&gt;&gt;
+&lt;&lt;set $showBackwards to true&gt;&gt;
+&lt;&lt;set $showCaptionsIcon to false&gt;&gt;
+
+&lt;audio id=&quot;audio&quot; autoplay &gt;
+  &lt;source src=&quot;&quot;&gt;
+&lt;/audio&gt;
+/* &lt;&lt;include &quot;header&quot;&gt;&gt; */
+&lt;main class=&quot;instructions history&quot;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;
+&lt;h2&gt;Historical background&lt;/h2&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;br/&gt;
+&lt;&lt;timed 1s&gt;&gt;
+&lt;div class=&quot;fadeIn historyLinks&quot;&gt;
+  &lt;p&gt;&lt;span class=&quot;type&quot;&gt;Website&lt;/span&gt;&lt;br/&gt; Traces of the Transatlantic Slave Economy in the National Heritage Collection. &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Visit.&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;type&quot;&gt;Report&lt;/span&gt; &lt;br/&gt;The slavery connections of Marble Hill House. &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Read.&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;type&quot;&gt;Lecture&lt;/span&gt; &lt;br/&gt;Teaching and learning about enslavement history. &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Watch.&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;span class=&quot;type&quot;&gt;Website&lt;/span&gt;&lt;br/&gt; Black History &amp; English Heritage. &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Visit.&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;&lt;/timed&gt;&gt;
+
+
+
+
+
+
+&lt;/main&gt;
+&lt;&lt;include &quot;footerback&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="record" tags="nobr" position="1100,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;record&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;listen&quot;&gt;&gt;
 &lt;&lt;set $showAudio to false&gt;&gt;
@@ -1982,7 +2226,7 @@ setup.backTen = () => {
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footerrecord&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="listenenter" tags="nobr t8n-dissolve" position="600,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
+&lt;&lt;include &quot;footerrecord&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="listenenter" tags="nobr t8n-dissolve" position="1225,725" size="100,100">&lt;&lt;set $prevpass to &quot;infopledge&quot;&gt;&gt;
 &lt;&lt;set $passage to &quot;listenenter&quot;&gt;&gt;
 &lt;&lt;set $nextpass to &quot;listen&quot;&gt;&gt;
 &lt;&lt;set $captions to false&gt;&gt;
@@ -2006,7 +2250,7 @@ setup.backTen = () => {
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt; 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="listen" tags="nobr t8n.typewriter.4 t8n-dissolve" position="725,725" size="100,100">&lt;&lt;set $showCaptionsIcon to true&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="listen" tags="nobr t8n.typewriter.4 t8n-dissolve" position="100,850" size="100,100">&lt;&lt;set $showCaptionsIcon to true&gt;&gt;
 &lt;&lt;set $showAudioIcon to true&gt;&gt;
 &lt;&lt;set $showBackwards to true&gt;&gt;
 /* &lt;&lt;set $sound to true&gt;&gt; */
@@ -2037,7 +2281,7 @@ setup.backTen = () => {
 &lt;&lt;/if&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footerlisten&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="headerlisten" tags="nobr" position="850,725" size="100,100">&lt;header class=&quot;listen player&quot; &gt;
+&lt;&lt;include &quot;footerlisten&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="headerlisten" tags="nobr" position="225,850" size="100,100">&lt;header class=&quot;listen player&quot; &gt;
 
       &lt;div class=&quot;nav-item&quot;&gt;
           [img[Back|../assets/img/back-black.png][infopledge]]
@@ -2062,7 +2306,7 @@ setup.backTen = () => {
 &lt;&lt;/button&gt;&gt;
  &lt;/div&gt;
   
-&lt;/header&gt;</tw-passagedata><tw-passagedata pid="58" name="footerlisten" tags="nobr" position="975,725" size="100,100">&lt;footer class=&quot;listen&quot;&gt;
+&lt;/header&gt;</tw-passagedata><tw-passagedata pid="63" name="footerlisten" tags="nobr" position="350,850" size="100,100">&lt;footer class=&quot;listen&quot;&gt;
 &lt;div class=&quot;nav-container&quot;&gt;
   &lt;&lt;if $showCaptionsIcon is true&gt;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
@@ -2108,7 +2352,7 @@ setup.backTen = () => {
   &lt;&lt;if $sound is true&gt;&gt;
    /* &lt;&lt;addclass &quot;#audioContainer&quot; &quot;activeIcon&quot;&gt;&gt; */
   &lt;&lt;/if&gt;&gt;
-&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="listen1" tags="" position="1100,725" size="100,100">&lt;source  src=&quot;https://youhavefoundconey.net/1884FM/assets/memorial/audio1.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="60" name="listen1cap" tags="nobr" position="1225,725" size="100,100">&lt;&lt;timed 1s&gt;&gt;
+&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="listen1" tags="" position="475,850" size="100,100">&lt;source  src=&quot;https://youhavefoundconey.net/1884FM/assets/memorial/audio1.mp3&quot;&gt;</tw-passagedata><tw-passagedata pid="65" name="listen1cap" tags="nobr" position="600,850" size="100,100">&lt;&lt;timed 1s&gt;&gt;
   &lt;&lt;replace &quot;#caption&quot;&gt;&gt;
     &lt;&lt;type 60ms&gt;&gt;
 &lt;p&gt;The live show made me think about the role and the power of historians&lt;/p&gt; 

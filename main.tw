@@ -2042,7 +2042,7 @@ transcript
 
 <form id="contactForm" class="hide" >
     
-    <label for="writing">Written Contribution:</label>
+    <label for="writing">Written Contribution from Watching the House:</label>
     <textarea id="writing" name="writing" rows="4"  required>$writing</textarea>
 
     <button type="submit">Submit</button>
@@ -2054,7 +2054,10 @@ transcript
  <</timed>>
 
  <<timed 8s>>
-  <<goto $nextpass>>
+  <br/><br/>
+  <<button "Next">>
+    <<goto $nextpass>>
+    <</button>>
   <</timed>>
 
  <<done>>

@@ -52,29 +52,29 @@ button,
   /* background-color: transparent;
   border: #fff 1px solid;
   border-radius: 3px; */
-  background: var(--color-cream);
-  color: var(--color-brown);
+  background:  var(--color-cream);
+  color: var(--color-green);
   font-size: 2rem;
 border: none;
   border-radius: 3px;
   font-family: var(--font-headings);
   text-transform: uppercase;
   padding: 5px;
-  box-shadow: var(--accent-color-shadow) 4px 4px;
+  box-shadow:  var(--color-green) 4px 4px;
   font-weight: 900;
 
 }
 
 button:hover {
-  background-color: var(--color-green);
-  border: #fff 1px solid;
-  color: #fff;
+  background-color: var(--color-cream);
+  border: black 1px solid;
+  color: black;
 }
 
 button:focus,
 .inline-btn-wrapper > a {
   transform: translate(2px, 2px);
-  box-shadow: var(--accent-color-shadow) 1px 1px;
+  box-shadow: var(--color-green) 1px 1px;
 }
 
 a {
@@ -126,7 +126,7 @@ h4 {
 }
 
 p{
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 header {
@@ -180,7 +180,7 @@ footer {
   bottom: 0;
   padding: var(--padding);
   width: 100%;
-  background-color: var(--color-brown);
+  background-color: var(--color-green);
 }
 
 nav {
@@ -217,7 +217,7 @@ nav {
 }
 
 .nav-item > button {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .hide {
@@ -611,6 +611,8 @@ main.framing > p {
 main.listen.entrance{
   align-items: center;
 }
+
+
 header.listen{
   justify-content: space-between;
 }
@@ -618,6 +620,8 @@ header.listen{
 header.listen > .nav-item{
 margin-block-end: 0;
 }
+
+
 
 main.listen{
   background: var(--color-green);
@@ -636,11 +640,19 @@ main.listen > #caption > .macro-timed > p{
   color:var(--color-cream)
 }
 
-footer.listen > .nav-wrapper > .nav-item > button{
-  background-color:  var(--color-cream);
-  color: black;
+main.listen > #endMsgMount > button{
   box-shadow: black 4px 4px;
-  border: solid black 2px;
+}
+
+
+header.listen > .nav-item > button,
+footer.listen > .nav-wrapper > .nav-item > button, 
+main.listen.entrance > button {
+  background-color:  var(--color-cream);
+  color: var(--color-green);
+  box-shadow: black 4px 4px;
+  /* border: solid black 2px; */
+  font-size: 1.6rem;
 }
 
 

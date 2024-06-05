@@ -136,7 +136,7 @@ body.green{
 
 body.greengrad{
   background: linear-gradient(180deg,var(--color-lightgreen)
- 50%, var(--color-green) 50%);
+ 29%, var(--color-green) 71%);
 }
 
 h1,
@@ -591,11 +591,12 @@ main.story > #buttons > button{
 
 /* SHOW NOTHING ON A PHONE  */
 
-/* .comp-warning {
+.comp-warning {
   display: none;
+  margin-block-start: 5rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1000px) {
   main {
     display: none !important;
   }
@@ -603,7 +604,7 @@ main.story > #buttons > button{
     text-align: center;
     display: inherit;
   }
-} */
+}
 
 /* PULSE ANIMATION  */
 .circle {

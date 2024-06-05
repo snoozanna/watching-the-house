@@ -120,7 +120,7 @@ setup.addCaptions = (cuekey) =>  {
      const track = audio.addTextTrack('subtitles', 'English', 'en');
     track.mode = 'showing';
 
-    console.log("track", track)
+    // console.log("track", track)
   
     const cues = {
        audio1:[[3.629,5.939,"Hello and congratulations."],[5.939,10.259,"Today is your first day on the job as a watcher at Marble Hill."],[10.259,14.999,"My name is Lydia and it's my job to make sure you get settled into your new role."],[14.999,17.309,"Think of me as your guide."],[17.309,22.439,"I'll be here with you as you get used to your new workplace."],[22.439,25.769,"A few quick things to know about Marble Hill."],[25.769,29.969,"The house was built in the 1720s by Henrietta Howard."],[29.969,36.179,"The villa is an important example of a house built for and by a woman in Georgian England."],[36.179,46.769,"After a difficult earlier life, Henrietta enjoyed more freedom and independence here than she'd ever known, and hosted many of London's cultural and political elite."],[46.769,55.919,"Henrietta was a prominent member of the royal court and a gift from King George II - when he was Prince of Wales - made the building of her new home possible."],[55.919,58.139,"That's all you need to know for now."],[58.139,62.459,"But what about this job?"],[62.459,65.999,"Well, you don't need to do too much actually."],[65.999,71.789,"Marble Hill already has room explainers, whose job is to talk to guests and share the history."],[71.789,74.039,"So your job is simple."],[74.039,78.569,"Protect and preserve the house and its treasures of the past."],[78.569,82.889,"Observe and listen, you are the Watcher after all."],[82.889,86.429,"Make sure everything in each room remains as it should be."],[86.429,88.979,"Keep an eye out for anything untoward."],[88.979,93.269,"And the more discreet you are, the better so you can keep watch."],[93.269,95.999,"Imagine you are invisible."],[95.999,101.009,"Other guests should hardly realise you are there."],[101.009,104.03999999999999,"Now that's sorted, you are ready to start your first shift."]], 
@@ -144,9 +144,9 @@ setup.addCaptions = (cuekey) =>  {
     track.addCue(cue); 
    // console.log("cue added", cue)
 }
-console.log("track after adding cues", track)
+// console.log("track after adding cues", track)
     track.addEventListener('cuechange', () => {
-  console.log("cue has changed", )
+  // console.log("cue has changed", )
     const activeCue = track.activeCues[0];
     if (activeCue) {
       document.getElementById('caption').textContent = activeCue.text;
@@ -243,9 +243,7 @@ setup.JSLoaded = false;
      event_category : 'GuestClick'
  });
 
- });</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;1&quot; &quot;assets/audio/1.mp3&quot;&gt;&gt;
-
-&lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;standard&quot;&gt;
+ });</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="header" tags="nobr" position="100,225" size="100,100">&lt;header class=&quot;standard&quot;&gt;
 &lt;div class=&quot;header-item&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;header-item&quot;&gt;
   &lt;h1&gt;$title&lt;/h1&gt;
@@ -545,11 +543,12 @@ setup.JSLoaded = false;
 &lt;&lt;set $showBackwards to false&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to true&gt;&gt;
 &lt;&lt;addclass &quot;body&quot; &quot;greengrad&quot;&gt;&gt;
-&lt;div class=&quot;comp-warning&quot;&gt;Best experienced on a phone&lt;/div&gt;
+/* &lt;div class=&quot;comp-warning&quot;&gt;Best experienced on a phone&lt;/div&gt; */
 &lt;main class=&quot;beginning&quot; id=&quot;&quot;&gt;
 
 /* &lt;h1 class=&quot;hide&quot;&gt;Watching the House&lt;/h1&gt; */
-&lt;img src=&quot;assets/img/Wthbits-16.png&quot; alt=&quot;Watching the House&quot;/&gt;
+&lt;img src=&quot;assets/img/Wthbits-16.png&quot; alt=&quot;Watching the House&quot; class=&quot;longtitle&quot;/&gt;
+&lt;img src=&quot;assets/img/Wthbits-17.png&quot; alt=&quot;Watching the House&quot; class=&quot;hide desktop&quot;/&gt;
 &lt;br/&gt;
  &lt;div class=&quot;menu-wrapper&quot;&gt;
  &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt;
@@ -841,7 +840,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -939,7 +938,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -1149,7 +1148,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -1201,7 +1200,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -1295,7 +1294,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -1516,7 +1515,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -1612,7 +1611,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -1716,7 +1715,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -2023,7 +2022,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -2102,7 +2101,7 @@ setup.JSLoaded = false;
 
   
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
-   &lt;img class=&quot;poster&quot; src=&quot;./../assets/img/house.png&quot;/&gt;
+   &lt;img class=&quot;poster&quot; src=&quot;assets/img/house.png&quot;/&gt;
  &lt;/div&gt;
  &lt;div id=&quot;caption&quot; class=&quot;hide&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;transcript&quot;&gt;&lt;/div&gt;
@@ -2209,9 +2208,10 @@ setup.JSLoaded = false;
   &lt;source src=&quot;&quot;&gt;
 &lt;/audio&gt;
 /* &lt;&lt;include &quot;header&quot;&gt;&gt; */
-&lt;main class=&quot;instructions&quot;&gt;
+&lt;main class=&quot;instructions thanks&quot;&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;img src=&quot;assets/img/Wthbits-17.png&quot; alt=&quot;Watching the House&quot; class=&quot;hide desktop&quot;/&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
  &lt;p&gt;Thank you for attending Watching the House, a project by Coney in partnership with English Heritage. &lt;/p&gt;

@@ -1,21 +1,21 @@
-@import url("/assets/fonts/ACaslonPro-Regular.otf");
+@import url("../assets/fonts/ACaslonPro-Regular.otf");
 
 @font-face {
   font-family: "Caslon";
   src:
-    url("/assets/fonts/ACaslonPro-Regular.otf") format("opentype")
+    url("../assets/fonts/ACaslonPro-Regular.otf") format("opentype")
 }
 
 @font-face {
   font-family: "Archetype";
   src:
-    url("/assets/fonts/ArchetypeRegular Regular.ttf") format("truetype")
+    url("../assets/fonts/ArchetypeRegular Regular.ttf") format("truetype")
 }
 
 @font-face {
   font-family: "TychoElU";
   src:
-    url("/assets/fonts/TychoElU.ttf") format("truetype")
+    url("../assets/fonts/TychoElU.ttf") format("truetype")
 }
 
 /* CONSTANTS  */
@@ -38,6 +38,7 @@
   --font-headings: "Archetype", sans-serif;
   --font-body: "Caslon", sans-serif;
   --font-size-ipad: 3rem;
+  --font-size-desktop: 2rem;
   --padding: 2rem;
   --icon-size: 3rem;
 }
@@ -316,7 +317,7 @@ textarea {
 
 /* LANDING  */
 main.beginning {
-  background-image: url(../assets/img/front-07.png);
+  background-image: url("../assets/img/front-07.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -591,7 +592,7 @@ main.story > #buttons > button{
 }
 
 /* SHOW NOTHING ON A PHONE  */
-
+/* 
 .comp-warning {
   display: none;
   margin-block-start: 5rem;
@@ -605,7 +606,7 @@ main.story > #buttons > button{
     text-align: center;
     display: inherit;
   }
-}
+} */
 
 /* PULSE ANIMATION  */
 .circle {
@@ -849,6 +850,10 @@ main{
   padding: 5rem;
 }
 
+main.beginning{
+  background-image: url("../assets/img/landscapefront-09.png");
+}
+
 p{
   font-size: var(--font-size-ipad);
 }
@@ -870,9 +875,93 @@ footer > .nav-wrapper.playpause-wrapper {
   width: 40px;
 }
 
+
+
 main.story > #caption {
   font-size: var(--font-size-ipad);
 }
 
+}
 
+/* DESKTOP */
+@media screen and (min-width: 1000px) {
+  body{
+    font-size: var(--font-size-desktop);
+  }
+  p{
+    font-size: 2rem;
+
+  }
+  main{
+    padding: 3rem;
+  }
+  main.beginning{
+   background-size: cover;
+   background-position: top;
+   height: inherit
+  }
+  main.beginning > .description-wrapper{
+    justify-content: end;
+  }
+  main.beginning > .description-wrapper > span.description {
+    text-align: end;
+    max-width: 20%;
+    font-size: 2.5rem;
+  }
+
+  main.instructions > #mount > p{
+    width: 60%;
+  }
+  
+
+img.longtitle{
+  display: none;
+}
+.hide.desktop{
+  display: initial;
+  opacity: 1;
+  width: 25%
+}
+button, .inline-btn-wrapper > a, .form-container > input[type="submit"]{
+  font-size: var(--font-size-desktop);
+}
+main.story > #caption {
+  font-size: var(--font-size-desktop);
+}
+main.story > .poster-wrapper {
+  width: 40%;
+}
+
+footer > .nav-wrapper.playpause-wrapper {
+  width: 25px;
+}
+.nav-item > a > img {
+  width:30px;
+}
+
+.letter{
+  max-width: 40%;
+  margin:auto
+}
+
+#mount{
+  width: 100%;
+}
+
+main.listen > #caption > .macro-type > p, main.listen > #caption > .macro-timed > p {
+  margin:auto;
+}
+
+main.thanks{
+  display: flex;
+  flex-direction: row;
+}
+
+main.thanks > img{
+max-width: 30%;
+}
+
+.historyLinks{
+  width: 100%;
+}
 }

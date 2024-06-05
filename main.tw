@@ -46,7 +46,7 @@ setup.addCaptions = (cuekey) =>  {
        audio3a: [[1.439,6.029,"We're in the bedroom of Miss Hotham, Henrietta's great niece."],[6.029,8.579,"Watchers aren't technically meant to sit here."],[8.579,15.449,"But, well, if nobody's paying you much attention, it's probably fine."],[15.449,19.799,"If you can sit down at the mirror and take a look at yourself."],[19.799,23.939,"If not, simply stand near the table."],[23.939,27.749,"How well do you know the stories of the people who came before you?"],[27.749,34.019,"Your ancestors, whose facial features you will share, even if you don't know it."],[34.019,35.969,"Take a look at the table."],[35.969,37.949,"Open the drawers."],[37.949,41.01,"Once you've found the drawer with the shells in, let me know"]], 
        audio3b: [[1.62,3.48,"Why shells?"],[3.48,7.2,"They were collected to decorate the grotto, in the garden outside."],[7.2,12.27,"And perhaps Miss Hotham loved the shapes, the colours, the swirls..."],[12.27,15.24,"But why shells, you wonder?"],[15.24,23.85,"Shells from the Caribbean, now in Richmond upon Thames, collected and transported as part of the Transatlantic slave route."],[23.85,27.63,"Now hidden in these drawers."],[27.63,30.42,"As you look at the mirror, you reflect."],[30.42,34.29,"Why did Henrietta want and need these shells so much?"],[34.29,37.23,"What were the names of the people who gathered them?"],[37.23,39.27,"The island the shells came from?"],[39.27,46.74,"And the horrors being enacted upon the people there in exchange for shells, sugar, money."],[46.74,51.27,"But hurry, it's time to go before somebody sees you here."],[51.27,53.85,"These stories have been hidden for a long time."],[53.85,56.28,"And not everybody wants to know they exist."]], 
        audio4: [[3.419,9.089,"From where you're standing, you might notice all the faces peering down at you."],[9.089,17.699,"These were people from Henrietta's circle, many of whom passed through this house to socialise, gossip and discuss business."],[17.699,22.109,"During her time at court, Henrietta became mistress to the Prince of Wales."],[22.109,32.579,"And this house was built after she received a gift of 11,500 pounds in stocks from him, worth possibly over 1 million pounds today."],[32.579,36.809,"Henrietta also held other investments and was financially savvy."],[36.809,42.329,"All the people in these paintings were mostly born wealthy, and were trying to make more money."],[42.329,44.549,"How? You might wonder..."],[44.549,50.159,"When you can, you might try to discreetly open up the drawers on the desk and see what's inside."]], 
-       audio5: [[1.62,3.48,"It's time to monitor the staircase."],[4.05,7.47,"You simply have to stand still on the landing, as others pass by."],[8.5,11.08,"You might look down. Take note of the wood."],[11.8,15.7,"Mahogany. A highly fashionable material in the eighteenth century."],[16.35,18.9,"Now you're standing on it, centuries later."],[20.04,24.57,"But at this point you've asked so many questions, and the wood elicits more."],[25.62,26.55,"Who built this?"],[27.27,28.8,"Where did this wood come from?"],[29.8,34.33,"How many hands have touched this word? And what toil did they have to suffer to build this?"],[35.77,39.34,"Who should have the right to feel proud of this staircase? This artwork."],[40.27,41.8,"Who is history-worthy?"],[43.87,50.47,"Henrietta was one of the first to use Mahogany in her home, and the wood quickly became fashionable across elite society."],[51.45,60.06,"But tradition has it, the wood was harvested in the Bay of Honduras - present-day Belize - and likely through the exploitation of enslaved people."],[60.96,65.82,"The Mahogany trade was one dependent on the forced labour of enslaved Africans,"],[66.33,70.44,"who worked unpaid in hostile conditions to satisfy the tastes of England."],[71.1,72.45,"The tastes of Richmond."],[74.25,76.59,"You close your eyes. You listen."],[77.52,82.32,"You walk down the stairs with your hand on the railing and start to hear fragments of a poem."],[87.13,89.95,"And then I realised the whole house was filled with mahogany,"],[89,93.05,"the doorknobs, the banisters, the stairs themselves..."],[93.41,96.62,"it was worship and annihilation all in one."],[97.97,101.09,"I was compelled to assist in cutting a great deal of Mahogany"],[101.09,105.86,"wood, writes Olaudah Equiano. Think of the mornings he toiled"],[105.86,109.82,"and toiled to capture swelling grains of the tree crotch under"],[109.82,113.45,"the tyranny of mosquitoes. Think of his back breaking, while"],[113.45,117.5,"harvesting rows of trunks bigger than the big house, to harness"],[117.5,121.73,"then tumble into nearby river water. Logs lashed"],[121.73,125.93,"together, lumbering, riding currents towards their first"],[125.93,131.18,"destination, a main port, to be buried in the belly of ships. Think"],[131.18,135.02,"genocide visited here, and men laboured and the art of such a thing."],[136.02,141,"Speak of Mahogany. O, speak of the people of the land!"],[140.99,143.84,"Speak of mahogany. Speak"],[143.84,145.82,"of the original people of the land!"],[146.32999999999998,150.56,"And think of\tbodies/\tbodies/ \tblood/"],[151.25,157.01,"black/\t\tblessed/\tbones/\t\tback/\t\tback broad/"],[157.34,159.2,"borders/\tbroken branches/"],[159.2,162.14,"broken bough/\tbrown/\tbleed/\t\tbalsam/"],[162.35,164.27,"balm/ \t\tbreathless/"]], 
+       audio5: [[1.62,3.48,"It's time to monitor the staircase."],[4.05,7.47,"You simply have to stand still on the landing, as others pass by."],[8.5,11.08,"You might look down. Take note of the wood."],[11.8,15.7,"Mahogany. A highly fashionable material in the eighteenth century."],[16.35,18.9,"Now you're standing on it, centuries later."],[20.04,24.57,"But at this point you've asked so many questions, and the wood elicits more."],[25.62,26.55,"Who built this?"],[27.27,28.8,"Where did this wood come from?"],[29.8,34.33,"How many hands have touched this wood? And what toil did they have to suffer to build this?"],[35.77,39.34,"Who should have the right to feel proud of this staircase? This artwork."],[40.27,41.8,"Who is history-worthy?"],[43.87,50.47,"Henrietta was one of the first to use Mahogany in her home, and the wood quickly became fashionable across elite society."],[51.45,60.06,"But tradition has it, the wood was harvested in the Bay of Honduras - present-day Belize - and likely through the exploitation of enslaved people."],[60.96,65.82,"The Mahogany trade was one dependent on the forced labour of enslaved Africans,"],[66.33,70.44,"who worked unpaid in hostile conditions to satisfy the tastes of England."],[71.1,72.45,"The tastes of Richmond."],[74.25,76.59,"You close your eyes. You listen."],[77.52,82.32,"You walk down the stairs with your hand on the railing and start to hear fragments of a poem."],[87.13,89.95,"And then I realised the whole house was filled with mahogany,"],[89,93.05,"the doorknobs, the banisters, the stairs themselves..."],[93.41,96.62,"it was worship and annihilation all in one."],[97.97,101.09,"I was compelled to assist in cutting a great deal of Mahogany"],[101.09,105.86,"wood, writes Olaudah Equiano. Think of the mornings he toiled"],[105.86,109.82,"and toiled to capture swelling grains of the tree crotch under"],[109.82,113.45,"the tyranny of mosquitoes. Think of his back breaking, while"],[113.45,117.5,"harvesting rows of trunks bigger than the big house, to harness"],[117.5,121.73,"then tumble into nearby river water. Logs lashed"],[121.73,125.93,"together, lumbering, riding currents towards their first"],[125.93,131.18,"destination, a main port, to be buried in the belly of ships. Think"],[131.18,135.02,"genocide visited here, and men laboured and the art of such a thing."],[136.02,141,"Speak of Mahogany. O, speak of the people of the land!"],[140.99,143.84,"Speak of mahogany. Speak"],[143.84,145.82,"of the original people of the land!"],[146.32999999999998,150.56,"And think of\tbodies/\tbodies/ \tblood/"],[151.25,157.01,"black/\t\tblessed/\tbones/\t\tback/\t\tback broad/"],[157.34,159.2,"borders/\tbroken branches/"],[159.2,162.14,"broken bough/\tbrown/\tbleed/\t\tbalsam/"],[162.35,164.27,"balm/ \t\tbreathless/"]], 
        audio6: [[1.11,4.56,"As you stand, once again your eyes wander."],[4.56,8.52,"You may notice a tea tray."],[8.52,13.23,"You are curious and perhaps, even after a long day, thirsty."],[14.94,19.53,"You remain discreet but edge towards the tray."],[19.53,22.14,"Feel free to open the lid, and see what's inside."],[24.42,29.28,"As you explore, smell the tea and close your eyes."],[29.28,36.57,"Like the Mahogany of the staircase, sugar, tea and coffee became highly fashionable during Henrietta's time."],[36.57,39.24,"But at what cost?"],[39.24,45.39,"You open the coffee pot and look inside."],[45.39,47.34,"Where did these goods come from?"],[47.34,51.54,"To sweeten the tea and coffee of the elites of Richmond."],[51.54,54.87,"Many people from around the world built this house,"],[54.87,57.78,"but only a few are remembered."],[57.78,61.17,"There are people whose stories are too dark and disturbing,"],[61.17,64.05,"that they are often hidden away, invisible."]], 
        audio7a: [[1.17,4.02,"You look at the map of Richmond."],[4.02,8.31,"The people of the past imagined this town as an idyllic utopia,"],[8.31,13.17,"without acknowledging the truth of how it was funded or built."],[13.17,16.59,"You might look through the cards on the table."],[16.59,20.55,"The great and the good of Richmond upon Thames."],[20.55,25.32,"The people who have been remembered, archived in history."],[25.32,31.44,"Does it feel right? Would you want to add anyone? Change anything?"]], 
        audio7b: [[0.57,2.28,"You've left your mark here now,"],[2.28,5.52,"whilst keeping things seemingly the same on the surface."],[5.52,8.34,"Perhaps that's what this job is about after all -"],[8.34,12.33,"but quick, the day is ending, and your shift is almost up."]], 
@@ -117,14 +117,14 @@ setup.backTen = () => {
 
 setup.initEmail = () => {
   console.log("initing emailjs")
-  emailjs.init("I5fGiJYF5iD8WzMJl")
+  emailjs.init("hZ7U9d-hipkmGQq90")
 ;}
 setup.test = () => {
   const form = document.getElementById("contactForm");
   console.log(form)
      const data = Object.fromEntries(new FormData(form).entries());
     console.log("formData", data);
-emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl")
+emailjs.sendForm('service_dkblcot', 'template_yxtqu05', form, "hZ7U9d-hipkmGQq90")
                      .then(
         (result) => {
           console.log(result.text);
@@ -134,6 +134,35 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
         },
       );
   };
+
+/* Google Analytics Tag */
+setup.JSLoaded = false;
+ var lockID = LoadScreen.lock();  // Lock loading screen
+ importScripts("https://www.googletagmanager.com/gtag/js?id=G-F1SYYS124M")
+     .then(function() {
+         setup.JSLoaded = true;
+         window.dataLayer = window.dataLayer || [];
+         window.gtag = function (){ dataLayer.push(arguments); };
+         gtag('js', new Date());
+         gtag('config', 'G-F1SYYS124M');
+         LoadScreen.unlock(lockID);  // Unlock loading screen
+     }).catch(function(error) {
+         alert("Error: Could not load 'gtag.js'.");
+     }
+ );
+
+
+ $(document).on('click', 'a', function (ev) {
+ // Get the destination of the clicked link var passage 
+ var passage = $(this).attr('data-passage');
+ // Send the message to google analytics
+ gtag('event', 'Navigation', {
+     event_label    : passage,
+     event_category : 'GuestClick'
+ });
+
+ });
+
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
@@ -192,7 +221,12 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 </header>
 
 
+:: headertitle [nobr]
 
+<header class="title">
+<img src="assets/img/Wthbits-17.png" alt="Watching the House"/>
+
+</header>
 
 :: headeraudio [nobr]
 
@@ -476,16 +510,17 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 <<set $showForwards to true>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to true>>
-<<addclass "body" "lightgreen">>
-<div class="comp-warning">Best experienced on a phone</div>
+<<addclass "body" "greengrad">>
+/* <div class="comp-warning">Best experienced on a phone</div> */
 <main class="beginning" id="">
-<h1 class="hide">Watching the House</h1>
-<span class="hide">An interactive experience by Coney at Marble Hill </span>
+/* <h1 class="hide">Watching the House</h1> */
+<img src="assets/img/Wthbits-16.png" alt="Watching the House"/>
 <br/>
  <div class="menu-wrapper">
  <br/> <br/> <br/> <br/> <br/> <br/>
     <<button "Start now">><<goto $nextpass>><</button>>
 </div>
+<div class="description-wrapper"><span class="description" >An interactive experience by Coney at Marble Hill </span></div>
 </main>
 
 
@@ -510,7 +545,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 <</replace>><</timed>>
 
 <<timed 2s>><<append "#mount">>
-<p>Today is your first day on the job as English Heritage Watcher. </p>
+<p>Today is your first day on the job as an English Heritage Watcher. </p>
 <</append>><</timed>>
 
 <<timed 5s>><<append "#mount">>
@@ -588,7 +623,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
  <<audio ":all" stop>>
 <main class="story testaudio" id="storyContainer">
 <audio id="audio" autoplay>
-  <source src="assets/audio/00.Sound_Check_Sound_Audio_Final.mp3">
+  <source src="assets/audio/00soundcheck.mp3">
   /* <track kind="captions" srclang="en" label="English captions" id="captrack" default> */
 </audio>
 <div class="poster-wrapper" id="poster">
@@ -869,7 +904,7 @@ transcript
 <</timed>>
 <<timed 3s>>
    <<append "#mount">>
-<p>Walk back to the house, take the mahogany staircase and go to the first floor, then enter the Breakfast Parlour on your left. If it is closed today, stay by the door.  </p>
+<p>Walk back to the house, take the mahogany staircase and go to the first floor. </p>
   <</append>>
 <</timed>>
 <<timed 6s>>
@@ -879,7 +914,7 @@ transcript
 <</timed>>
 <<timed 9s>>
   <<append "#mount">>
-<p>When you are there, press one of the buttons below. </p>
+<p>When you are there, press the button below.</p>
   <</append>>
 <</timed>>
 
@@ -888,7 +923,6 @@ transcript
   <<append "#mount">>
      <div class="menu-wrapper">
     <<button "I’m in the Great Room">><<goto $nextpass>><</button>>
-     <<button "I'm at the door of the Breakfast Parlour">><<goto $nextpass>><</button>>
 </div>
   <</append>>
 <</timed>>
@@ -980,12 +1014,12 @@ transcript
 <</timed>>
 <<timed 3s>>
    <<append "#mount">>
-<p>Look beyond appearances. </p>
+<p>To look beyond appearances. </p>
   <</append>>
 <</timed>>
 <<timed 5s>>
   <<append "#mount">>
-<p>Ask questions.</p>
+<p>To ask questions.</p>
   <</append>>
 <</timed>>
 <<timed 7s>>
@@ -1098,18 +1132,23 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>The next part of your shift will be in Miss Hotham’s Bedchamber, on your left when looking at the window. </p>
+    <p>The next part of your shift will be in Miss Hotham’s Bedchamber. </p>
   <</replace>>
 
 <</timed>>
 <<timed 4s>>
    <<append "#mount">>
-<p>Let me know when you are there. </p>
+<p>Take the door on your left when looking at the window, then walk through the next bedroom until you reach a small room with a dressing table and a mirror.</p>
   <</append>>
 <</timed>>
 
+<<timed 7s>>
+   <<append "#mount">>
+<p>Let me know when you are there.</p>
+  <</append>>
+<</timed>>
 
- <<timed 5.5s>>
+ <<timed 9s>>
   <<append "#mount">>
     <<button "I am in the Bedchamber">><<goto $nextpass>><</button>>
 
@@ -1124,7 +1163,6 @@ transcript
 <<set $passage to "audio3">>
 <<set $nextpass to "audio3b">>
 <<set $transcript to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1185,7 +1223,6 @@ transcript
 <<set $passage to "audio3b">>
 <<set $nextpass to "instructions4">>
 <<set $transcript to false>>
-<<set $captionToggle to false>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showTranscriptIcon to false>>
@@ -1266,7 +1303,7 @@ transcript
 <</timed>>
 <<timed 3s>>
    <<append "#mount">>
-<p>It’s the room on the other side of the Great Room. </p>
+<p>Walk back to the Great Room and take the door right in front of you, until you are in a room with red walls and curtains.</p>
   <</append>>
 <</timed>>
 
@@ -1336,8 +1373,8 @@ transcript
 <<timed 55s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
-    <<button "I have found the letter">><<goto "instructions5letter">><</button>>
-        <<button "I didn't find the letter">><<goto "instructions5noletter">><</button>>
+    <<button "I have found the brown folder">><<goto "instructions5letter">><</button>>
+        <<button "I didn't find the brown folder">><<goto "instructions5noletter">><</button>>
 </div>
     <</replace>>
   <</timed>>
@@ -1366,19 +1403,19 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>In 1720, seeking greater financial independence from her husband and the royal court, Henrietta invested in the South Sea Company, a British joint-stock company that was granted a monopoly to supply African slaves to the islands in the "South Seas" and South America.</p>
+ <p>In 1720, seeking greater financial independence from her husband and the royal household, Henrietta invested in the South Sea Company, a British company that was granted a monopoly to supply enslaved Africans to South America.</p>
   <</replace>>
 <</timed>>
 
 <<timed 8s>>
   <<append "#mount">>
-<p> The £11,500 gift she received from King George II after she left court in 1722 also contained shares in the South Sea Company. </p>
+<p>In 1723, she then received a gift from the Prince of Wales (later George II) to support her after she left the royal court, of which 70% were shares in the South Sea Company. </p>
   <</append>>
 <</timed>>
 
 <<timed 14s>>
   <<append "#mount">>
-<p>The trans-Atlantic slave trade was therefore crucial in funding both the acquisition of the land and the building of Marble Hill House. </p>
+<p>The transatlantic slave trade was crucial in funding both the purchase of the land and the building of Marble Hill.</p>
 
   <</append>>
 <</timed>>
@@ -1430,9 +1467,9 @@ transcript
     <p> I hope I need not tell you, my dear Mrs. Howard, that I heartily rejoice at your success in the South Sea, for you would have reason to think me void of friendship and gratitude if I did not. Certainly fortune never bestowed her gifts on one who deserved them more, or had a more just or elegant taste for enjoying them. But since she is not always so nice in the choice of her favourites, I cannot forbear repining that it is not in my power to put myself in her way, that I might share those bounties of which she is at present so profuse. To tell you the truth, I am almost South Sea mad, and I find that philosophical temper of mind which made me content under my circumstances, when there was no seeming probability of bettering them, forsakes me on this occasion; and I cannot, without great regret, reflect that, for want of a little money, I am forced to let slip an opportunity which is never like to happen again.</p>
 
 <p>Perhaps you will think me unreasonable when I tell you that good Lady Sunderland was so mindful of her absent friends as to secure us a five-hundred pound subscription, which money my father laid down for us, and it is now doubled; but this has but given me a taste of fortune, which makes me more eager to pursue it. As greedy as I seem, I should have been satisfied if I could by any means have raised the sum of five hundred or a thousand pounds more, but the vast price that money bears, and our being not able to make any security according to law, has made me reject a scheme I had laid of borrowing such a sum of some monied friend; but since I have given that over I shall endeavour to be content with the share I have in the good fortune of my friends, among whom I am proud to rank my dear Mrs Howard.</p>
-<span>And I am, &c.</span>
+<p>And I am, &c.</p>
 <br/>
-<span>E. Molesworth</span>
+<p>E. Molesworth</p>
     </div>
   <</append>>
 <</timed>>
@@ -1509,7 +1546,7 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>The next part of your shift will be on top of the mahogany staircase. </p>
+    <p>The next part of your shift will be at the top of the mahogany staircase. </p>
   <</replace>>
 
 <</timed>>
@@ -1521,7 +1558,7 @@ transcript
 
  <<timed 5s>>
   <<append "#mount">>
-    <<button "I’m on top of the staircase">><<goto $nextpass>><</button>>
+    <<button "I’m at the top of the staircase">><<goto $nextpass>><</button>>
 
   <</append>>
 <</timed>>
@@ -1599,6 +1636,7 @@ transcript
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 
+
 <audio id="audio" autoplay >
   <source src="">
 </audio>
@@ -1614,7 +1652,7 @@ transcript
 <</timed>>
 <<timed 3s>>
    <<append "#mount">>
-<p>Walk to the Hall next door, then enter the Breakfast Parlour on your left.</p>
+<p>Walk to the Hall next door, then enter the Breakfast Parlour on your left.  If it is closed today, stay by the door. </p>
   <</append>>
 <</timed>>
 
@@ -1627,7 +1665,7 @@ transcript
  <<timed 9s>>
   <<append "#mount">>
     <<button "I’m in the Breakfast Parlour">><<goto $nextpass>><</button>>
-
+ <<button "I'm at the door of the Breakfast Parlour">><<goto $nextpass>><</button>>
   <</append>>
 <</timed>>
 </main>
@@ -1893,7 +1931,7 @@ transcript
 
 <<timed 6s>>
    <<append "#mount">>
-<p>You can write about real people, or imagine people whose name and face have been forgotten. </p>
+<p>You can write about real people, or imagine people whose names and face have been forgotten. </p>
   <</append>>
 <</timed>>
 
@@ -2026,6 +2064,7 @@ transcript
 
  <<timed 14s>>
   <<append "#mount">>
+    <br/><br/>
     <<button "I am done">><<goto $nextpass>><</button>>
   <</append>>
 <</timed>>
@@ -2058,15 +2097,19 @@ transcript
   </form>
 
 <<timed 4s>>
-   <<replace "#confirmation">><p>Sent.</p><</replace>>
+   <<replace "#confirmation">><p>Sent.</p>
+    <div id="mount"></div>
+   <</replace>>
 
  <</timed>>
 
- <<timed 8s>>
+ <<timed 6.5s>>
+  <<replace "#mount">>
   <br/><br/>
   <<button "Next">>
     <<goto $nextpass>>
     <</button>>
+    <</replace>>
   <</timed>>
 
  <<done>>
@@ -2377,10 +2420,11 @@ transcript
 <br/>
 <<timed 1s>>
 <div class="fadeIn historyLinks">
-  <p><span class="type">Website</span><br/> Traces of the Transatlantic Slave Economy in the National Heritage Collection. <a href="" target="_blank" rel="noreferrer">Visit.</a></p>
-  <p><span class="type">Report</span> <br/>The slavery connections of Marble Hill House. <a href="" target="_blank" rel="noreferrer">Read.</a></p>
-  <p><span class="type">Lecture</span> <br/>Teaching and learning about enslavement history. <a href="" target="_blank" rel="noreferrer">Watch.</a></p>
-  <p><span class="type">Website</span><br/> Black History & English Heritage. <a href="" target="_blank" rel="noreferrer">Visit.</a></p>
+  <p><span class="type">Website</span><br/> Traces of the Transatlantic Slave Economy in the National Heritage Collection. <a href="https://www.english-heritage.org.uk/learn/histories/transatlantic-slavery-abolition/traces-transatlantic-slave-economy/" target="_blank" rel="noreferrer">Visit.</a></p>
+  <p><span class="type">Report</span> <br/>The slavery connections of Marble Hill House. <a href="https://www.english-heritage.org.uk/siteassets/home/learn/research/the-slavery-connections-of-marble-hill-house.pdf" target="_blank" rel="noreferrer">Read.</a></p>
+  <p><span class="type">Lecture</span> <br/>Teaching and learning about enslavement history. <a href="https://www.youtube.com/watch?v=kMUpkqITtAc" target="_blank" rel="noreferrer">Watch.</a></p>
+  <p><span class="type">Website</span><br/> Black History & English Heritage. <a href="https://www.english-heritage.org.uk/learn/histories/black-history/" target="_blank" rel="noreferrer">Visit.</a></p>
+    <p><span class="type">Website</span><br/>Marble Hill - History and stories.<a href="https://www.english-heritage.org.uk/visit/places/marble-hill/history-and-stories/" target="_blank" rel="noreferrer">Visit.</a></p>
   </div>
   <</timed>>
 
@@ -2403,11 +2447,11 @@ transcript
 <<set $showCaptionsIcon to false>>
 <main class="instructions">
 <h2>Record</h2>
-<p class="nofade">By clicking Record, you consent for your recording to be published online as part of the project. You can withdraw that consent at any time. More info can be found in our terms of use.</p>
+<p class="nofade">By clicking Record, you consent for your recording to be published online as part of the project. You can withdraw that consent at any time. More info can be found in our <a href="TCsWTHouse.pdf" target="_blank" rel="noreferrer" class="hlght">here</a>. </p>
   <p class="nofade"> Please try to keep your recording to 60 sec or less.</p>
       <p class="nofade">By submitting a recording here, you agree to the <a
           href="" target="_blank" rel="no-referrer"
-          class="highlighted">terms and
+          class="hlght">terms and
           conditions</a>.</p>
       <br>
       <iframe src="https://www.speakpipe.com/widget/inline/kzucd1vw97rd1ikj33nexcg8mnycvn9k"  allow="microphone"
@@ -2425,6 +2469,7 @@ transcript
 <<set $captions to false>>
 <<set $sound to true>>
 <<set $showForwards to false>>
+<<addclass "body" "green">>
 
    <<set $audiooptions to ["listen1"]>>
  <<set $audiooptionscopy to $audiooptions>>

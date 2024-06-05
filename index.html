@@ -267,7 +267,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;if $showBackwards is true&gt;&gt;
   &lt;div class=&quot;nav-wrapper&quot;&gt;
     &lt;div class=&quot;nav-item&quot;&gt;
-        [img[Back|assets/img/back-black.png][$prevpass]]
+        [img[Back|assets/img/back.png][$prevpass]]
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;&lt;/if&gt;&gt;
@@ -277,7 +277,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 
     &lt;div class=&quot;nav-wrapper&quot; id=&quot;forIcon&quot;&gt;
     &lt;div class=&quot;nav-item &quot; &gt;
-         [img[Forward|assets/img/for-black.png][$nextpass]]
+         [img[Forward|assets/img/for.png][$nextpass]]
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -513,13 +513,14 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showBackwards to false&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to true&gt;&gt;
-
+&lt;&lt;addclass &quot;body&quot; &quot;lightgreen&quot;&gt;&gt;
 &lt;div class=&quot;comp-warning&quot;&gt;Best experienced on a phone&lt;/div&gt;
 &lt;main class=&quot;beginning&quot; id=&quot;&quot;&gt;
-&lt;h1&gt;Watching the House&lt;/h1&gt;
-&lt;span&gt;An interactive experience by Coney at Marble Hill &lt;/span&gt;
+&lt;h1 class=&quot;hide&quot;&gt;Watching the House&lt;/h1&gt;
+&lt;span class=&quot;hide&quot;&gt;An interactive experience by Coney at Marble Hill &lt;/span&gt;
 &lt;br/&gt;
  &lt;div class=&quot;menu-wrapper&quot;&gt;
+ &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt; &lt;br/&gt;
     &lt;&lt;button &quot;Start now&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="12" name="framing" tags="nobr" position="700,175" size="100,100">&lt;&lt;set $prevpass to &quot;beginning&quot;&gt;&gt;
@@ -794,6 +795,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio1transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -892,6 +894,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio2transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1097,6 +1100,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio3transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1149,6 +1153,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio3btranscript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1242,6 +1247,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio4transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1462,6 +1468,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio5transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1554,6 +1561,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio6transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1657,6 +1665,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio7transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -1958,6 +1967,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio7btranscript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -2036,6 +2046,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;set $showTranscriptIcon to false&gt;&gt;
 &lt;&lt;set $sendOn to false&gt;&gt;
 &lt;&lt;set $transcriptname to  &quot;audio8transcript&quot;&gt;&gt;
+&lt;&lt;addclass &quot;body&quot; &quot;green&quot;&gt;&gt;
 &lt;&lt;include &quot;headeraudio&quot;&gt;&gt;
  &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 
@@ -2096,12 +2107,40 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;replace &quot;#mount&quot;&gt;&gt;
-    &lt;p&gt;Rhianna to add copy about recording pledge  - endeavour to do things differently, now that’s you’ve been induced, make the invisible visible. &lt;/p&gt;
+    &lt;p&gt;Now you’ve spent the day watching the house, and taking note of the stories that have been hidden here, we’d like you to do one last thing.&lt;/p&gt;
   &lt;&lt;/replace&gt;&gt;
 
 &lt;&lt;/timed&gt;&gt;
 
- &lt;&lt;timed 2s&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+    &lt;p&gt;It’s time to record your Watcher pledge, to share with others.&lt;/p&gt; 
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p&gt;For this, think of the following questions.&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 7s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p class=&quot;finalq&quot;&gt;What is something you can do in your daily life to make sure that certain histories and stories aren’t forgotten or left in the sidelines?&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p class=&quot;finalq&quot;&gt;What parts of history do you want to learn more of now?&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s&gt;&gt;
+  &lt;&lt;append &quot;#mount&quot;&gt;&gt;
+&lt;p class=&quot;finalq&quot;&gt;Or do you want to share a reflection after your induction as a Watcher?&lt;/p&gt;
+  &lt;&lt;/append&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+ &lt;&lt;timed 14s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
  &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;&lt;button &quot;Record your pledge&quot;&gt;&gt;&lt;&lt;goto &quot;record&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -2169,7 +2208,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 &lt;&lt;timed 10s&gt;&gt;
    &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;br/&gt;
-&lt;p&gt;We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking &lt;a href=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLScB_bdRpG8ST3qWnvuF6QK0sNSMUzEvfDWVcANXyogJiZ_N9w/viewform&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;

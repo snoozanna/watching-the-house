@@ -26,7 +26,8 @@
   --accent-color-secondary: var(--color-purple);
   --accent-color-shadow: var(--color-brown);
   --accent-color-red:var(--color-red);
-  --color-green: #16473b;
+  --color-green: #16473c;
+  --color-lightgreen:#2a7c65;
   --color-cream: #f3ebdc;
   --color-red: #730522;
   --color-brown: #733326;
@@ -124,6 +125,14 @@ color: var(--color-font);
 font-weight: 600;
 }
 
+body.lightgreen{
+  background: var(--color-lightgreen);
+}
+
+body.green{
+  background: var(--color-green);
+}
+
 h1,
 h2,
 h3,
@@ -133,7 +142,7 @@ h4 {
 }
 
 p{
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 header {
@@ -232,6 +241,10 @@ nav {
   opacity: 0;
 }
 
+p.finalq{
+  color:var(--color-red)
+}
+
 .poster-wrapper {
   position: relative;
   margin-bottom: 3rem;
@@ -299,6 +312,10 @@ textarea {
 main.beginning {
   align-items: center;
   height: 100vh;
+  background-image: url("../assets/img/main-imgfiles-07.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main.beginning > h1 {
@@ -454,12 +471,13 @@ header > #headerinstmount > p.note {
   font-size: 1.4rem;
   max-width: 80%;
   margin: auto;
-  background-color: var(--color-green);
-  color: white;
+  background-color: var(--color-cream);
+  color: var(--color-green);
   padding: 0.5rem;
   width: fit-content;
   text-align: center;
   border-radius: 1rem;
+  font-weight: 900;
 }
 
 main.story {
@@ -532,10 +550,10 @@ main.story > .poster-wrapper.small {
 
 main.story > #caption {
   /* z-index: 9999; */
-  color:var(--color-font);
+  color:var(--color-cream);
   padding: 0.5rem;
   text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-wrap: pretty;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -544,6 +562,10 @@ main.story > #caption {
 
 main.story > .mount > p {
   text-align: center;
+}
+
+main.story > #buttons > button{
+  box-shadow: black 4px 4px;
 }
 
 /* SHOW NOTHING ON A PHONE  */

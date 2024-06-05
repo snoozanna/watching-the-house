@@ -200,7 +200,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 <<if $showBackwards is true>>
   <div class="nav-wrapper">
     <div class="nav-item">
-        [img[Back|assets/img/back-black.png][$prevpass]]
+        [img[Back|assets/img/back.png][$prevpass]]
     </div>
   </div>
   <</if>>
@@ -210,7 +210,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 
     <div class="nav-wrapper" id="forIcon">
     <div class="nav-item " >
-         [img[Forward|assets/img/for-black.png][$nextpass]]
+         [img[Forward|assets/img/for.png][$nextpass]]
     </div>
   </div>
 
@@ -476,13 +476,14 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 <<set $showForwards to true>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to true>>
-
+<<addclass "body" "lightgreen">>
 <div class="comp-warning">Best experienced on a phone</div>
 <main class="beginning" id="">
-<h1>Watching the House</h1>
-<span>An interactive experience by Coney at Marble Hill </span>
+<h1 class="hide">Watching the House</h1>
+<span class="hide">An interactive experience by Coney at Marble Hill </span>
 <br/>
  <div class="menu-wrapper">
+ <br/> <br/> <br/> <br/> <br/> <br/>
     <<button "Start now">><<goto $nextpass>><</button>>
 </div>
 </main>
@@ -794,6 +795,7 @@ emailjs.sendForm('service_hqggznf', 'template_e75d2qj', form, "I5fGiJYF5iD8WzMJl
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio1transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -903,6 +905,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio2transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -1127,6 +1130,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio3transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -1187,6 +1191,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio3btranscript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -1292,6 +1297,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio4transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -1533,6 +1539,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio5transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -1637,6 +1644,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio6transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -1752,6 +1760,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio7transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -2077,6 +2086,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio7btranscript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -2165,6 +2175,7 @@ transcript
 <<set $showTranscriptIcon to false>>
 <<set $sendOn to false>>
 <<set $transcriptname to  "audio8transcript">>
+<<addclass "body" "green">>
 <<include "headeraudio">>
  <<audio ":all" stop>>
 
@@ -2233,12 +2244,40 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>Rhianna to add copy about recording pledge  - endeavour to do things differently, now that’s you’ve been induced, make the invisible visible. </p>
+    <p>Now you’ve spent the day watching the house, and taking note of the stories that have been hidden here, we’d like you to do one last thing.</p>
   <</replace>>
 
 <</timed>>
 
- <<timed 2s>>
+<<timed 3s>>
+  <<append "#mount">>
+    <p>It’s time to record your Watcher pledge, to share with others.</p> 
+  <</append>>
+<</timed>>
+<<timed 5s>>
+  <<append "#mount">>
+<p>For this, think of the following questions.</p>
+  <</append>>
+<</timed>>
+<<timed 7s>>
+  <<append "#mount">>
+<p class="finalq">What is something you can do in your daily life to make sure that certain histories and stories aren’t forgotten or left in the sidelines?</p>
+  <</append>>
+<</timed>>
+
+<<timed 10s>>
+  <<append "#mount">>
+<p class="finalq">What parts of history do you want to learn more of now?</p>
+  <</append>>
+<</timed>>
+
+<<timed 12s>>
+  <<append "#mount">>
+<p class="finalq">Or do you want to share a reflection after your induction as a Watcher?</p>
+  <</append>>
+<</timed>>
+
+ <<timed 14s>>
   <<append "#mount">>
  <div class="menu-wrapper">
     <<button "Record your pledge">><<goto "record">><</button>>
@@ -2310,7 +2349,7 @@ transcript
 <<timed 10s>>
    <<append "#mount">>
     <br/>
-<p>We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking <a href="" target="_blank" rel="noreferrer">here</a>.</p>
+<p>We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking <a href="https://docs.google.com/forms/d/e/1FAIpQLScB_bdRpG8ST3qWnvuF6QK0sNSMUzEvfDWVcANXyogJiZ_N9w/viewform" target="_blank" rel="noreferrer">here</a>.</p>
   <</append>>
 <</timed>>
 </main>

@@ -764,6 +764,7 @@ setup.JSLoaded = false;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="captionsexplainer" tags="nobr" position="975,225" size="100,100">&lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;p class=&quot;explainer&quot;&gt;Would you like to see captions? &lt;/p&gt;
+   &lt;&lt;set $fn to setup.pause()&gt;&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 3s&gt;&gt;
@@ -1583,8 +1584,10 @@ setup.JSLoaded = false;
 
  &lt;&lt;timed 9s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-    &lt;&lt;button &quot;I’m in the Breakfast Parlour&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
- &lt;&lt;button &quot;I&#39;m at the door of the Breakfast Parlour&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+   &lt;div class=&quot;menu-wrapper&quot;&gt;
+      &lt;&lt;button &quot;I’m in the Breakfast Parlour&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+   &lt;&lt;button &quot;I&#39;m at the door of the Breakfast Parlour&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
+   &lt;/div&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
@@ -1824,7 +1827,7 @@ setup.JSLoaded = false;
 
 &lt;&lt;timed 6s&gt;&gt;
    &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;You can write about real people, or imagine people whose names and face have been forgotten. &lt;/p&gt;
+&lt;p&gt;You can write about real people, or imagine people whose names and faces have been forgotten. &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 
@@ -1934,7 +1937,7 @@ setup.JSLoaded = false;
 
 &lt;&lt;timed 10s&gt;&gt;
    &lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;You can write about real people, or imagine people whose name and face have been forgotten. &lt;/p&gt;
+&lt;p&gt;You can write about real people, or imagine people whose names and faces have been forgotten. &lt;/p&gt;
   &lt;&lt;/append&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 

@@ -752,6 +752,7 @@ setup.JSLoaded = false;
 <<timed 0.1s>>
   <<append "#mount">>
     <p class="explainer">Would you like to see captions? </p>
+   <<set $fn to setup.pause()>>
   <</append>>
 <</timed>>
 <<timed 3s>>
@@ -1665,8 +1666,10 @@ transcript
 
  <<timed 9s>>
   <<append "#mount">>
-    <<button "I’m in the Breakfast Parlour">><<goto $nextpass>><</button>>
- <<button "I'm at the door of the Breakfast Parlour">><<goto $nextpass>><</button>>
+   <div class="menu-wrapper">
+      <<button "I’m in the Breakfast Parlour">><<goto $nextpass>><</button>>
+   <<button "I'm at the door of the Breakfast Parlour">><<goto $nextpass>><</button>>
+   </div>
   <</append>>
 <</timed>>
 </main>
@@ -1932,7 +1935,7 @@ transcript
 
 <<timed 6s>>
    <<append "#mount">>
-<p>You can write about real people, or imagine people whose names and face have been forgotten. </p>
+<p>You can write about real people, or imagine people whose names and faces have been forgotten. </p>
   <</append>>
 <</timed>>
 
@@ -2049,7 +2052,7 @@ transcript
 
 <<timed 10s>>
    <<append "#mount">>
-<p>You can write about real people, or imagine people whose name and face have been forgotten. </p>
+<p>You can write about real people, or imagine people whose names and faces have been forgotten. </p>
   <</append>>
 <</timed>>
 

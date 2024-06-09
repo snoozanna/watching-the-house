@@ -510,7 +510,7 @@ setup.JSLoaded = false;
 <<set $showCaptionsIcon to true>>
 <<addclass "body" "greengrad">>
 /* <div class="comp-warning">Best experienced on a phone</div> */
-<main class="beginning" id="">
+<main class="beginning fadeIn" id="">
 
 /* <h1 class="hide">Watching the House</h1> */
 <img src="assets/img/Wthbits-16.png" alt="Watching the House" class="longtitle"/>

@@ -46,7 +46,7 @@ setup.addCaptions = (cuekey) =>  {
        audio3a: [[1.439,6.029,"We're in the bedroom of Miss Hotham, Henrietta's great niece."],[6.029,8.579,"Watchers aren't technically meant to sit here."],[8.579,15.449,"But, well, if nobody's paying you much attention, it's probably fine."],[15.449,19.799,"If you can sit down at the mirror and take a look at yourself."],[19.799,23.939,"If not, simply stand near the table."],[23.939,27.749,"How well do you know the stories of the people who came before you?"],[27.749,34.019,"Your ancestors, whose facial features you will share, even if you don't know it."],[34.019,35.969,"Take a look at the table."],[35.969,37.949,"Open the drawers."],[37.949,41.01,"Once you've found the drawer with the shells in, let me know."]], 
        audio3b: [[1.62,3.48,"Why shells?"],[3.48,7.2,"They were collected to decorate the grotto, in the garden outside."],[7.2,12.27,"And perhaps Miss Hotham loved the shapes, the colours, the swirls..."],[12.27,15.24,"But why shells, you wonder?"],[15.24,23.85,"Shells from the Caribbean, now in Richmond upon Thames, collected and transported as part of the Transatlantic slave route."],[23.85,27.63,"Now hidden in these drawers."],[27.63,30.42,"As you look at the mirror, you reflect."],[30.42,34.29,"Why did Henrietta want and need these shells so much?"],[34.29,37.23,"What were the names of the people who gathered them?"],[37.23,39.27,"The island the shells came from?"],[39.27,46.74,"And the horrors being enacted upon the people there in exchange for shells, sugar, money."],[46.74,51.27,"But hurry, it's time to go before somebody sees you here."],[51.27,53.85,"These stories have been hidden for a long time."],[53.85,56.28,"And not everybody wants to know they exist."]], 
        audio4: [[3.419,9.089,"From where you're standing, you might notice all the faces peering down at you."],[9.089,17.699,"These were people from Henrietta's circle, many of whom passed through this house to socialise, gossip and discuss business."],[17.699,22.109,"During her time at court, Henrietta became mistress to the Prince of Wales."],[22.109,32.579,"And this house was built after she received a gift of £11,500 in stocks from him, worth possibly over £1 million today."],[32.579,36.809,"Henrietta also held other investments and was financially savvy."],[36.809,42.329,"All the people in these paintings were mostly born wealthy, and were trying to make more money."],[42.329,44.549,"How? You might wonder..."],[44.549,50.159,"When you can, you might try to discreetly open up the drawers on the desk and see what's inside."]], 
-       audio5: [[1.62,3.48,"It's time to monitor the staircase."],[4.05,7.47,"You simply have to stand still on the landing, as others pass by."],[8.5,11.08,"You might look down. Take note of the wood."],[11.8,15.7,"Mahogany. A highly fashionable material in the eighteenth century."],[16.35,18.9,"Now you're standing on it, centuries later."],[20.04,24.57,"But at this point you've asked so many questions, and the wood elicits more."],[25.62,26.55,"Who built this?"],[27.27,28.8,"Where did this wood come from?"],[29.8,34.33,"How many hands have touched this wood? And what toil did they have to suffer to build this?"],[35.77,39.34,"Who should have the right to feel proud of this staircase? This artwork?"],[40.27,41.8,"Who is history-worthy?"],[43.87,50.47,"Henrietta was one of the first to use mahogany in her home, and the wood quickly became fashionable across elite society."],[51.45,60.06,"But tradition has it, the wood was harvested in the Bay of Honduras - present-day Belize - and likely through the exploitation of enslaved people."],[60.96,65.82,"The mahogany trade was one dependent on the forced labour of enslaved Africans,"],[66.33,70.44,"who worked unpaid in hostile conditions to satisfy the tastes of England."],[71.1,72.45,"The tastes of Richmond."],[74.25,76.59,"You close your eyes. You listen."],[77.52,82.32,"You walk down the stairs with your hand on the railing and start to hear fragments of a poem."],[87.13,89.95,"And then I realised the whole house was filled with mahogany,"],[89,93.05,"the doorknobs, the banisters, the stairs themselves..."],[93.41,96.62,"it was worship and annihilation all in one."],[97.97,101.09,"I was compelled to assist in cutting a great deal of mahogany"],[101.09,105.86,"wood, writes Olaudah Equiano. Think of the mornings he toiled"],[105.86,109.82,"and toiled to capture swelling grains of the tree crotch under"],[109.82,113.45,"the tyranny of mosquitoes. Think of his back breaking, while"],[113.45,117.5,"harvesting rows of trunks bigger than the big house, to harness"],[117.5,121.73,"then tumble into nearby river water. Logs lashed"],[121.73,125.93,"together, lumbering, riding currents towards their first"],[125.93,131.18,"destination, a main port, to be buried in the belly of ships. Think"],[131.18,135.02,"genocide visited here, and men laboured and the art of such a thing."],[136.02,141,"Speak of mahogany. O, speak of the people of the land!"],[140.99,143.84,"Speak of mahogany. Speak"],[143.84,145.82,"of the original people of the land!"],[146.32999999999998,150.56,"And think of\tbodies/\tbodies/ \tblood/"],[151.25,157.01,"black/\t\tblessed/\tbones/\t\tback/\t\tback broad/"],[157.34,159.2,"borders/\tbroken branches/"],[159.2,162.14,"broken bough/\tbrown/\tbleed/\t\tbalsam/"],[162.35,164.27,"balm/ \t\tbreathless/"]], 
+       audio5: [[1.62,3.48,"It's time to monitor the staircase."],[4.05,7.47,"You simply have to stand still on the landing, as others pass by."],[8.5,11.08,"You might look down. Take note of the wood."],[11.8,15.7,"Mahogany. A highly fashionable material in the eighteenth century."],[16.35,18.9,"Now you're standing on it, centuries later."],[20.04,24.57,"But at this point you've asked so many questions, and the wood elicits more."],[25.62,26.55,"Who built this?"],[27.27,28.8,"Where did this wood come from?"],[29.8,34.33,"How many hands have touched this wood? And what toil did they have to suffer to build this?"],[35.77,39.34,"Who should have the right to feel proud of this staircase? This artwork?"],[40.27,41.8,"Who is history-worthy?"],[43.87,50.47,"Henrietta was one of the first to use mahogany in her home, and the wood quickly became fashionable across elite society."],[51.45,60.06,"But tradition has it, the wood was harvested in the Bay of Honduras - present-day Belize - and likely through the exploitation of enslaved people."],[60.96,65.82,"The mahogany trade was one dependent on the forced labour of enslaved Africans,"],[66.33,70.44,"who worked unpaid in hostile conditions to satisfy the tastes of England."],[71.1,72.45,"The tastes of Richmond."],[74.25,76.59,"You close your eyes. You listen."],[77.52,82.32,"You walk down the stairs with your hand on the railing and start to hear fragments of a poem."],[87.13,89.95,"And then I realised the whole house was filled with mahogany,"],[89,93.05,"the doorknobs, the banisters, the stairs themselves..."],[93.41,96.62,"it was worship and annihilation all in one."],[97.97,101.09,"I was compelled to assist in cutting a great deal of mahogany"],[101.09,105.86,"wood, writes Olaudah Equiano. Think of the mornings he toiled"],[105.86,109.82,"and toiled to capture swirling grains of the tree crotch under"],[109.82,113.45,"the tyranny of mosquitoes. Think of his back breaking, while"],[113.45,117.5,"harvesting rows of trunks bigger than the big house, to harness"],[117.5,121.73,"then tumble into nearby river water. Logs lashed"],[121.73,125.93,"together, lumbering, riding currents towards their first"],[125.93,131.18,"destination, a main port, to be buried in the belly of ships. Think"],[131.18,135.02,"genocide visited here, and men laboured in the art of such a thing."],[136.02,141,"Speak of mahogany. O, speak of the people of the land!"],[140.99,143.84,"Speak of mahogany. Speak"],[143.84,145.82,"of the original people of the land!"],[146.32999999999998,150.56,"And think of\tbodies/\tbodies/ \tblood/"],[151.25,157.01,"black/\t\tblessed/\tbones/\t\tback/\t\tback broad/"],[157.34,159.2,"borders/\tbroken branches/"],[159.2,162.14,"broken bough/\tbrown/\tbleed/\t\tbalsam/"],[162.35,164.27,"balm/ \t\tbreathless/"]], 
        audio6: [[1.11,4.56,"As you stand, once again your eyes wander."],[4.56,8.52,"You may notice a tea tray."],[8.52,13.23,"You are curious and perhaps, even after a long day, thirsty."],[14.94,19.53,"You remain discreet but edge towards the tray."],[19.53,22.14,"Feel free to open the lid, and see what's inside."],[24.42,29.28,"As you explore, smell the tea and close your eyes."],[29.28,36.57,"Like the mahogany of the staircase, sugar, tea and coffee became highly fashionable during Henrietta's time."],[36.57,39.24,"But at what cost?"],[39.24,45.39,"You open the coffee pot and look inside."],[45.39,47.34,"Where did these goods come from?"],[47.34,51.54,"To sweeten the tea and coffee of the elites of Richmond."],[51.54,54.87,"Many people from around the world built this house,"],[54.87,57.78,"but only a few are remembered."],[57.78,61.17,"There are people whose stories are too dark and disturbing,"],[61.17,64.05,"that they are often hidden away, invisible."]], 
        audio7a: [[1.17,4.02,"You look at the map of Richmond."],[4.02,8.31,"The people of the past imagined this town as an idyllic utopia,"],[8.31,13.17,"without acknowledging the truth of how it was funded or built."],[13.17,16.59,"You might look through the cards on the table."],[16.59,20.55,"The great and the good of Richmond upon Thames."],[20.55,25.32,"The people who have been remembered, archived in history."],[25.32,31.44,"Does it feel right? Would you want to add anyone? Change anything?"]], 
        audio7b: [[0.57,2.28,"You've left your mark here now,"],[2.28,5.52,"whilst keeping things seemingly the same on the surface."],[5.52,8.34,"Perhaps that's what this job is about after all -"],[8.34,12.33,"but quick, the day is ending, and your shift is almost up."]], 
@@ -583,7 +583,7 @@ setup.JSLoaded = false;
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>This is an interactive audio induction. </p>
+    <p>This is an interactive audio experience. </p>
   <</replace>>
 
 <</timed>>
@@ -612,7 +612,7 @@ setup.JSLoaded = false;
 :: testaudio [nobr]
 <<set $prevpass to "instructions1">>
 <<set $passage to "testaudio">>
-<<set $nextpass to "instructions1d">>
+<<set $nextpass to "instructions1sit">>
 <<set $transcript to false>>
 <<set $playToggle to false>>
 <<set $showBackwards to true>>
@@ -653,10 +653,10 @@ setup.JSLoaded = false;
     <</timed>>
      <<timed 2s>>
       <<append "#mount">>
-      <p>- bluetooth is turned on  </p>
+      <p>- You have plugged in headphones with the suitable adaptor (usb c or iphone) </p>
     <p>  - your phone is paired to the headphones you are trying to connect to</p>
-    <p>- your phone is disconnected from other devices</p>
-    <p>If it doesn't work, ask for help from a member of staff. </p>
+    <p>- Your phone is not on mute</p>
+    <p>- Your phone is not paired with another bluetooth device </p>
     <</append>>
     <</timed>>
     <<timed 6s>>
@@ -770,12 +770,46 @@ setup.JSLoaded = false;
 
 
 
+:: instructions1sit [nobr]
+<<set $prevpass to "testaudio">>
+<<set $passage to "instructions1sit">>
+<<set $nextpass to "instructions1d">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<<audio ":all" stop>>
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+<main class="instructions">
+
+<div id="mount" class="onboarding"></div>
+<<timed 0.1s>>
+  <<append "#mount">>
+    <p>This experience will invite you to explore Marble Hill's history and discover its secrets in unexpected places.  </p>
+  <</append>>
+<</timed>>
+<<timed 3s>>
+  <<append "#mount">>
+    <p>Some of the collections are very delicate, but we will direct you towards the objects you can interact with and places where you can sit.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 6s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
 
 
 
 
 :: instructions1d [nobr]
-<<set $prevpass to "testaudio">>
+<<set $prevpass to "instructions1sit">>
 <<set $passage to "instructions1d">>
 <<set $nextpass to "audio1">>
 <<set $showAudio to false>>
@@ -802,7 +836,7 @@ setup.JSLoaded = false;
 <</timed>>
 <<timed 6s>>
   <<append "#mount">>
-    <p>If it rains, feel free to move to the Welcome Room next door and look at the model of Marble Hill instead. </p>
+    <p>If it rains, feel free to move to the Welcome Room next door and look at the model of Marble Hill on the wall to your left.</p>
   <</append>>
 <</timed>>
 <<timed 9s>>
@@ -1140,7 +1174,7 @@ transcript
 <</timed>>
 <<timed 4s>>
    <<append "#mount">>
-<p>Take the door on your left when looking at the window, then walk through the next bedroom until you reach a small room with a dressing table and a mirror.</p>
+<p>Face the window and take the door on your left, then walk through the next bedroom until you reach a small room with a dressing table and a mirror.</p>
   <</append>>
 <</timed>>
 
@@ -1299,7 +1333,7 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
-    <p>The next part of your shift will be in the Dressing Room. </p>
+    <p>Please close the drawer and make your way to the Dressing Room. </p>
   <</replace>>
 
 <</timed>>
@@ -1405,13 +1439,13 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>In 1720, seeking greater financial independence from her husband and the royal household, Henrietta invested in the South Sea Company, a British company that was granted a monopoly to supply enslaved Africans to South America.</p>
+ <p>In this letter Elizabeth Molesworth congratulates Henrietta on the success of her investments in the South Sea Company. She also writes of her own desire to buy further stock to increase her profits after having had a ‘taste of fortune</p>
   <</replace>>
 <</timed>>
 
 <<timed 8s>>
   <<append "#mount">>
-<p>In 1723, she then received a gift from the Prince of Wales (later George II) to support her after she left the royal court, of which 70% were shares in the South Sea Company.</p>
+<p>In 1720, seeking greater financial independence from her husband and the royal household, Henrietta invested in the South Sea Company, a British company that was granted a monopoly to supply enslaved Africans to South America. In 1723, she then received a gift from the Prince of Wales (later George II), of which 70% were shares in the South Sea Company. </p>
   <</append>>
 <</timed>>
 
@@ -1504,19 +1538,19 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>In 1720, seeking greater financial independence from her husband and the royal court, Henrietta invested in the South Sea Company, a British joint-stock company that was granted a monopoly to supply African slaves to the islands in the "South Seas" and South America.</p>
+ <p>In this letter Elizabeth Molesworth congratulates Henrietta on the success of her investments in the South Sea Company. She also writes of her own desire to buy further stock to increase her profits after having had a ‘taste of fortune</p>
   <</replace>>
 <</timed>>
 
 <<timed 8s>>
   <<append "#mount">>
-<p> The £11,500 gift she received from King George II after she left court in 1722 also contained shares in the South Sea Company. </p>
+<p>In 1720, seeking greater financial independence from her husband and the royal household, Henrietta invested in the South Sea Company, a British company that was granted a monopoly to supply enslaved Africans to South America. In 1723, she then received a gift from the Prince of Wales (later George II), of which 70% were shares in the South Sea Company. </p>
   <</append>>
 <</timed>>
 
 <<timed 14s>>
   <<append "#mount">>
-<p>The trans-Atlantic slave trade was therefore crucial in funding both the acquisition of the land and the building of Marble Hill House. </p>
+<p>The transatlantic slave trade was crucial in funding both the purchase of the land and the building of Marble Hill. </p>
 
   <</append>>
 <</timed>>
@@ -1654,7 +1688,7 @@ transcript
 <</timed>>
 <<timed 3s>>
    <<append "#mount">>
-<p>Walk to the Hall next door, then enter the Breakfast Parlour on your left. In the room, you'll find a low wooden tray near the window.</p>
+<p>Walk to the Hall next door, then enter the Breakfast Parlour on your left. Against the wall in front of you, you'll find a low wooden tea tray with a map on it.</p>
   <</append>>
 <</timed>>
 
@@ -1840,8 +1874,8 @@ transcript
 <<timed 33s>>
   <<replace "#buttons">>
      <div class="menu-wrapper">
-    <<button "I want to change things">><<goto "instructions7change">><</button>>
-        <<button "I don't like change">><<goto "instructions7nochange">><</button>>
+    <<button "Add someone">><<goto "instructions7change">><</button>>
+        <<button "Leave things as they are">><<goto "instructions7nochange">><</button>>
 </div>
     <</replace>>
   <</timed>>
@@ -1881,7 +1915,7 @@ transcript
 
 <<timed 6s>>
    <<append "#mount">>
-<p>Now look on the fireplace floor. </p>
+<p>Now look at the fireplace floor. </p>
   <</append>>
 <</timed>>
 
@@ -1952,7 +1986,7 @@ transcript
 
 <<timed 15s>>
    <<append "#mount">>
-<p>When you are done, place your drawing back in the box on the mantelpiece.</p>
+<p>Feel free to sit on one of the red-top benches by the window to draw your card. When you are done, place your drawing back in the box.</p>
   <</append>>
 <</timed>>
 
@@ -2032,7 +2066,7 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>Classic. Objects related to silenced voices tend to disappear.
+ <p>Strange, this is not the first time objects have disappeared.
  </p>
   <</replace>>
 
@@ -2045,7 +2079,7 @@ transcript
 
 <<timed 6s>>
    <<append "#mount">>
-<p>The map includes Henrietta’s friends and neighbours, house owners from the Richmond aristocracy. But who else should be remembered in the history of this place?"</p>
+<p>The map includes Henrietta’s friends and neighbours, house owners from the Richmond aristocracy. But who else should be remembered in the history of this place?</p>
   <</append>>
 <</timed>>
 
@@ -2068,13 +2102,6 @@ transcript
       <<button "Submit">><<goto "writingSubmitted">><</button>>
    </div>
 
-  <</append>>
-<</timed>>
-
- <<timed 14s>>
-  <<append "#mount">>
-    <br/><br/>
-    <<button "I am done">><<goto $nextpass>><</button>>
   <</append>>
 <</timed>>
 </main>
@@ -2329,7 +2356,13 @@ transcript
   <</append>>
 <</timed>>
 
- <<timed 14s>>
+<<timed 14s>>
+  <<append "#mount">>
+<p>If it's raining, feel free to pick a quiet spot inside the house to do the recording.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 16s>>
   <<append "#mount">>
  <div class="menu-wrapper">
     <<button "Record your pledge">><<goto "record">><</button>>
@@ -2368,25 +2401,33 @@ transcript
   <</replace>>
 
 <</timed>>
+
 <<timed 2s>>
+  <<append "#mount">>
+ <p>Please return your headphones and adapter to the Marble Hill entrance.</p>
+  <</append>>
+
+<</timed>>
+
+<<timed 5s>>
    <<append "#mount">>
 <p>To find out more about the project click <a href="https://coneyhq.org/project/watching-the-house/" target="_blank" rel="noreferrer" class="hlght">here</a>. </p>
   <</append>>
 <</timed>>
 
-<<timed 4s>>
+<<timed 8s>>
    <<append "#mount">>
 <p>For more historical background about Marble Hill’s colonial history, click <<link "here">><<goto "history">><</link>>.</p>
   <</append>>
 <</timed>>
 
-<<timed 6s>>
+<<timed 11s>>
    <<append "#mount">>
 <p>If you want to find out more about the next Coney projects, please sign up for our <a href="https://coneyhq.org/sign-up-to-our-mailing-list/" target="_blank" rel="noreferrer">newsletter</a> or follow us on social media.</p>
   <</append>>
 <</timed>>
 
-<<timed 8s>>
+<<timed 14s>>
    <<append "#mount">>
 <div class="icon-container socials fadeIn">
         <a href="https://www.instagram.com/agencyofconey/" target="_blank">
@@ -2399,7 +2440,7 @@ transcript
   <</append>>
 <</timed>>
 
-<<timed 10s>>
+<<timed 16s>>
    <<append "#mount">>
     <br/>
 <p>We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking <a href="https://docs.google.com/forms/d/e/1FAIpQLScB_bdRpG8ST3qWnvuF6QK0sNSMUzEvfDWVcANXyogJiZ_N9w/viewform" target="_blank" rel="noreferrer">here</a>.</p>
@@ -2481,7 +2522,7 @@ transcript
 <<set $showForwards to false>>
 <<addclass "body" "green">>
 
-   <<set $audiooptions to ["listen1"]>>
+   <<set $audiooptions to ["listen1", "listen2"]>>
  <<set $audiooptionscopy to $audiooptions>>
 
 /* <header/> */
@@ -2528,8 +2569,8 @@ transcript
 <div id="caption">
 
 </div>
-  /* <<include `$source + "cap"`>> */
-  <<include "listen1cap">>
+  <<include `$source + "cap"`>>
+
 <</if>>
 
 </main>
@@ -2539,7 +2580,7 @@ transcript
 <header class="listen player" >
 
       <div class="nav-item">
-          [img[Back|../assets/img/back-black.png][infopledge]]
+          [img[Back|assets/img/back-black.png][infopledge]]
       </div>
 
  <div class="nav-item">
@@ -2571,7 +2612,7 @@ transcript
   <<if $showCaptionsIcon is true>>
   <div class="nav-wrapper">
       <div class="nav-item" id="capIconContainer">
-        <<link [img[../assets/img/captions.png]]>>
+        <<link [img[assets/img/captions.png]]>>
         <<if $captions is true>>
           <<set $captions to false>>
   
@@ -2617,94 +2658,135 @@ transcript
 
 
 :: listen1
-<source  src="https://youhavefoundconey.net/1884FM/assets/memorial/audio1.mp3">
+<source  src="assets/listen/audio1.mp3">
 
 :: listen1cap [nobr]
 
+
 <<timed 1s>>
   <<replace "#caption">>
-    <<type 60ms>>
-<p>The live show made me think about the role and the power of historians</p> 
+    <<type 60ms>>  
+I can continue to listen 
 <</type>>
-  <</replace>>
-<</timed>>
-
-<<timed 7s>>
-  <<replace "#caption">>
- <<type 40ms>>
-<p>to tell the stories of people and communities that they never met</p> 
-<</type>>
-  <</replace>>
-<</timed>>
-
-<<timed 12s>>
+<</replace>>
+  <</timed>>
+<<timed 3s>>
   <<append "#caption">>
-  <<type 30ms>>
-<p>and they don't really know </p>
+    <<type 60ms>>  
+even when it can be difficult, 
 <</type>>
-  <</append>>
-<</timed>>
-
-<<timed 15s>>
+<</append>>
+  <</timed>>
+<<timed 6s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+and continue to educate myself 
+<</type>>
+<</append>>
+  <</timed>>
+<<timed 9s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+even when those new things you learn can be hard, 
+<</type>>
+<</append>>
+  <</timed>>
+<<timed 14s>>
   <<replace "#caption">>
-  <<type 60ms>>
-<p>and the way that in particular Western white supremacist institutions</p> 
+    <<type 60ms>>  
+I can continue to amplify other voices and other stories 
 <</type>>
-  <</replace>>
-<</timed>>
+<</replace>>
+  <</timed>>
+<<timed 19s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+that will help others to be more comfortable with histories and stories 
+<</type>>
+<</append>>
+  <</timed>>
 
 <<timed 24s>>
   <<append "#caption">>
-  <<type 40ms>>
-<p>apply a bias and a lens</p>
+    <<type 40ms>>  
+that they might not know about, 
 <</type>>
-  <</append>>
-<</timed>>
-
-<<timed 27s>>
-  <<append "#caption">>
-  <<type 40ms>>
-<p> to the stories and the histories of people of color. </p>
-<</type>>
-  <</append>>
-<</timed>>
-
-<<timed 32s>>
+<</append>>
+  <</timed>>
+<<timed 26.5s>>
   <<replace "#caption">>
-  <<type 50ms>>
-<p>The way histories and objects are made to be exotic </p>
+    <<type 60ms>>  
+but will help further 
 <</type>>
-  <</replace>>
-<</timed>>
-
-<<timed 38s>>
+<</replace>>
+  <</timed>>
+<<timed 29.5s>>
   <<append "#caption">>
-  <<type 40ms>>
-<p>and are made to be ritualistic and </p>
+    <<type 60ms>>  
+our own identity in this country 
 <</type>>
-  <</append>>
-<</timed>>
-
-<<timed 41s>>
+<</append>>
+  <</timed>>
+<<timed 31s>>
   <<append "#caption">>
-  <<type 40ms>>
-<p>made to be... more nonsensical </p>
+    <<type 60ms>>  
+and further all of our understandings 
 <</type>>
-  <</append>>
-<</timed>>
+<</append>>
+  <</timed>>
+<<timed 34s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+on how we can live together in this world. 
+<</type>>
+<</append>>
+  <</timed>>
 
-<<timed 46s>>
-  <<replace "#caption">> 
-  <<type 60ms>>
-<p>just because of...</p>
-<</type>>
-  <</replace>>
-<</timed>>
 
-<<timed 50s>>
-  <<append "#caption">> 
-  <<type 60ms>>
-<p>where that community are from.</p>
+:: listen2
+<source  src="assets/listen/audio2.mp3">
+
+:: listen2cap [nobr]
+
+
+<<timed 01s>>
+  <<replace "#caption">>
+    <<type 60ms>>  
+Be curious.
 <</type>>
-  <</append>>
+<</replace>>
+<</timed>>
+<<timed 03s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+Especially when things are presented as just one thing 
+<</type>>
+<</append>>
+<</timed>>
+<<timed 06s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+so... "British" or "simple" or "beautiful", 
+<</type>>
+<</append>>
+<</timed>>
+<<timed 13s>>
+  <<replace "#caption">>
+    <<type 60ms>>  
+and keep asking questions 
+<</type>>
+<</replace>>
+<</timed>>
+<<timed 16s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+about what might be behind those 
+<</type>>
+<</append>>
+<</timed>>
+<<timed 19s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+seemingly simple things.<</type>>
+<</append>>
 <</timed>>

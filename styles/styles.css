@@ -571,7 +571,8 @@ main.story > .poster-wrapper.small {
   margin: 0 auto;
 }
 
-main.story > #caption {
+main.story > #caption, 
+main.listen > #caption {
   /* z-index: 9999; */
   color:var(--color-cream);
   padding: 0.5rem;
@@ -581,6 +582,8 @@ main.story > #caption {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
     animation-delay: var(1000ms, 0s);
+    background-color: var(--color-green);
+    border-radius: 1rem;
 }
 
 main.story > .mount > p {
@@ -663,6 +666,8 @@ main.framing > p {
 
 main.listen.entrance{
   align-items: center;
+  background-color: var(--color-green);
+  background-image: none;
 }
 
 
@@ -677,8 +682,13 @@ margin-block-end: 0;
 
 
 main.listen{
-  background: var(--color-green);
+  background: var(--color-beige);
+  background-image: url("../../assets/img/footstepphone.gif");
   min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: inherit;
 }
 
 main.listen > #caption{
@@ -698,13 +708,14 @@ main.listen {
 
 main.listen.player {
   display: flex;
+    padding-top: 0;
 }
 
 main.listen > #caption > .macro-type > p, 
 main.listen > #caption > .macro-timed > p{
   text-align: center;
   font-size: 2rem;
-  color:var(--color-cream)
+  color:var(--color-cream);
 }
 
 main.listen > #endMsgMount > button{
@@ -880,6 +891,12 @@ footer > .nav-wrapper.playpause-wrapper {
   width: 40px;
 }
 
+main.listen > #caption {
+  width: fit-content;
+  margin: auto;
+  padding: 1rem 2rem;
+  max-width: 70%;
+}
 
 
 main.story > #caption {
@@ -956,6 +973,10 @@ footer > .nav-wrapper.playpause-wrapper {
 
 #mount{
   width: 100%;
+}
+
+main.listen{
+  background-image: url("../../assets/img/footsteplandscape.gif");
 }
 
 main.listen > #caption > .macro-type > p, main.listen > #caption > .macro-timed > p {

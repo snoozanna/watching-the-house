@@ -147,7 +147,7 @@ setup.JSLoaded = false;
          gtag('config', 'G-F1SYYS124M');
          LoadScreen.unlock(lockID);  // Unlock loading screen
      }).catch(function(error) {
-         alert("Error: Could not load 'gtag.js'.");
+       //   alert("Error: Could not load 'gtag.js'.");
      }
  );
 
@@ -654,7 +654,6 @@ setup.JSLoaded = false;
      <<timed 2s>>
       <<append "#mount">>
       <p>- You have plugged in headphones with the suitable adaptor (usb c or iphone) </p>
-    <p>  - your phone is paired to the headphones you are trying to connect to</p>
     <p>- Your phone is not on mute</p>
     <p>- Your phone is not paired with another bluetooth device </p>
     <</append>>
@@ -836,7 +835,7 @@ setup.JSLoaded = false;
 <</timed>>
 <<timed 6s>>
   <<append "#mount">>
-    <p>If it rains, feel free to move to the Welcome Room next door and look at the model of Marble Hill on the wall to your left.</p>
+    <p>If it is raining, feel free to move to the Welcome Room next door and look at the model of Marble Hill on the wall to your left.</p>
   <</append>>
 <</timed>>
 <<timed 9s>>
@@ -1439,7 +1438,7 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>In this letter Elizabeth Molesworth congratulates Henrietta on the success of her investments in the South Sea Company. She also writes of her own desire to buy further stock to increase her profits after having had a ‘taste of fortune</p>
+ <p>In this letter Elizabeth Molesworth congratulates Henrietta on the success of her investments in the South Sea Company. She also writes of her own desire to buy further stock to increase her profits after having had a ‘taste of fortune'.</p>
   <</replace>>
 <</timed>>
 
@@ -1457,7 +1456,7 @@ transcript
 <</timed>>
 <<timed 16s>>
    <<append "#mount">>
-<p>Now put this letter where you found it. </p>
+<p>Now put this letter back in its folder and place it in the desk drawer.</p>
   <</append>>
 <</timed>>
 
@@ -1538,7 +1537,7 @@ transcript
 <div id="mount"></div>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>In this letter Elizabeth Molesworth congratulates Henrietta on the success of her investments in the South Sea Company. She also writes of her own desire to buy further stock to increase her profits after having had a ‘taste of fortune</p>
+ <p>In this letter Elizabeth Molesworth congratulates Henrietta on the success of her investments in the South Sea Company. She also writes of her own desire to buy further stock to increase her profits after having had a ‘taste of fortune'.</p>
   <</replace>>
 <</timed>>
 
@@ -2367,7 +2366,7 @@ transcript
  <div class="menu-wrapper">
     <<button "Record your pledge">><<goto "record">><</button>>
      <<button "Skip and listen to others">><<goto "listen">><</button>>
-    <<button "End the experience">><<goto "end">><</button>>
+    <<button "End experience">><<goto "end">><</button>>
 </div>
   <</append>>
 <</timed>>
@@ -2397,7 +2396,7 @@ transcript
 <img src="assets/img/Wthbits-17.png" alt="Watching the House" class="hide desktop"/>
 <<timed 0.1s>>
   <<replace "#mount">>
- <p>Thank you for attending Watching the House, a project by Coney in partnership with English Heritage. </p>
+ <p>Watching the House is the result of a new collaboration between Coney and English Heritage’s youth engagement programme, Shout Out Loud.</p>
   <</replace>>
 
 <</timed>>
@@ -2446,6 +2445,22 @@ transcript
 <p>We would also appreciate if you could fill in a very short feedback form, to tell us your thoughts about the experience, by clicking <a href="https://docs.google.com/forms/d/e/1FAIpQLScB_bdRpG8ST3qWnvuF6QK0sNSMUzEvfDWVcANXyogJiZ_N9w/viewform" target="_blank" rel="noreferrer">here</a>.</p>
   <</append>>
 <</timed>>
+
+<<timed 19s>>
+   <<append "#mount">>
+    <br/>
+<div class="icon-container logos fadeIn">
+     <a href="https://coneyhq.org/" target="_blank">
+          <img src="assets/img/logos/coney-logo.jpeg" alt="Coney logo"></a>
+       <a href="https://www.english-heritage.org.uk/" target="_blank">
+          <img src="assets/img/logos/engher.png" alt="English Heritage logo"></a>
+        <a href="https://www.artscouncil.org.uk/" target="_blank">
+          <img src="assets/img/logos/ace.png" alt="ACE Logo"></a>
+      </div>
+  <</append>>
+<</timed>>
+
+
 </main>
 <<include "footerfinal">>
 
@@ -2638,7 +2653,7 @@ transcript
  </div>
 <div class="nav-wrapper">
    <div class="nav-item" id="">
-        <<button "End the experience">>
+        <<button "End experience">>
         <<goto "end">>
         <</button>>
   </div>

@@ -772,7 +772,7 @@ setup.JSLoaded = false;
 :: instructions1sit [nobr]
 <<set $prevpass to "testaudio">>
 <<set $passage to "instructions1sit">>
-<<set $nextpass to "instructions1d">>
+<<set $nextpass to "instructions1explainer">>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showForwards to true>>
@@ -805,10 +805,46 @@ setup.JSLoaded = false;
 <<include "footer">>
 
 
+:: instructions1explainer [nobr]
+<<set $prevpass to "instructions1sit">>
+<<set $passage to "instructions1explainer">>
+<<set $nextpass to "instructions1d">>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<<audio ":all" stop>>
+<audio id="audio" autoplay >
+  <source src="">
+</audio>
+<main class="instructions">
+
+<div id="mount" class="onboarding"></div>
+<<timed 0.1s>>
+  <<append "#mount">>
+    <p>This adventure will take you through different rooms in the house. </p>
+  <</append>>
+<</timed>>
+<<timed 3s>>
+  <<append "#mount">>
+    <p>If you have any questions about the house or its history as you walk through, you can pause the audio and ask a Room Explainer, who will be more than happy to speak to you.</p>
+  <</append>>
+<</timed>>
+
+ <<timed 6s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
 
 
 :: instructions1d [nobr]
-<<set $prevpass to "instructions1sit">>
+<<set $prevpass to "instructions1explainer">>
 <<set $passage to "instructions1d">>
 <<set $nextpass to "audio1">>
 <<set $showAudio to false>>
@@ -2537,7 +2573,7 @@ transcript
 <<set $showForwards to false>>
 <<addclass "body" "green">>
 
-   <<set $audiooptions to ["listen1", "listen2"]>>
+   <<set $audiooptions to ["listen1", "listen2", "listen3"]>>
  <<set $audiooptionscopy to $audiooptions>>
 
 /* <header/> */
@@ -2805,3 +2841,78 @@ about what might be behind those
 seemingly simple things.<</type>>
 <</append>>
 <</timed>>
+
+
+
+:: listen3
+<source  src="assets/listen/audio3.mp3">
+
+:: listen3cap [nobr]
+
+<<timed 1s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+I would like to<</type>>
+<</append>>
+<</timed>>
+
+<<timed 4s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+completely immerse myself in history <</type>>
+<</append>>
+<</timed>>
+
+<<timed 6s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+when I'm thinking about it, <</type>>
+<</append>>
+<</timed>>
+
+<<timed 9s>>
+  <<replace "#caption">>
+    <<type 40ms>>  
+and go into all the nooks and crannies because<</type>>
+<</replace>>
+<</timed>>
+
+<<timed 10s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+ the darkness and layers and the complexity <</type>>
+<</append>>
+<</timed>>
+
+<<timed 14s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+are what make history.<</type>>
+<</append>>
+<</timed>>
+
+<<timed 16s>>
+  <<replace "#caption">>
+    <<type 40ms>>  
+It's why we should study it and what makes it interesting,<</type>>
+<</replace>>
+<</timed>>
+
+
+<<timed 18s>>
+  <<append "#caption">>
+    <<type 50ms>>  
+and what makes it a tool to help us <</type>>
+<</append>>
+<</timed>>
+
+<<timed 21s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+be better, today.<</type>>
+<</append>>
+<</timed>>
+
+
+
+

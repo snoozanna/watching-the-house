@@ -2573,7 +2573,7 @@ transcript
 <<set $showForwards to false>>
 <<addclass "body" "green">>
 
-   <<set $audiooptions to ["listen1", "listen2", "listen3"]>>
+   <<set $audiooptions to ["listen1", "listen2", "listen3", "listen4", "listen5", "listen6"]>>
  <<set $audiooptionscopy to $audiooptions>>
 
 /* <header/> */
@@ -2913,6 +2913,163 @@ be better, today.<</type>>
 <</append>>
 <</timed>>
 
+:: listen4
+<source  src="assets/listen/audio4.mp3">
 
+:: listen4cap [nobr]
+<<timed 0s>>
+  <<replace "#caption">>
+    <<type 60ms>> 
+Watching the House has been peaceful yet also depressing, 
+<</type>>
+<</replace>>
+<</timed>>
+<<timed 4s>>
+  <<append "#caption">>
+    <<type 40ms>> 
+as there are many hidden secrets of the house.
+<</type>>
+<</append>>
+<</timed>>
+<<timed 8s>>
+  <<replace "#caption">>
+    <<type 60ms>> 
+When you go to the bed chamber 
+<</type>>
+<</replace>>
+<</timed>>
+<<timed 12s>>
+  <<append "#caption">>
+    <<type 60ms>> 
+or the breakfast room, 
+<</type>>
+<</append>>
+<</timed>>
+<<timed 15s>>
+  <<append "#caption">>
+    <<type 40ms>> 
+you will find a kettle. 
+<</type>>
+<</append>>
+<</timed>>
+<<timed 17.5s>>
+  <<replace "#caption">>
+    <<type 40ms>> 
+Open the lid of the kettle
+<</type>>
+<</replace>>
+<</timed>>
+<<timed 19s>>
+  <<append "#caption">>
+    <<type 60ms>> 
+and you'll find a piece of paper.
+<</type>>
+<</append>>
+<</timed>>
+<<timed 21s>>
+  <<append "#caption">>
+    <<type 60ms>> 
+A miniature version of the table on which it is on.
+<</type>>
+<</append>>
+<</timed>>
+:: listen5
+<source  src="assets/listen/audio5.mp3">
 
+:: listen5cap [nobr]
+<<timed 03s>>
+  <<replace "#caption">>
+    <<type 60ms>>  
+To always think 
+    <</type>>
+  <</replace>>
+<</timed>>
+<<timed 04s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+when you're looking at history.
+    <</type>>
+  <</append>>
+<</timed>>
+<<timed 09s>>
+  <<replace "#caption">>
+    <<type 40ms>>  
+To look underneath 
+    <</type>>
+  <</replace>>
+<</timed>>
+<<timed 11s>>
+  <<append "#caption">>
+    <<type 60ms>>  
+and to try to remember who was really involved, 
+    <</type>>
+  <</append>>
+<</timed>>
+<<timed 16s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+particularly not the people that had all the wealth.
+    <</type>>
+  <</append>>
+<</timed>>
+<<timed 22s>>
+  <<replace "#caption">>
+    <<type 40ms>>  
+But how did that wealth move into their hands?
+    <</type>>
+  <</replace>>
+<</timed>>
+<<timed 25s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+And who had to suffer
+    <</type>>
+  <</append>>
+<</timed>>
+<<timed 26.5s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+as a result of that wealth moving into their hands? 
+    <</type>>
+  <</append>>
+<</timed>>
 
+:: listen6
+<source  src="assets/listen/audio6.mp3">
+
+:: listen6cap [nobr]
+<<timed 01s>>
+  <<replace "#caption">>
+    <<type 50ms>>  
+I can continue to be curious and ask questions. 
+    <</type>>
+  <</replace>>
+<</timed>>
+<<timed 6s>>
+  <<replace "#caption">>
+    <<type 50ms>>  
+Continue to be dedicated in my practice 
+    <</type>>
+  <</replace>>
+<</timed>>
+<<timed 7.5s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+to uncovering stories that are untold 
+    <</type>>
+  <</append>>
+<</timed>>
+<<timed 9.5s>>
+  <<append "#caption">>
+    <<type 40ms>>  
+and retelling stories that should be seen and heard.
+    <</type>>
+  <</append>>
+<</timed>>
+<<timed 15s>>
+  <<replace "#caption">>
+    <<type 40ms>>  
+Making the invisible visible.
+    <</type>>
+  <</replace>>
+<</timed>>
